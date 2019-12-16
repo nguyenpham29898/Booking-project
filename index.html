@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- bootstrap -->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+	crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+	crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+	crossorigin="anonymous"></script>
+	
+
+	<!-- font-awesome -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<!-- <script src="https://kit.fontawesome.com/20b02079e9.js" crossorigin="anonymous"></script> -->
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=vietnamese" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Darker+Grotesque:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+
+	<!-- datetime-picker -->
+	<link href="datepicker/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="datepicker/css/datepicker.css" rel="stylesheet" />
+
+	
+	<!-- for on scroll animations -->
+	<link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+	<script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+	
+	<!-- slide slick -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css">	
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+
+    <!---------------------- LightGallery Zoom -->
+    <link rel="stylesheet" href="./lightgallery/dist/css/lightgallery.css" />
+
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/main.js"></script>
+	<script src="js/datetime-picker.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="firts">
+		<!--------------- video starts here --------------->
+		<div class="video-container">
+			<video playsinline autoplay muted loop id="bgvid">
+				  <source src="/video/main(new).mp4" type="video/mp4">
+			</video>
+	  	</div>
+
+		<div class="header">
+			<h1>A Luxury Stay</h1>
+		</div>
+
+		<!--------------- navbar starts here --------------->
+		<nav class="nav-menu">
+				<span id="brand">
+					  <a href="index.html">Luxury</a>
+				</span>
+				<div class="search-form index">
+					<input type="text" placeholder="Search">
+				</div>
+				<ul id="menu">
+					<li><a href="index.html">Trang chủ</a></li> 
+					<li><a href="/host-detail/dashboard.html">Host</a></li>
+					<li><a href="login.html">Đăng nhập</a></li>
+					<li><a href="sign-up.html">Đăng ký</a></li>
+					<li><a href="#contact" class="contactmenu">Liên hệ</a></li>
+			  </ul>
+				<div id="toggle">
+					  <div class="span" style="cursor: pointer;">menu</div>
+				</div>
+		  </nav>
+
+		  <div id="resize">
+				<div class="close-btn">close</div>
+
+				<ul id="menu">
+					  <li><a href="index.html">Trang chủ</a></li> 
+					  <li><a href="/host-detail/dashboard.html">Host</a></li>
+					  <li><a href="login.html">Đăng nhập</a></li>
+					  <li><a href="sign-up.html">Đăng ký</a></li>
+					  <li><a href="#contact" class="contactmenu">Liên hệ</a></li>
+				</ul>
+		  </div>
+
+		  <div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content text-center">
+							<!-- <div class="home_title"><h1>A Luxury Stay</h1></div> -->
+							<div class="booking_form_container">
+								<form action="#" class="booking_form">
+									<div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
+										<div class="booking_input_container d-flex flex-lg-row flex-column align-items-start justify-content-start">
+											<div class="check-in-check-out"><input type="text" id="timeCheckIn" class="datepicker booking_input booking_input_a booking_in" placeholder="Check in" required="required"></div>
+											<div class="check-in-check-out"><input type="text" id="timeCheckOut" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" required="required"></div>
+											<div class="select-items">
+												<!-- <input type="number" class="booking_input booking_input_b" placeholder="Children" required="required"> -->
+												<select name="" id="" class="booking_input booking_input_b">
+													<option value="">Adults</option>
+													  <option value="">1</option>
+													  <option value="">2</option>
+													  <option value="">3</option>
+													  <option value="">4</option>
+												</select>
+												<i class="fas fa-angle-down icon"></i>
+											</div>
+											<div>
+												<!-- <input type="number" class="booking_input booking_input_b" placeholder="Room" required="required"> -->
+												<div class="select-items">
+														<!-- <input type="number" class="booking_input booking_input_b" placeholder="Children" required="required"> -->
+														<select name="" id="" class="booking_input booking_input_b">
+															<option value="">Adults</option>
+															  <option value="">1</option>
+															  <option value="">2</option>
+															  <option value="">3</option>
+															  <option value="">4</option>
+														</select>
+														<i class="fas fa-angle-down icon"></i>
+												</div>
+											</div>
+										</div>
+										<div class="btn-booking"><button class="booking_button" onclick="gettext()">Book Now</button></div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="second">
+		<section>
+			<div class="container-fluid container--md slide1">
+				<div class="tittle">
+					<h1>Địa điểm nổi bật</h1>
+					<h3>Cùng Luxury bắt đầu chuyến hành trình chinh phục thế giới của bạn</h3>
+				</div>	
+					<div class="slider" id="autoplay">
+						<div>
+							<div class="product_img">
+								<a href="" target="_blank">
+									<img src="https://cdn.luxstay.com/home/location/location_5_1559735011.png" />
+								</a>
+							</div>	
+							<div class="product_content">
+								<div class="product_title">
+									Hồ Chí Minh
+								</div>
+								<div class="product_price">
+									<b>1491</b> Chỗ ở
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="product_img">
+								<a href="" target="_blank">
+									<img src="https://cdn.luxstay.com/home/location/location_16_1559303173.png" />
+								</a>
+								</div>	
+							<div class="product_content">
+								<div class="product_title">
+									Đà Nẵng
+								</div>
+								<div class="product_price">
+									<b>1000</b> Chỗ ở
+								</div>
+							</div>
+						</div>
+						<div>
+								<div class="product_img">
+									<a href="" target="_blank">
+										<img src="https://cdn.luxstay.com/home/location/location_1_1559734709.png" />
+									</a>
+									</div>	
+								<div class="product_content">
+									<div class="product_title">
+										Hà Nội
+									</div>
+									<div class="product_price">
+										<b>1327</b> Chỗ ở
+									</div>
+								</div>
+							</div>
+						<div>
+							<div class="product_img">
+								<a href="" target="_blank">
+									<img src="https://cdn.luxstay.com/home/location/location_4_1559786177.png" />
+								</a>
+								</div>	
+							<div class="product_content">
+								<div class="product_title">
+									Đà Lạt
+								</div>
+								<div class="product_price">
+									<b>989</b> Chỗ ở
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="product_img">
+									<a href="" target="_blank">
+										<img src="https://cdn.luxstay.com/home/location/location_10_1559303118.png" />
+									</a>
+									</div>	
+								<div class="product_content">
+									<div class="product_title">
+										Vũng tàu
+									</div>
+									<div class="product_price">
+										<b>521</b> Chỗ ở
+									</div>
+								</div>
+						</div>
+						<div>
+							<div class="product_img">
+								<a href="" target="_blank">
+									<img src="https://cdn.luxstay.com/home/location/location_6_1559786202.png" />
+								</a>
+							</div>	
+							<div class="product_content">
+								<div class="product_title">
+									Hội An
+								</div>
+								<div class="product_price">
+									<b>319</b> Chỗ ở
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</section>
+		<section>
+				<div class="container-fluid container--md slide2" style="margin: 30px 0;">
+					<div class="top_title">
+						<div class="tittle">
+							<h1>Deal mới mỗi ngày</h1>
+							<h3>Khám phá ngay chỗ ở mới giảm đến 50%. Nhập mã OCTOBER để nhận thêm giảm giá lên tới 1 triệu đồng!
+							</h3>
+						</div>
+						<a href="" class="see_more">Xem thêm</a>
+					</div>
+							<div class="slider lazy wow fadeInUp" id="lazy" data-wow-delay="0.3s">
+								<div style="width: 100%; display: inline-block;">
+									<div class="product_img">
+										<a href="detail-product.html" target="_blank">
+											<img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+										</a>
+									</div>	
+									<div class="promo_content">
+										<div class="main_content">
+											<a href="detail-product.html">
+												<div class="promo_title">
+														URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+												</div>	
+											</a>
+											<div class="promo_description">
+													4 khách - 2 Phòng ngủ - 2 phòng tắm
+											</div>
+											<div class="promo_price">
+												<span class="promotion_price">
+														1.200.000đ/đêm
+												</span>
+												<span class="main_price"> 1.500.000đ</span>
+											</div>
+											<div class="promo_address">
+													Quận 1, Hồ Chí Minh
+											</div>
+											<div class="promo_review">
+												<div class="promo_star">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+												</div>
+												<span class="promo_review">
+													3
+												</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+								<div style="width: 100%; display: inline-block;">
+									<div class="product_img">
+										<a href="" target="_blank">
+											<img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+										</a>
+									</div>	
+									<div class="promo_content">
+										<div class="main_content">
+											<a href="">
+												<div class="promo_title">
+													TROPICAL HOUSE*CHARMING BLUE WINDOW 1BR APT*PREE POOL 3R5
+												</div>	
+											</a>
+											<div class="promo_description">
+												3 khách · 1 Phòng ngủ · 1 phòng tắm
+											</div>
+											<div class="promo_price">
+												<span class="promotion_price">
+														1.500.000đ/đêm
+												</span>
+												<span class="main_price"> 1.600.000đ</span>
+											</div>
+											<div class="promo_address">
+													Quận 1, Hồ Chí Minh
+											</div>
+											<div class="promo_review">
+												<div class="promo_star">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+												</div>
+												<span class="promo_review">
+													2
+												</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+								<div style="width: 100%; display: inline-block;">
+									<div class="product_img">
+										<a href="" target="_blank">
+											<img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+										</a>
+									</div>	
+									<div class="promo_content">
+										<div class="main_content">
+											<a href="">
+												<div class="promo_title">
+														URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+												</div>	
+											</a>
+											<div class="promo_description">
+													4 khách · 2 Phòng ngủ · 2 phòng tắm
+											</div>
+											<div class="promo_price">
+												<span class="promotion_price">
+														1.200.000đ/đêm
+												</span>
+												<span class="main_price"> 1.500.000đ</span>
+											</div>
+											<div class="promo_address">
+													Quận 1, Hồ Chí Minh
+											</div>
+											<div class="promo_review">
+												<div class="promo_star">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+												</div>
+												<span class="promo_review">
+													3
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style="width: 100%; display: inline-block;">
+									<div class="product_img">
+										<a href="" target="_blank">
+											<img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+										</a>
+									</div>	
+									<div class="promo_content">
+										<div class="main_content">
+											<a href="">
+												<div class="promo_title">
+														URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+												</div>	
+											</a>
+											<div class="promo_description">
+													4 khách · 2 Phòng ngủ · 2 phòng tắm
+											</div>
+											<div class="promo_price">
+												<span class="promotion_price">
+														1.200.000đ/đêm
+												</span>
+												<span class="main_price"> 1.500.000đ</span>
+											</div>
+											<div class="promo_address">
+													Quận 1, Hồ Chí Minh
+											</div>
+											<div class="promo_review">
+												<div class="promo_star">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+												</div>
+												<span class="promo_review">
+													3
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style="width: 100%; display: inline-block;">
+									<div class="product_img">
+										<a href="" target="_blank">
+											<img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+										</a>
+									</div>	
+									<div class="promo_content">
+										<div class="main_content">
+											<a href="">
+												<div class="promo_title">
+														URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+												</div>	
+											</a>
+											<div class="promo_description">
+													4 khách · 2 Phòng ngủ · 2 phòng tắm
+											</div>
+											<div class="promo_price">
+												<span class="promotion_price">
+														1.200.000đ/đêm
+												</span>
+												<span class="main_price"> 1.500.000đ</span>
+											</div>
+											<div class="promo_address">
+													Quận 1, Hồ Chí Minh
+											</div>
+											<div class="promo_review">
+												<div class="promo_star">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+												</div>
+												<span class="promo_review">
+													3
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style="width: 100%; display: inline-block;">
+									<div class="product_img">
+										<a href="" target="_blank">
+											<img src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+										</a>
+									</div>	
+									<div class="promo_content">
+										<div class="main_content">
+											<a href="">
+												<div class="promo_title">
+														URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+												</div>	
+											</a>
+											<div class="promo_description">
+													4 khách · 2 Phòng ngủ · 2 phòng tắm
+											</div>
+											<div class="promo_price">
+												<span class="promotion_price">
+														1.200.000đ/đêm
+												</span>
+												<span class="main_price"> 1.500.000đ</span>
+											</div>
+											<div class="promo_address">
+													Quận 1, Hồ Chí Minh
+											</div>
+											<div class="promo_review">
+												<div class="promo_star">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+												</div>
+												<span class="promo_review">
+													3
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>
+		</section>
+		<section>
+			<div class="container-fluid container--md slide2" style="margin: 30px 0;">
+				<div class="top_title">
+					<div class="tittle">
+						<h1>Deal mới mỗi ngày</h1>
+						<h3>Khám phá ngay chỗ ở mới giảm đến 50%. Nhập mã OCTOBER để nhận thêm giảm giá lên tới 1 triệu đồng!
+						</h3>
+					</div>
+					<a href="" class="see_more">Xem thêm</a>
+				</div>
+						<div class="slider lazy wow fadeInUp" data-wow-delay="0.3s">
+							<div style="width: 100%; display: inline-block;">
+								<div class="product_img">
+									<a href="" target="_blank">
+										<img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+									</a>
+								</div>	
+								<div class="promo_content">
+									<div class="main_content">
+										<a href="">
+											<div class="promo_title">
+													URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+											</div>	
+										</a>
+										<div class="promo_description">
+												4 khách - 2 Phòng ngủ - 2 phòng tắm
+										</div>
+										<div class="promo_price">
+											<span class="promotion_price">
+													1.200.000đ/đêm
+											</span>
+											<span class="main_price"> 1.500.000đ</span>
+										</div>
+										<div class="promo_address">
+												Quận 1, Hồ Chí Minh
+										</div>
+										<div class="promo_review">
+											<div class="promo_star">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+											</div>
+											<span class="promo_review">
+												3
+											</span>
+										</div>	
+									</div>
+								</div>
+							</div>
+							<div style="width: 100%; display: inline-block;">
+								<div class="product_img">
+									<a href="" target="_blank">
+										<img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+									</a>
+								</div>	
+								<div class="promo_content">
+									<div class="main_content">
+										<a href="">
+											<div class="promo_title">
+												TROPICAL HOUSE*CHARMING BLUE WINDOW 1BR APT*PREE POOL 3R5
+											</div>	
+										</a>
+										<div class="promo_description">
+											3 khách · 1 Phòng ngủ · 1 phòng tắm
+										</div>
+										<div class="promo_price">
+											<span class="promotion_price">
+													1.500.000đ/đêm
+											</span>
+											<span class="main_price"> 1.600.000đ</span>
+										</div>
+										<div class="promo_address">
+												Quận 1, Hồ Chí Minh
+										</div>
+										<div class="promo_review">
+											<div class="promo_star">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+											</div>
+											<span class="promo_review">
+												2
+											</span>
+										</div>	
+									</div>
+								</div>
+							</div>
+							<div style="width: 100%; display: inline-block;">
+								<div class="product_img">
+									<a href="" target="_blank">
+										<img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+									</a>
+								</div>	
+								<div class="promo_content">
+									<div class="main_content">
+										<a href="">
+											<div class="promo_title">
+													URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+											</div>	
+										</a>
+										<div class="promo_description">
+												4 khách · 2 Phòng ngủ · 2 phòng tắm
+										</div>
+										<div class="promo_price">
+											<span class="promotion_price">
+													1.200.000đ/đêm
+											</span>
+											<span class="main_price"> 1.500.000đ</span>
+										</div>
+										<div class="promo_address">
+												Quận 1, Hồ Chí Minh
+										</div>
+										<div class="promo_review">
+											<div class="promo_star">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+											</div>
+											<span class="promo_review">
+												3
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div style="width: 100%; display: inline-block;">
+								<div class="product_img">
+									<a href="" target="_blank">
+										<img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+									</a>
+								</div>	
+								<div class="promo_content">
+									<div class="main_content">
+										<a href="">
+											<div class="promo_title">
+													URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+											</div>	
+										</a>
+										<div class="promo_description">
+												4 khách · 2 Phòng ngủ · 2 phòng tắm
+										</div>
+										<div class="promo_price">
+											<span class="promotion_price">
+													1.200.000đ/đêm
+											</span>
+											<span class="main_price"> 1.500.000đ</span>
+										</div>
+										<div class="promo_address">
+												Quận 1, Hồ Chí Minh
+										</div>
+										<div class="promo_review">
+											<div class="promo_star">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+											</div>
+											<span class="promo_review">
+												3
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div style="width: 100%; display: inline-block;">
+								<div class="product_img">
+									<a href="" target="_blank">
+										<img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+									</a>
+								</div>	
+								<div class="promo_content">
+									<div class="main_content">
+										<a href="">
+											<div class="promo_title">
+													URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+											</div>	
+										</a>
+										<div class="promo_description">
+												4 khách · 2 Phòng ngủ · 2 phòng tắm
+										</div>
+										<div class="promo_price">
+											<span class="promotion_price">
+													1.200.000đ/đêm
+											</span>
+											<span class="main_price"> 1.500.000đ</span>
+										</div>
+										<div class="promo_address">
+												Quận 1, Hồ Chí Minh
+										</div>
+										<div class="promo_review">
+											<div class="promo_star">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+											</div>
+											<span class="promo_review">
+												3
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div style="width: 100%; display: inline-block;">
+								<div class="product_img">
+									<a href="" target="_blank">
+										<img src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+									</a>
+								</div>	
+								<div class="promo_content">
+									<div class="main_content">
+										<a href="">
+											<div class="promo_title">
+													URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+											</div>	
+										</a>
+										<div class="promo_description">
+												4 khách · 2 Phòng ngủ · 2 phòng tắm
+										</div>
+										<div class="promo_price">
+											<span class="promotion_price">
+													1.200.000đ/đêm
+											</span>
+											<span class="main_price"> 1.500.000đ</span>
+										</div>
+										<div class="promo_address">
+												Quận 1, Hồ Chí Minh
+										</div>
+										<div class="promo_review">
+											<div class="promo_star">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+											</div>
+											<span class="promo_review">
+												3
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+	</section>
+			<div class="contact">
+				<div class="contact-info">
+					<div class="card wow fadeInUp " data-wow-delay="0.3s">
+					<i class="card-icon far fa-envelope"></i>
+					<p>luxury@gmail.com.com</p>
+					</div>
+			
+					<div class="card wow fadeInUp " data-wow-delay="0.4s">
+					<i class="card-icon fas fa-phone"></i>
+					<p>+84358023396</p>
+					</div>
+			
+					<div class="card wow fadeInUp " data-wow-delay="0.5s">
+					<i class="card-icon fas fa-map-marker-alt"></i>
+					<p>Đà Nẵng, Việt Nam</p>
+					</div>
+				</div>
+			</div>
+			<footer>
+			  <div class="footer1">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center contact1">
+							<h3>DỊCH VỤ KHÁCH HÀNG</h3>
+							<ul>
+								<li><a href="">Tài khoản thanh toán</a></li>
+								<li><a href="">Hướng dẫn mua hàng</a></li>
+								<li><a href="">Giới thiệu về chúng tôi</a></li>
+								<li><a href="">Lưu ý khi đặt hàng online</a></li>
+							</ul>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center contact1">
+							<h3>ĐIỀU KHOẢN MUA BÁN</h3>
+							<ul>
+								<li><a href="">Điều khoản bảo mật</a></li>
+								<li><a href="">Hình thức giao hàng</a></li>
+								<li><a href="">Hình thức thanh toán</a></li>
+								<li><a href="">Hoãn hủy thay đổi sản phẩm</a></li>
+							</ul>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center contact2">
+							<h3>HỖ TRỢ MUA BÁN</h3>
+							<ul>
+								<li><a href="" class="fab fa-facebook"></a></li>			
+								<li><a href="" class="fa fa-google-plus-g"></a></li>
+								<li><a href="" class="fa fa-twitter"></a></li>
+								<li><a href="" class="fa fa-linkedin-in"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer2">
+				<div class="container text-center">
+					<p>Copyright © Your Website 2019 </p>
+					<p>Design By Nguyên Phạm</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div class='lentop'>
+			<div>
+				<img src='https://1.bp.blogspot.com/-k6sikOdzFXQ/VwqCKDosmEI/AAAAAAAAKxE/nLxLhkTIO6o3iE5ZWmtxo2bf4QHdzPQNQ/s1600/top.png'/>
+			</div>
+	</div>
+	<!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+	<script>
+		new WOW().init();
+		$(window).scroll(function() {
+    if ($(this).scrollTop() > 100) $(".lentop").fadeIn();
+    else $(".lentop").fadeOut();
+  });
+  $(".lentop").on("click", function() {
+    $("HTML, BODY").animate({ scrollTop: 0 }, 1000);
+  });
+  $(".contactmenu").on("click", function() {
+    var bottom = $(document).height() - $(window).height();
+    $("HTML, BODY").animate({ scrollTop: bottom }, 1000);
+  });
+	</script>
+		<!-- datetime-picker -->
+	<script src="datepicker/js/bootstrap.min.js"></script>
+	<script src="datepicker/js/bootstrap-datepicker.js"></script>
+	<script src="./lightgallery/dist/js/lightgallery-all.min.js"></script>
+	<script src="./lightgallery/lib/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript">
+		function gettext() {
+		  var s = document.getElementById("timeCheckIn").value;
+		  alert(s);
+		}
+	  </script>
+</body>
+</html>

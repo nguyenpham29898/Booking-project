@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery lightGallery demo</title>
+        <link href="../dist/css/lightgallery.css" rel="stylesheet" />
+        <!-- <link rel="stylesheet" href="style.css" /> -->
+        <!-- slide slick -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"
+        />
+
+        <script
+            type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"
+        ></script>
+
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+    </head>
+    <body class="home">
+        <div class="slider" id="autoplay">
+            <div id="lightgallery--outer">
+                <div class="" id="lightgallery">
+                    <a
+                        class="portfolio--anchor video--box"
+                        href="https://vimeo.com/167026828"
+                    >
+                        <img
+                            class="portfolio--thumb box"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/reel.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                        <span class="play">
+                            <i class="material-icons">play_circle_outline</i>
+                        </span>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor video--box"
+                        href="https://vimeo.com/167732930"
+                    >
+                        <img
+                            class="portfolio--thumb box"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/slub.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                        <span class="play">
+                            <span class="play-wrapped">&#9658;</span>
+                        </span>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor video--box"
+                        href="https://vimeo.com/166722426"
+                    >
+                        <img
+                            class="portfolio--thumb box"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/zamek.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                        <span class="play">
+                            <span class="play-wrapped">&#9658;</span>
+                        </span>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor video--box"
+                        href="https://vimeo.com/163814398"
+                    >
+                        <img
+                            class="portfolio--thumb box"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/stadion.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                        <span class="play">
+                            <span class="play-wrapped">&#9658;</span>
+                        </span>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor no-video--box"
+                        href="http://www.skyred.pl/wp-content/uploads/2016/05/Oczyszczalnia-ścieków-Łomianki.jpg"
+                    >
+                        <img
+                            class="portfolio--thumb box"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/oczyszczalnia.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor no-video--box"
+                        href="http://www.skyred.pl/wp-content/uploads/2016/04/samochod.jpg"
+                    >
+                        <img
+                            class="portfolio--thumb box"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/samochod.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                    </a>
+
+                    <!-- DO WYMIANY | START -->
+
+                    <a
+                        class="portfolio--anchor no-video--box"
+                        href="http://www.skyred.pl/wp-content/uploads/2016/04/11231-1.jpg"
+                    >
+                        <img
+                            class="portfolio--thumb"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/rzeka.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor no-video--box"
+                        href="http://www.skyred.pl/wp-content/uploads/2016/03/włochy3.jpg"
+                    >
+                        <img
+                            class="portfolio--thumb"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/budynek.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor no-video--box"
+                        href="http://www.skyred.pl/wp-content/uploads/2016/05/bociek2.jpg"
+                    >
+                        <img
+                            class="portfolio--thumb"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/bociek.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor no-video--box"
+                        href="http://www.skyred.pl/wp-content/uploads/2016/03/krajobraz.jpg"
+                    >
+                        <img
+                            class="portfolio--thumb"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/krajobraz.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor no-video--box"
+                        href="http://www.skyred.pl/wp-content/uploads/2016/03/DJI_0564.jpg"
+                    >
+                        <img
+                            class="portfolio--thumb"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/budynek2.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor no-video--box"
+                        href="http://www.skyred.pl/wp-content/uploads/2016/04/Bez-nazwy-3.jpg"
+                    >
+                        <img
+                            class="portfolio--thumb"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/skaryszewski-1.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor no-video--box"
+                        href="http://www.skyred.pl/wp-content/uploads/2016/04/11334132_370455323152771_6003148034730567644_o.jpg"
+                    >
+                        <img
+                            class="portfolio--thumb"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/wysoo.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor no-video--box"
+                        href="http://www.skyred.pl/wp-content/uploads/2016/05/Bez-nazwy-7.jpg"
+                    >
+                        <img
+                            class="portfolio--thumb"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/firma.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor no-video--box"
+                        href="http://www.skyred.pl/wp-content/uploads/2016/03/4-kopia.jpg"
+                    >
+                        <img
+                            class="portfolio--thumb"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/dom.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                    </a>
+
+                    <a
+                        class="portfolio--anchor no-video--box"
+                        href="http://www.skyred.pl/wp-content/uploads/2016/04/12605341_438083083056661_92435107471561945_o.jpg"
+                    >
+                        <img
+                            class="portfolio--thumb"
+                            src="http://www.skyred.pl/wp-content/uploads/2016/06/zamek2.jpg"
+                        />
+                        <div class="portfolio--thumb_dimmer"></div>
+                    </a>
+
+                    <!-- DO WYMIANY | END -->
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#lightgallery").lightGallery();
+                $("#autoplay").slick({
+                    dots: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    autoplaySpeed: 2000
+                });
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+        <script src="../dist/js/lightgallery-all.min.js"></script>
+        <script src="../lib/jquery.mousewheel.min.js"></script>
+    </body>
+</html>

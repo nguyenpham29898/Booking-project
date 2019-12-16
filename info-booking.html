@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- bootstrap -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font-awesome -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <script src="https://kit.fontawesome.com/20b02079e9.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=vietnamese"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Darker+Grotesque:300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+      rel="stylesheet"
+    />
+
+    <!-- datetime-picker -->
+    <link href="datepicker/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="datepicker/css/datepicker.css" rel="stylesheet" />
+
+    <!-- for on scroll animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css"
+    />
+    <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+
+    <!-- slide slick -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"
+    ></script>
+
+    <!---------------------- LightGallery Zoom -->
+    <link rel="stylesheet" href="./lightgallery/dist/css/lightgallery.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
+    <script src="js/datetime-picker.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="first_detail">
+      <nav class="nav-menu detail">
+        <span id="brand">
+          <a href="index.html">Luxury</a>
+        </span>
+        <div class="search-form">
+          <input type="text" placeholder="Search" />
+        </div>
+        <ul id="menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#about">Host</a></li>
+          <li><a href="#services">Đăng nhập</a></li>
+          <li><a href="#team">Đăng ký</a></li>
+          <li><a href="#contact" class="contactmenu">Liên hệ</a></li>
+        </ul>
+
+        <div id="toggle">
+          <div class="span" style="cursor: pointer;">menu</div>
+        </div>
+      </nav>
+      <div id="resize">
+        <div class="close-btn">close</div>
+
+        <ul id="menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#about">Host</a></li>
+          <li><a href="#services">Đăng nhập</a></li>
+          <li><a href="#team">Đăng ký</a></li>
+          <li><a href="#contact" class="contactmenu">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main">
+      <div class="container-fluid" style="max-width: calc(1296px + 5.6rem);">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <div>
+              <div class="title_info_booking">
+                <h3>Thông tin đặt chỗ</h3>
+              </div>
+              <div class="content_info_booking">
+                <div class="input-group">
+                  <label for="">
+                    <span class="text-ranger">*</span>Số khách
+                  </label>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <div class="customer"><span>1 Khách</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="">1 đêm tại SunSea Villa - Luxury room</label>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <div class="check-in">
+                        <hr />
+                        <p>Nhận phòng</p>
+                        <p class="date">16/12/2019</p>
+                        <p style="font-size: 14px;">Thứ hai</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-6">
+                      <div class="check-out">
+                        <hr />
+                        <p>Trả phòng</p>
+                        <p class="date">17/12/2019</p>
+                        <p style="font-size: 14px;">Thứ ba</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="">Nội quy chỗ ở</label>
+                  <b style="font-size: 16px;"
+                    >Khách hàng chịu mọi trách nhiệm thiệt hại về tài sản đã gây
+                    ra tại chỗ ở trong thời gian lưu trú.</b style="font-size: 16px;"
+                  >
+                  <span style="display: block;">
+                    Vui lòng giữ vệ sinh chung - Không hút thuốc - Dọn dẹp ngay
+                    khi sử dụng bếp và vật dụng bếp. - Không sử dụng các chất
+                    kích thích, văn hoá phẩm đồi trụy. - Không mang theo vật
+                    nuôi</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="title_user">
+              <h3>Thông tin của bạn</h3>
+            </div>
+            <div class="content_user">
+              <div class="input-group">
+                <label for="">
+                  <span class="text-ranger">*</span>Tên khách hàng
+                </label>
+                <span style="  display: block;">Họ tên trên CMND/ Thẻ căn cước</span>
+                <input type="text" class="input"/>
+              </div>
+              <div class="row input-group">
+                <div class="col-xs-12 col-sm-6" style="padding-left: 0;">
+                  <div class="input-group">
+                    <label for="">
+                      <span class="text-ranger">*</span>Số điện thoại
+                    </label>
+                    <span>Mã điện thoại quốc gia</span>
+                    <input class="input" type="number" placeholder="Số điện thoại" />
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6" style="padding-left: 0; padding-right: 0;">
+                  <div class="input-group">
+                    <label for="">
+                      <span class="text-danger">*</span>Email
+                    </label>
+                    <span>VD: email@example.com</span>
+                    <input class="input" type="email" placeholder="Email" />
+                  </div>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="">
+                  Yêu cầu đặc biệt
+                </label>
+                <textarea name="" id="" cols="71" rows="10"></textarea>
+              </div>
+              <button class="pay">Thanh toán</button>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-1"></div>
+          <div class="col-md-5 col-lg-4 col-xs-12">
+            <div>
+              <div class="title_detail_booking">
+                <h3>
+                  Chi tiết đặt phòng
+                </h3>
+              </div>
+              <div class="content_detail_booking">
+                <div class="detail_booking_header">
+                  <div class="info_room">
+                    <div class="name_place">
+                      <h4>SunSea Villa - Luxury room</h4>
+                    </div>
+                    <div class="place">
+                      <img
+                        width="20px"
+                        height="20px"
+                        src="./images/icon-svg/place.png"
+                        alt=""
+                      />
+                      <span style="font-size: 16px;">Vũng Tàu, Bà Rịa Vũng Tàu, Vietnam</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="detail_booking_body">
+                  <div class="detail_days">
+                    <div class="content">
+                      <img
+                        width="24px"
+                        height="24px"
+                        src="./images/icon-svg/towel.png"
+                        alt=""
+                      />
+                      <span><b>1 đêm</b> · 16/12/2019 - 17/12/2019</span>
+                    </div>
+                    <div class="content" style="padding-top: 1rem;">
+                      <img
+                        width="24px"
+                        height="24px"
+                        src="./images/icon-svg/user.png"
+                        alt=""
+                      />
+                      <span><b>1 người lớn</b></span>
+                    </div>
+                  </div>
+                  <div class="detail_price">
+                    <div class="content_price">
+                      <div class="title_content">
+                        <span>Giá thuê 1 đêm</span>
+                        <span>930.000đ</span>
+                      </div>
+                      <div class="title_content">
+                        <span>Phí dọn dẹp</span>
+                        <span>50.000đ</span>
+                      </div>
+                      <hr />
+                      <div class="title_content total">
+                        <span>Tổng tiền</span>
+                        <span>980.000đ</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="detail_booking_footer">
+                  <div class="input-group">
+                    <label for="">Chính sách hủy phòng</label>
+                    <span
+                      ><b>Linh hoạt</b> : Miễn phí hủy phòng trong vòng 48h sau
+                      khi đặt phòng thành công và trước 1 ngày so với thời gian
+                      check-in. Sau đó, hủy phòng trước 1 ngày so với thời gian
+                      check-in, được hoàn lại 100% tổng số tiền đã trả (trừ phí
+                      dịch vụ).
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer style="">
+			<div class="footer2">
+				<div class="container text-center">
+					<p>Copyright © Your Website 2019 </p>
+					<p>Design By Nguyên Phạm</p>
+				</div>
+			</div>
+    </footer>
+    <div class="lentop">
+      <div>
+        <img
+          src="https://1.bp.blogspot.com/-k6sikOdzFXQ/VwqCKDosmEI/AAAAAAAAKxE/nLxLhkTIO6o3iE5ZWmtxo2bf4QHdzPQNQ/s1600/top.png"
+        />
+      </div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+    <script>
+      new WOW().init();
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) $(".lentop").fadeIn();
+        else $(".lentop").fadeOut();
+      });
+      $(".lentop").on("click", function() {
+        $("HTML, BODY").animate({ scrollTop: 0 }, 1000);
+      });
+      $(".contactmenu").on("click", function() {
+        var bottom = $(document).height() - $(window).height();
+        $("HTML, BODY").animate({ scrollTop: bottom }, 1000);
+      });
+    </script>
+    <!-- datetime-picker -->
+    <script src="datepicker/js/bootstrap.min.js"></script>
+    <script src="datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="./lightgallery/dist/js/lightgallery-all.min.js"></script>
+    <script src="./lightgallery/lib/jquery.mousewheel.min.js"></script>
+  </body>
+</html>

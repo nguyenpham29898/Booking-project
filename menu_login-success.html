@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- bootstrap -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font-awesome -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <script src="https://kit.fontawesome.com/20b02079e9.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=vietnamese"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Darker+Grotesque:300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+      rel="stylesheet"
+    />
+
+    <!-- datetime-picker -->
+    <link href="datepicker/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="datepicker/css/datepicker.css" rel="stylesheet" />
+
+    <!-- for on scroll animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css"
+    />
+    <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+
+    <!-- slide slick -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"
+    ></script>
+
+    <!---------------------- LightGallery Zoom -->
+    <link rel="stylesheet" href="./lightgallery/dist/css/lightgallery.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
+    <script src="js/datetime-picker.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!--------------- navbar starts here --------------->
+    <div class="first_detail">
+      <nav class="nav-menu detail">
+        <span id="brand">
+          <a href="index.html">Luxury</a>
+        </span>
+        <div class="search-form">
+          <input type="text" placeholder="Search" />
+        </div>
+        <ul id="menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#about">Host</a></li>
+          <li class="user dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img
+                width="25px"
+                height="25px"
+                style="margin-right: 5px"
+                src="../images/icon-svg/user.png"
+                class="rounded-circle"
+              />
+              Phạm Lê Đức Nguyên
+            </a>
+            <ul class="dropdown-menu" style="width: 85%; margin-top:10px;">
+              <li>
+                <a href="">Hồ sơ</a>
+              </li>
+              <li>
+                <a href="">Đăng xuất</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#contact" class="contactmenu">Liên hệ</a></li>
+        </ul>
+
+        <div id="toggle">
+          <div class="span" style="cursor: pointer;">menu</div>
+        </div>
+      </nav>
+      <div id="resize">
+        <div class="close-btn">close</div>
+
+        <ul id="menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#about">Host</a></li>
+          <li><a href="#services">Đăng nhập</a></li>
+          <li><a href="#team">Đăng ký</a></li>
+          <li><a href="#contact" class="contactmenu">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="resize">
+      <div class="close-btn">close</div>
+
+      <ul id="menu">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="/host-detail/dashboard.html">Host</a></li>
+        <li><a href="login.html">Đăng nhập</a></li>
+        <li><a href="sign-up.html">Đăng ký</a></li>
+        <li><a href="#contact" class="contactmenu">Liên hệ</a></li>
+      </ul>
+    </div>
+    <div class="lentop">
+      <div>
+        <img
+          src="https://1.bp.blogspot.com/-k6sikOdzFXQ/VwqCKDosmEI/AAAAAAAAKxE/nLxLhkTIO6o3iE5ZWmtxo2bf4QHdzPQNQ/s1600/top.png"
+        />
+      </div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+    <script>
+      new WOW().init();
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) $(".lentop").fadeIn();
+        else $(".lentop").fadeOut();
+      });
+      $(".lentop").on("click", function() {
+        $("HTML, BODY").animate({ scrollTop: 0 }, 1000);
+      });
+      $(".contactmenu").on("click", function() {
+        var bottom = $(document).height() - $(window).height();
+        $("HTML, BODY").animate({ scrollTop: bottom }, 1000);
+      });
+    </script>
+    <!-- datetime-picker -->
+    <script src="datepicker/js/bootstrap.min.js"></script>
+    <script src="datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="./lightgallery/dist/js/lightgallery-all.min.js"></script>
+    <script src="./lightgallery/lib/jquery.mousewheel.min.js"></script>
+  </body>
+</html>

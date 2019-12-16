@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font-awesome -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <script src="https://kit.fontawesome.com/20b02079e9.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=vietnamese"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Darker+Grotesque:300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+      rel="stylesheet"
+    />
+
+    <!-- datetime-picker -->
+    <link href="datepicker/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="datepicker/css/datepicker.css" rel="stylesheet" />
+
+    <!-- for on scroll animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css"
+    />
+    <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+
+    <!-- slide slick -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"
+    ></script>
+    <!---------------------- LightGallery Zoom -->
+    <link rel="stylesheet" href="./lightgallery/dist/css/lightgallery.css" />
+    <!-- ----------------------main------------------------- -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/datetime-picker.js"></script>
+    <script src="js/main.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="first_detail">
+      <nav class="nav-menu detail">
+        <span id="brand">
+          <a href="index.html">Luxury</a>
+        </span>
+        <div class="search-form">
+            <input type="text" placeholder="Search">
+        </div>
+        <ul id="menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#about">Host</a></li>
+          <li><a href="#services">Đăng nhập</a></li>
+          <li><a href="#team">Đăng ký</a></li>
+          <li><a href="#contact" class="contactmenu">Liên hệ</a></li>
+        </ul>
+
+        <div id="toggle">
+          <div class="span" style="cursor: pointer;">menu</div>
+        </div>
+      </nav>
+      <div id="resize">
+        <div class="close-btn">close</div>
+
+        <ul id="menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#about">Host</a></li>
+          <li><a href="#services">Đăng nhập</a></li>
+          <li><a href="#team">Đăng ký</a></li>
+          <li><a href="#contact" class="contactmenu">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="second_detail">
+      <section>
+        <div class="slider_header">
+          <div id="lightgallery" class="slider detail_slide">
+            <div
+              class="img_room"
+              data-src="https://cdn.luxstay.com/rooms/25232/large/room_25232_8_1558780153.jpg"
+            >
+              <a href="">
+                <img
+                  class="img-responsive"
+                  src="https://cdn.luxstay.com/rooms/25232/large/room_25232_8_1558780153.jpg"
+                  data-src="https://cdn.luxstay.com/rooms/25232/large/room_25232_8_1558780153.jpg"
+                />
+              </a>
+            </div>
+            <div
+              class="img_room"
+              data-src="https://cdn.luxstay.com/rooms/25232/large/room_25232_9_1558780155.jpg"
+            >
+              <a href="">
+                <img
+                  class="img-responsive"
+                  src="https://cdn.luxstay.com/rooms/25232/large/room_25232_9_1558780155.jpg"
+                  data-src="https://cdn.luxstay.com/rooms/25232/large/room_25232_9_1558780155.jpg"
+                />
+              </a>
+            </div>
+            <div
+              class="img_room"
+              data-src="https://cdn.luxstay.com/rooms/25232/large/room_25232_6_1558780093.jpg"
+            >
+              <a href="">
+                <img
+                  class="img-responsive"
+                  src="https://cdn.luxstay.com/rooms/25232/large/room_25232_6_1558780093.jpg"
+                />
+              </a>
+            </div>
+            <div
+              class="img_room"
+              data-src="https://cdn.luxstay.com/rooms/25232/large/room_25232_16_1558780165.jpg"
+            >
+              <a href="">
+                <img
+                  class="img-responsive"
+                  src="https://cdn.luxstay.com/rooms/25232/large/room_25232_16_1558780165.jpg"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="infor-detail">
+      <div class="container">
+        <div class="section">
+          <div class="row">
+            <div class="col-md-8 col-sm-8 col-xs-12">
+              <div class="infor-detail-left">
+                <div id="title-fix"></div>
+                <div class="breadcrumbs">
+                  <span class="detail-breadcrumbs">
+                    <a href="index.html">Luxury</a>
+                    <i class="fas fa-arrow-right"></i>
+                  </span>
+                  <span class="detail-breadcrumbs">
+                    <a href="#">Hồ Chí Minh</a>
+                    <i class="fas fa-arrow-right"></i>
+                  </span>
+                  <span class="detail-breadcrumbs">
+                    <a href="#">Quận 1</a>
+                    <i class="fas fa-arrow-right"></i>
+                  </span>
+                  <span class="detail-breadcrumbs">
+                    <a href="#">Bến Nghé</a>
+                  </span>
+                </div>
+                <section>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="title-rooms">
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-10">
+                            <h1>
+                              Amanda Phan 2 // Căn hộ tiện nghi có ban công giữa
+                              lòng thành phố
+                            </h1>
+                          </div>
+                          <div class="room-id col-lg-2 text-right">
+                            <div class="room-id-content">
+                              <p>
+                                Mã chỗ ở<br />
+                                123
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end title-room -->
+                      <div class="detail-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Quận 1, Hồ Chí Minh, Vietnam</span>
+                        <a href="#map-location">Xem bản đồ</a>
+                      </div>
+                      <div class="description-room">
+                        <i class="fas fa-hotel"></i>
+                        <span>Căn hộ </span>
+                        <span>- 30m <sup>2</sup></span>
+                      </div>
+                      <div class="detail-type">
+                        <p>
+                          <span>Nguyên căn - </span>
+                          <span>1 phòng tắm - </span>
+                          <span>1 giường - </span>
+                          <span>1 phòng ngủ - </span>
+                          <span>2 khách (tối đa 3 khách)</span>
+                        </p>
+                      </div>
+                      <div class="detail-intro" style="position: relative;">
+                        <div class="room-des">
+                          <p>
+                            Kết hợp với kiểu dáng hiện đại, chất lượng phòng từ
+                            đệm đến ga trải giường, hay thiết bị trong phòng....
+                            tất cả đưa lại cho du khách cảm giác nhẹ nhàng thư
+                            thái, dễ dàng quên hết mọi nhọc nhằn của bề bộn cuộc
+                            sống để thư giãn và giải tỏa nhất có thể.
+                          </p>
+                          <p>
+                            Bên cạnh đó là những đồ nội thất được bài trí hài
+                            hòa, không làm giảm đi phần diện tích vốn đã khá hạn
+                            hẹp của căn phòng. Tông màu xám trắng và xanh của đồ
+                            nội thất không chỉ đưa lại sự sang trọng cho phòng
+                            mà còn đưa lại sự ấm cúng, đồng thời làm nổi bật
+                            thêm sắc trắng.
+                          </p>
+                          <p>
+                            Tọa lạc tại giữa trung tâm thành phố, khu phố rất
+                            thân thiện. Họ luôn sẵn sàng giúp bạn khám phá
+                          </p>
+                          <p>- 1 phút đến cửa hàng tiện lợi Shop &amp; Go</p>
+                          <p>- 1 phút đến cửa hàng cà phê Starbuck</p>
+                          <p>- 5 phút đến chợ Bến Thành</p>
+                          <p>- 5 phút đến phố Bùi Viện</p>
+                          <p>
+                            - 5 phút đến trung tâm mua sắm trung tâm Vincom.
+                          </p>
+                          <p><br /></p>
+                          <p>
+                            Có nhiều món ăn ngon xung quanh như: Burger King,
+                            San Fu Lou Dimsum, Tej Sushi, KFC, .. và bạn dễ dàng
+                            đến đó bằng cách đi bộ chỉ mất vài phút.
+                          </p>
+                        </div>
+                        <a href="" class="reading-more">Đọc thêm </a>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <div class="amenities">
+                  <div class="des-amenities">
+                    <div class="title">
+                      <h3>Tiện nghi chỗ ở</h3>
+                      <span
+                        >Giới thiệu về các tiện nghi và dịch vụ tại nơi lưu
+                        trú</span
+                      >
+                    </div>
+                    <div class="content">
+                      <div class="detail-content">
+                        <div class="utilities">
+                          <h4>Tiện ích gia đình</h4>
+                          <ul class="list">
+                            <li>
+                              <img
+                                width="24px"
+                                height="24px"
+                                src="./images/icon-svg/bed.png"
+                                alt=""
+                              />
+                              <span>Phù hợp với trẻ nhỏ</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="utilities">
+                          <h4>Tiện ích giải trí</h4>
+                          <ul class="list">
+                            <li>
+                              <img
+                                width="24px"
+                                height="24px"
+                                src="./images/icon-svg/bed.png"
+                                alt=""
+                              />
+                              <span>Phù hợp với trẻ nhỏ</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="utilities">
+                          <h4>Tiện ích bếp</h4>
+                          <ul class="list">
+                            <li>
+                              <img
+                                width="24px"
+                                height="24px"
+                                src="./images/icon-svg/microwave-oven.png"
+                                alt=""
+                              />
+                              <span>Lò vi sóng</span>
+                            </li>
+                            <li>
+                              <img
+                                src="./images/icon-svg/stove.png"
+                                alt=""
+                                width="24px"
+                                height="24px"
+                              /><span>Bếp điện</span>
+                            </li>
+                            <li>
+                              <img
+                                src="./images/icon-svg/fridge.png"
+                                alt=""
+                                width="24px"
+                                height="24px"
+                              />
+                              <span>Tủ lạnh</span>
+                            </li>
+                          </ul>
+                          <a href="" class="read-more">Xem thêm </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="detail-amenities">
+                    <div id="content-detail-amenities">
+                      <div id="content-detail-amenities2">
+                        <div class="modals-dialog">
+                          <header class="modals-header">
+                            <div id="back">
+                              <div class="icon-back">
+                                <img
+                                  width="35px"
+                                  height="35px"
+                                  src="./images/icon-svg/close.png"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                          </header>
+                          <div id="modal-content-scrollable">
+                            <div class="container">
+                              <div class="row">
+                                <div
+                                  class="col-md-7 col-sm-8 offset-sm-2 offset-md-3 col-xs-12"
+                                >
+                                  <div>
+                                    <h2>Tiện ích gia đình</h2>
+                                    <ul class="list">
+                                      <li>
+                                        <div class="title-modal">
+                                          Phù hợp với trẻ nhỏ
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/bed.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <h2>Tiện ích bếp</h2>
+                                    <ul class="list">
+                                      <li>
+                                        <div class="title-modal">
+                                          Bếp điện
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/stove.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          Lò vi sóng
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/microwave-oven.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          Tủ lạnh
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/fridge.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <h2>Tiện ích giải trí</h2>
+                                    <ul class="list">
+                                      <li>
+                                        <div class="title-modal">
+                                          Cảnh quan đẹp
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/mountain.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <h2>Tiện ích phòng</h2>
+                                    <ul class="list">
+                                      <li>
+                                        <div class="title-modal">
+                                          Ban công
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/antique-balcony.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <h2>Tiện ích</h2>
+                                    <ul class="list">
+                                      <li>
+                                        <div class="title-modal">
+                                          Wifi
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/wifi.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          TV
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/television.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          Điều hòa
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/air-conditioner.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          Máy giặt
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/washing-machine.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          Dầu gội, dầu xả
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/soap.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          Giấy vệ sinh
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/toilet-paper.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          Bàn là
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/iron.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          Giấy ăn
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/tissue-box.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          Nước khoáng
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/water.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          Khăn tắm
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/towel.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          Kem đánh răng
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/toothbrush.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          Thang máy
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/elevator.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="title-modal">
+                                          Máy sấy
+                                        </div>
+                                        <div class="img-icon">
+                                          <img
+                                            width="50px"
+                                            height="50px"
+                                            src="./images/icon-svg/hair-dryer.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rooms-price">
+                  <div class="des-rooms-price">
+                    <div class="title">
+                      <h3>Giá phòng</h3>
+                      <span
+                        >Giá có thể tăng vào cuối tuần hoặc ngày lễ</span
+                      >
+                    </div>
+                </div>
+                <div class="rooms-price-detail">
+                  <div class="content">
+                    <span class="days">Thứ hai - Thứ năm</span>
+                    <span class="detail">1.200.000</span>
+                  </div>
+                  <div class="content">
+                    <span class="days">Thứ sáu - Chủ nhật</span>
+                    <span class="detail">1.400.000</span>
+                  </div>
+                  <div class="content">
+                    <span class="days">Phí khách tăng thêm</span>
+                    <span class="detail">150.000 (sau 2 khách)</span>
+                  </div>
+                  <div class="content">
+                    <span class="days">Thuê theo tháng</span>
+                    <span class="detail">-9.09 %</span>
+                  </div>
+                  <div class="content">
+                    <span class="days">Số đêm tối thiểu</span>
+                    <span class="detail">1 đêm</span>
+                  </div>
+                </div>
+              </div>
+              <div class="policy-rooms">
+                  <div class="title">
+                    <h3>Nội quy và chính sách về chỗ ở</h3>
+                    <h4>Chính sách hủy phòng</h4>
+                    <span
+                      ><b>Trung bình:</b> Miễn phí hủy phòng trong vòng 48h sau khi đặt phòng thành công và trước 5 ngày so với thời gian check-in. Sau đó, hủy phòng trước 5 ngày so với thời gian check-in, được hoàn lại 100% tổng số tiền đã trả (trừ phí dịch vụ)
+                      <a href="" class="read-more-policy">Xem thêm</a>
+                    </span>
+                  </div>
+                  <div id="cancel-rule">
+                    <div class="rooms-cancel">
+                      <div class="rooms-cancel-title">
+                        <div class="rooms-cancel-title-content">
+                          <p class="rule-title">Đặt phòng thành công</p>
+                        </div>
+                        <div class="rooms-cancel-title-content">
+                          <p class="rule-title">Sau 48h</p>
+                        </div>
+                        <div class="rooms-cancel-title-content">
+                          <p class="rule-title">5 ngày trước check-in</p>
+                        </div>
+                        <div class="rooms-cancel-title-content" style="justify-content: flex-end;">
+                          <p class="rule-title">Check-in</p>
+                        </div>
+                      </div>
+                      <div class="rooms-cancel-content">
+                        <div class="detail">
+                          <div class="rule">
+                            <div class="icon-rule-process">
+                              <div class="check-mark-green"></div>
+                              <div class="rule-line top"></div>
+                              <div class="rule-line bot"></div>
+                            </div>
+                            <div class="content-rule-process">
+                              <p>
+                                Hoàn tiền 100%
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="detail">
+                          <div class="rule">
+                            <div class="icon-rule-yellow">
+                              <div class="rule-line top"></div>
+                              <div class="rule-line bot"></div>
+                            </div>
+                            <div class="content-rule-process">
+                              <p>
+                                Hoàn tiền 100% (trừ phí dịch vụ)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="detail" style="flex-grow: 1;">
+                          <div class="rule">
+                            <div class="icon-rule-yellow orange">
+                              <div class="rule-line top"></div>
+                              <div class="rule-line bot"></div>
+                            </div>
+                            <div class="content-rule-process orange">
+                              <p>
+                                Hoàn 50% (trừ phí đêm đầu tiên, phí dịch vụ và các phí kèm theo)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="detail">
+                          <div class="rule">
+                            <div class="icon-rule-process last">
+                              <div class="check-mark-green"></div>
+                              <div class="rule-line top"></div>
+                              <div class="rule-line bot"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="note-rooms">
+                <div class="des-note-rooms">
+                  <div class="title">
+                    <h3>Lưu ý đặc biệt</h3>
+                    <p>- Vui lòng không hút thuốc lá và sử dụng các chất cấm</p>
+                    <p>- Giữ yên lặng sau 22:00</p>
+                    <p>- Không mang theo thú cưng</p>
+                    <p>- Không tổ chức tiệc</p>
+                  </div>
+              </div>
+              </div>
+              <div class="check-in_time">
+                <div class="title">
+                  <h3>Thời gian nhận phòng</h3>
+                </div>
+                <div class="rooms-price-detail">
+                  <div class="content">
+                    <span class="days">Nhận phòng</span>
+                    <span class="detail">02:00 pm</span>
+                  </div>
+                  <div class="content">
+                    <span class="days">Trả phòng</span>
+                    <span class="detail">12:00 pm</span>
+                  </div>
+                  </div>  
+              </div>
+              <div class="utility-around">
+                <div class="title">
+                  <h3>Tiện ích xung quanh</h3>
+                  <span>Trải nghiệm các tiện ích nổi bật xung quanh căn hộ</span>
+                </div>
+                <div class="content">
+                  <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 mb-3 scroll-nav">
+                            <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="famous-place-tab" data-toggle="tab" href="#famous-place" role="tab" aria-controls="home" aria-selected="true">
+                          <img
+                          width="24px"
+                          height="24px"
+                          src="./images/icon-svg/cafe.png"
+                          alt="" style="margin-right: 10px;"
+                        />Địa điểm nổi tiếng</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="food-tab" data-toggle="tab" href="#food" role="tab" aria-controls="food" aria-selected="false">
+                            <img
+                            width="24px"
+                            height="24px"
+                            src="./images/icon-svg/salad.png"
+                            alt="" style="margin-right: 10px;"
+                          />Ẩm thực</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="shopping-tab" data-toggle="tab" href="#shopping" role="tab" aria-controls="shopping" aria-selected="false">
+                            <img
+                            width="24px"
+                            height="24px"
+                            src="./images/icon-svg/shopping-cart.png"
+                            alt="" style="margin-right: 10px;"
+                          />
+                          Mua sắm</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="entertaiment-tab" data-toggle="tab" href="#entertaiment" role="tab" aria-controls="entertaiment" aria-selected="false">
+                            <img
+                            width="24px"
+                            height="24px"
+                            src="./images/icon-svg/confetti.png"
+                            alt="" style="margin-right: 10px;"
+                          />Giải trí</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="medical-tab" data-toggle="tab" href="#medical" role="tab" aria-controls="medical" aria-selected="false">
+                            <img
+                            width="24px"
+                            height="24px"
+                            src="./images/icon-svg/medicine.png"
+                            alt="" style="margin-right: 10px;"
+                          />Y tế</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="organ-tab" data-toggle="tab" href="#organ" role="tab" aria-controls="organ" aria-selected="false">
+                            <img
+                            width="24px"
+                            height="24px"
+                            src="./images/icon-svg/building.png"
+                            alt="" style="margin-right: 10px;"
+                          />Cơ quan ban hành</a>
+                      </li>
+                    </ul>
+                        </div>
+                        <!-- /.col-md-4 -->
+                            <div class="col-md-8 content-utility">
+                          <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="famous-place" role="tabpanel" aria-labelledby="famous-place-tab">
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="counter">
+                                <span class="counter_number">1</span>
+                                <span class="counter_text">Chợ Đồng Xuân</span>
+                              </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="counter">
+                                <span class="counter_number">2</span>
+                                <span class="counter_text">Tháp nước “Bốt” Hàng Đậu</span>
+                              </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="counter">
+                                <span class="counter_number">3</span>
+                                <span class="counter_text">
+                                    Chùa quán Huyền Thiên</span>
+                              </div>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="tab-pane fade" id="food" role="tabpanel" aria-labelledby="food-tab">
+                          <div class="row">
+                              <div class="col-sm-6 col-xs-12">
+                                  <div class="counter">
+                                      <span class="counter_number">1</span>
+                                      <span class="counter_text">
+                                          48 Bistro - Beefsteak & Món Âu - Lê Thị Riêng</span>
+                                    </div>
+                              </div>
+                              <div class="col-sm-6 col-xs-12">
+                                  <div class="counter">
+                                      <span class="counter_number">2</span>
+                                      <span class="counter_text">Sushi Tei - Lý Tự Trọng</span>
+                                    </div>
+                              </div>
+                              </div>
+                    </div>
+                    <div class="tab-pane fade" id="shopping" role="tabpanel" aria-labelledby="shopping-tab">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="counter">
+                                    <span class="counter_number">1</span>
+                                    <span class="counter_text">
+                                        Circle K Store</span>
+                                  </div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="tab-pane fade" id="entertaiment" role="tabpanel" aria-labelledby="entertaiment-tab">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="counter">
+                                    <span class="counter_number">1</span>
+                                    <span class="counter_text">
+                                        Softwater Club - Beer & Cafe</span>
+                                  </div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="tab-pane fade" id="medical" role="tabpanel" aria-labelledby="medical-tab">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="counter">
+                                    <span class="counter_number">1</span>
+                                    <span class="counter_text">BỆNH VIỆN MẮT SÀI GÒN</span>
+                                  </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="counter">
+                                    <span class="counter_number">2</span>
+                                    <span class="counter_text">
+                                        NHA KHOA NGUYỄN VĂN HẬU</span>
+                                  </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="counter">
+                                    <span class="counter_number">3</span>
+                                    <span class="counter_text">
+                                        Bệnh Viện Y Học Cổ Truyền Nam Á - Hòe Nhai</span>
+                                  </div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="tab-pane fade" id="organ" role="tabpanel" aria-labelledby="organ-tab">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="counter">
+                                    <span class="counter_number">1</span>
+                                    <span class="counter_text">
+                                        Liên Đoàn Lao Động</span>
+                                  </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="counter">
+                                    <span class="counter_number">2</span>
+                                    <span class="counter_text">
+                                        Uỷ ban nhân dân Phường cô Giang</span>
+                                  </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="counter">
+                                    <span class="counter_number">3</span>
+                                    <span class="counter_text">
+                                        Uỷ ban nhân dân Phường Bến Thành</span>
+                                  </div>
+                            </div>
+                            </div>
+                    </div>
+                        </div>
+                        <!-- /.col-md-8 -->
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-12" data-sticky-container>
+          <div id="fix-right" class="infor-detail-right">
+              <div class="room-sidebar">
+                  <div class="shadow">
+                      <div class="content-shadow">
+                        <div class="prices-room">
+                          <span style="font-weight: bold;">1.200.000đ</span>
+                          <span style="font-size: 14px;">/đêm</span>
+                        </div>
+                          <div class="home_content">
+                            <!-- <div class="home_title"><h1>A Luxury Stay</h1></div> -->
+                            <div class="booking_form_container detail_room">
+                        <form action="#" class="booking_form">
+                          <div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
+                            <div class="booking_input_container d-flex flex-lg-row flex-column align-items-start justify-content-start detail">
+                              <div class="content-detail"><input type="text" id="timeCheckIn" class="datepicker booking_input booking_input_a booking_in detail_check" placeholder="Check in" required="required"></div>
+                              <div class="content-detail"><input type="text" id="timeCheckOut" class="datepicker booking_input booking_input_a booking_out detail_check" placeholder="Check out" required="required"></div>
+                            </div>
+                          </div>
+                            <div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
+                            <div class="booking_input_container d-flex flex-lg-row flex-column align-items-start justify-content-start">
+                              <div class="select-items content-detail">
+                                <!-- <input type="number" class="booking_input booking_input_b" placeholder="Children" required="required"> -->
+                                <select name="" id="" class="booking_input booking_input_b detail_check">
+                                  <option value="">Adults</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                </select>
+                                <i class="fas fa-angle-down icon"></i>
+                              </div>
+                              <div class="content-detail">
+                                <!-- <input type="number" class="booking_input booking_input_b" placeholder="Room" required="required"> -->
+                                <div class="select-items">
+                                    <!-- <input type="number" class="booking_input booking_input_b" placeholder="Children" required="required"> -->
+                                    <select name="" id="" class="booking_input booking_input_b detail_check">
+                                      <option value="">Adults</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                    </select>
+                                    <i class="fas fa-angle-down icon"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </form>
+                      </div>
+                    </div>
+                    <button id="addtocart">Đặt ngay</button>
+                  </div>
+                  </div>
+                </div>
+          </div>
+
+      </div>
+    </div>
+    </div>
+  </div>
+    </div>
+    <div class="container similars-rooms">
+        <div class="row">
+            <div class="col-xs-12">
+              <div class="similar-room">
+                  <div class="title">
+                    <h3>Chỗ ở tương tự</h3>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-4 col-md-3">
+                        <div style="width: 100%; display: inline-block;">
+                            <div class="product_img">
+                              <a href="" target="_blank">
+                                <img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+                              </a>
+                            </div>	
+                            <div class="promo_content">
+                              <div class="main_content">
+                                <a href="">
+                                  <div class="promo_title">
+                                      URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+                                  </div>	
+                                </a>
+                                <div class="promo_description">
+                                    4 khách · 2 Phòng ngủ · 2 phòng tắm
+                                </div>
+                                <div class="promo_price">
+                                  <span class="promotion_price">
+                                      1.200.000đ/đêm
+                                  </span>
+                                  <span class="main_price"> 1.500.000đ</span>
+                                </div>
+                                <div class="promo_address">
+                                    Quận 1, Hồ Chí Minh
+                                </div>
+                                <div class="promo_review">
+                                  <div class="promo_star">
+                                      <i class="fa fa-star"></i>
+                                      <i class="fa fa-star"></i>
+                                      <i class="fa fa-star"></i>
+                                      <i class="fa fa-star"></i>
+                                      <i class="fa fa-star"></i>
+                                  </div>
+                                  <span class="promo_review">
+                                    3
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3">
+                      <div style="width: 100%; display: inline-block;">
+                          <div class="product_img">
+                            <a href="" target="_blank">
+                              <img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+                            </a>
+                          </div>	
+                          <div class="promo_content">
+                            <div class="main_content">
+                              <a href="">
+                                <div class="promo_title">
+                                    URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+                                </div>	
+                              </a>
+                              <div class="promo_description">
+                                  4 khách · 2 Phòng ngủ · 2 phòng tắm
+                              </div>
+                              <div class="promo_price">
+                                <span class="promotion_price">
+                                    1.200.000đ/đêm
+                                </span>
+                                <span class="main_price"> 1.500.000đ</span>
+                              </div>
+                              <div class="promo_address">
+                                  Quận 1, Hồ Chí Minh
+                              </div>
+                              <div class="promo_review">
+                                <div class="promo_star">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <span class="promo_review">
+                                  3
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div style="width: 100%; display: inline-block;">
+                        <div class="product_img">
+                          <a href="" target="_blank">
+                            <img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+                          </a>
+                        </div>	
+                        <div class="promo_content">
+                          <div class="main_content">
+                            <a href="">
+                              <div class="promo_title">
+                                  URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+                              </div>	
+                            </a>
+                            <div class="promo_description">
+                                4 khách · 2 Phòng ngủ · 2 phòng tắm
+                            </div>
+                            <div class="promo_price">
+                              <span class="promotion_price">
+                                  1.200.000đ/đêm
+                              </span>
+                              <span class="main_price"> 1.500.000đ</span>
+                            </div>
+                            <div class="promo_address">
+                                Quận 1, Hồ Chí Minh
+                            </div>
+                            <div class="promo_review">
+                              <div class="promo_star">
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                              </div>
+                              <span class="promo_review">
+                                3
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                  <div style="width: 100%; display: inline-block;">
+                      <div class="product_img">
+                        <a href="" target="_blank">
+                          <img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
+                        </a>
+                      </div>	
+                      <div class="promo_content">
+                        <div class="main_content">
+                          <a href="">
+                            <div class="promo_title">
+                                URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
+                            </div>	
+                          </a>
+                          <div class="promo_description">
+                              4 khách · 2 Phòng ngủ · 2 phòng tắm
+                          </div>
+                          <div class="promo_price">
+                            <span class="promotion_price">
+                                1.200.000đ/đêm
+                            </span>
+                            <span class="main_price"> 1.500.000đ</span>
+                          </div>
+                          <div class="promo_address">
+                              Quận 1, Hồ Chí Minh
+                          </div>
+                          <div class="promo_review">
+                            <div class="promo_star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="promo_review">
+                              3
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <footer style="margin-top: 30px;">
+			<div class="footer2">
+				<div class="container text-center">
+					<p>Copyright © Your Website 2019 </p>
+					<p>Design By Nguyên Phạm</p>
+				</div>
+			</div>
+    </footer>
+    <div class='lentop'>
+			<div>
+				<img src='https://1.bp.blogspot.com/-k6sikOdzFXQ/VwqCKDosmEI/AAAAAAAAKxE/nLxLhkTIO6o3iE5ZWmtxo2bf4QHdzPQNQ/s1600/top.png'/>
+			</div>
+	</div>
+    <script src="./sticky-js/dist/sticky.compile.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // var elementPosition = $('#fix-right').offset();
+        // $(window).scroll(function(){
+        // if($(window).scrollTop() > elementPosition.top){
+        //       $('#fix-right').css('position','fixed').css('top','0').css('z-index','9999').css('margin-top','80px');
+        // } else {
+        //     $('#fix-right').css('position','static');
+        // }    
+        // });
+        // var sticky = new Sticky("[data-sticky]", {});
+      });
+    </script>
+        <script>
+          var sticky = new Sticky('.infor-detail-right');
+        </script>
+    <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+    <script src="./lightgallery/dist/js/lightgallery-all.min.js"></script>
+    <script src="./lightgallery/lib/jquery.mousewheel.min.js"></script>
+    <script src="datepicker/js/bootstrap.min.js"></script>
+		<script src="datepicker/js/bootstrap-datepicker.js"></script>
+  </body>
+</html>

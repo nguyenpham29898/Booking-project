@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- bootstrap -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font-awesome -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <script src="https://kit.fontawesome.com/20b02079e9.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=vietnamese"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Darker+Grotesque:300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+      rel="stylesheet"
+    />
+
+    <!-- datetime-picker -->
+    <link href="datepicker/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="datepicker/css/datepicker.css" rel="stylesheet" />
+
+    <!-- for on scroll animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css"
+    />
+    <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+
+    <!-- slide slick -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="first_detail">
+      <nav class="nav-menu detail login">
+        <span id="brand">
+          <a href="index.html">Luxury</a>
+        </span>
+
+        <ul id="menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#about">Host</a></li>
+          <li><a href="#services">Đăng nhập</a></li>
+          <li><a href="#team">Đăng ký</a></li>
+          <li><a href="#contact" class="contactmenu">Liên hệ</a></li>
+        </ul>
+
+        <div id="toggle">
+          <div class="span" style="cursor: pointer;">menu</div>
+        </div>
+      </nav>
+      <div id="resize">
+        <div class="close-btn">close</div>
+
+        <ul id="menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#about">Host</a></li>
+          <li><a href="#services">Đăng nhập</a></li>
+          <li><a href="#team">Đăng ký</a></li>
+          <li><a href="#contact" class="contactmenu">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="container-custom">
+        <!-- <div class="title">
+          <h1>Switzerland</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
+            illum, veniam officia accusamus temporibus ratione quas unde ipsam
+            facere minima.
+          </p>
+          <div class="buttons">
+            <button>Explore</button>
+          </div>
+        </div> -->
+
+        <form action="" class="form-login sign-up">
+          <h2>Đăng ký thành viên</h2>
+          <div class="input-group">
+            <input type="text" id="email" required />
+            <label for="username">Địa chỉ email</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="phone" required />
+            <label for="password">Số điện thoại</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="name" required />
+            <label for="password">Tên</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="full_name" required />
+            <label for="password">Họ và tên đệm </label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="password" required />
+            <label for="password">Mật khẩu</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="confirm_password" required />
+            <label for="password">Xác nhận mật khẩu mới</label>
+          </div>
+          <button type="submit">Đăng ký</button>
+          <p>Bạn đã có tài khoản ?<a href="#"> Đăng nhập</a></p>
+        </form>
+
+        <div class="graphic">
+          <div class="clip-svg">
+            <div class="night">
+              <div class="surface moveRight"></div>
+              <div class="car suspension">
+                <img src="./images/login/Img_06.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <svg
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http:www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 809.39 555.27"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: url(#linear-gradient);
+                }
+
+                .cls-2 {
+                  fill: url(#linear-gradient-2);
+                }
+              </style>
+              <linearGradient
+                id="linear-gradient"
+                x1="669"
+                y1="470"
+                x2="669"
+                y2="470"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0" stop-color="#7fe0f4" />
+                <stop offset="0.1" stop-color="#76d9f1" />
+                <stop offset="0.26" stop-color="#5cc8ea" />
+                <stop offset="0.47" stop-color="#33abdd" />
+                <stop offset="0.57" stop-color="#1e9cd7" />
+                <stop offset="0.87" stop-color="#0075be" />
+                <stop offset="0.99" stop-color="#355c97" />
+              </linearGradient>
+              <linearGradient
+                id="linear-gradient-2"
+                x1="557.61"
+                y1="277.63"
+                x2="1367"
+                y2="277.63"
+                xlink:href="#linear-gradient"
+              />
+            </defs>
+            <title>Svg_2</title>
+            <clipPath id="myClip">
+              <path class="cls-1" d="M669,470" transform="translate(-557.61)" />
+              <path
+                class="cls-2"
+                d="M700,0S549,29,558,233c0,0,2.7,95.93,52.24,184.12C649.64,487.28,720.66,534,800.53,543.66c104.88,12.76,372,45.63,429.47-115.66,0,0,6.49-75.47,66.54-111,43.34-25.61,70.46-71.68,70.46-122V0Z"
+                transform="translate(-557.61)"
+              />
+            </clipPath>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

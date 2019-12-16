@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="../css/login-host.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      charset="utf-8"
+    ></script>
+  </head>
+  <body>
+    <form action="" class="login-form">
+      <h1>Login for HOST</h1>
+
+      <div class="txtb">
+        <input type="email" />
+        <span data-placeholder="Email"></span>
+      </div>
+
+      <div class="txtb">
+        <input type="password" />
+        <span data-placeholder="Mật khẩu"></span>
+      </div>
+      <input type="submit" class="logbtn fb" value="Đăng nhập bằng Facebook" />
+      <input type="submit" class="logbtn" value="Đăng nhập" />
+
+      <div class="bottom-text">
+        Bạn chưa có mật khẩu ? <a href="#">Đăng ký</a>
+      </div>
+    </form>
+    <script type="text/javascript">
+      $(".txtb input").on("focus", function() {
+        $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur", function() {
+        if ($(this).val() == "") $(this).removeClass("focus");
+      });
+    </script>
+  </body>
+</html>
