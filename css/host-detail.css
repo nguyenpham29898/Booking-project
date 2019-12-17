@@ -155,12 +155,12 @@ button.new_room span {
   /* position: relative;
   margin: 0 auto 50px; */
   position: fixed;
-  margin-left: 80px;
+  /* margin-left: 80px; */
   background: #fff;
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
-  width: 90%;
+  width: 100%;
 }
 .dialog-wrapper.promotion {
   width: 60%;
