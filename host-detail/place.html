@@ -202,629 +202,98 @@
                     style="margin-top: 14vh;"
                   >
                     <div class="dialog-wrapper_header">
-                      <h1>Thêm chỗ ở</h1>
+                      <h4>Thêm chỗ ở</h4>
                       <button type="button" class="wrapper_header_btn_back">
                         <i class="fas fa-times"></i>
                       </button>
                     </div>
-                    <table
-                      align="center"
-                      border="0"
-                      cellpadding="0"
-                      cellspacing="0"
-                      style="width: 100%;"
-                    >
-                      <tr>
-                        <td>
-                          <!-- Smart Wizard wizard2-->
-                          <div id="wizard2" class="swMain">
-                            <ul>
-                              <li>
-                                <a href="#step-1">
-                                  <label class="stepNumber">1</label>
-                                  <span class="stepDesc">
-                                    Mô tả<br />
-                                    <small>Thông tin phòng</small>
-                                  </span>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#step-2">
-                                  <label class="stepNumber">2</label>
-                                  <span class="stepDesc">
-                                    Phòng và giường<br />
-                                    <small>Chi tiết phòng</small>
-                                  </span>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#step-3">
-                                  <label class="stepNumber">3</label>
-                                  <span class="stepDesc">
-                                    Giá tiền<br />
-                                    <small>Chi phí phòng</small>
-                                  </span>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#step-4">
-                                  <label class="stepNumber">4</label>
-                                  <span class="stepDesc">
-                                    Hình ảnh<br />
-                                    <small>Các hình ảnh</small>
-                                  </span>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#step-5">
-                                  <label class="stepNumber">5</label>
-                                  <span class="stepDesc">
-                                    Vị trí<br />
-                                    <small>Địa điểm chỗ ở</small>
-                                  </span>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#step-6">
-                                  <label class="stepNumber">6</label>
-                                  <span class="stepDesc">
-                                    Tiện nghi<br />
-                                    <small>Tiện ích của phòng</small>
-                                  </span>
-                                </a>
-                              </li>
-                            </ul>
-                            <div id="step-1">
-                              <h2 class="StepTitle">
-                                Tiêu đề, tóm tắt và mô tả chỗ ở sẽ được hiển thị
-                                công khai trên trang của bạn.
-                              </h2>
-                              <form action="#" style="margin-top: 15px;">
-                                <div class="form-group">
-                                  <label for=""
-                                    >Tên chỗ ở
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <input class="form-control" type="text" required/>
-                                </div>
-                                <div class="form-group">
-                                  <label for="comment"
-                                    >Giới thiệu chỗ ở
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <textarea
-                                    class="form-control"
-                                    rows="5"
-                                    cols="50"
-                                  ></textarea>
-                                </div>
-                                <div class="form-group">
-                                  <label for="comment"
-                                    >Lưu ý đặc biệt
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <textarea
-                                    class="form-control"
-                                    rows="5"
-                                    cols="50"
-                                  ></textarea>
-                                </div>
-                              </form>
-                            </div>
-                            <div id="step-2">
-                              <h2 class="StepTitle">Thông tin cơ bản</h2>
-                              <form action="#" style="margin-top: 15px;">
-                                <div class="form-group">
-                                  <label for=""
-                                    >Loại chỗ ở
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <select class="form-control" name="">
-                                    <option value="">Select</option>
-                                    <option value="">Chung cư</option>
-                                    <option value="">Biệt Thự</option>
-                                    <option value="">Nhà riêng</option>
-                                    <option value="">Căn hộ dịch vụ</option>
-                                    <option value="">Khác</option>
-                                  </select>
-                                </div>
-                                <div class="form-group">
-                                  <label for=""
-                                    >Loại phòng
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <select class="form-control" name="">
-                                    <option value="">Select</option>
-                                    <option value="">Nguyên căn</option>
-                                    <option value="">Phòng riêng</option>
-                                  </select>
-                                </div>
-                                <div class="form-group">
-                                  <label for=""
-                                    >Số khách tiêu chuẩn
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <input class="form-control" type="number" />
-                                </div>
-                                <div class="form-group">
-                                  <label for=""
-                                    >Số khách tối đa (bao gồm số người lớn và số trẻ
-                                    em)*
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <input class="form-control" type="number" />
-                                </div>
-                                <div class="form-group">
-                                  <label for=""
-                                    >Trẻ sơ sinh tối đa
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <input class="form-control" type="number" />
-                                </div>
-                                <div class="form-group">
-                                  <label for=""
-                                    >Diện tích chỗ ở (m2)
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <input class="form-control" type="number" />
-                                </div>
-                              </form>
-                              <h2 class="StepTitle">Phòng và giường</h2>
-                              <form action="#" style="margin-top: 15px;">
-                                <div class="form-group">
-                                  <label for=""
-                                    >Phòng ngủ
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <input class="form-control" type="number" />
-                                </div>
-                                <div class="form-group">
-                                  <div class="col-sm-12 col-md-6">
-                                    <div class="row">
-                                      <div class="form-group" style=" margin-left: 17px; width: 17%; margin-bottom: 0px;">
-                                        <label for=""
-                                          >Giường
-                                          <span
-                                            class="
-                                          imperative-red"
-                                            >*</span
-                                          >
-                                        </label>
-                                        <input class="form-control" type="number" style="width: 100%;"/>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-sm-12 col-md-6">
-                                    <div class="row">
-                                      <div class="form-group">
-                                        <label for=""
-                                          >Loại giường
-                                          <span
-                                            class="
-                                          imperative-red"
-                                            >*</span
-                                          >
-                                        </label>
-                                        <select
-                                          class="form-control"
-                                          name=""
-                                          style="width: 50%;"
-                                        >
-                                          <option value="">Select</option>
-                                          <option value="">Real Bed</option>
-                                          <option value="">King size</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for=""
-                                    >Phòng tắm
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <input class="form-control" type="number" />
-                                </div>
-                              </form>
-                            </div>
-                            <div id="step-3">
-                              <h2 class="StepTitle">Giá cơ bản</h2>
-                              <form action="#" style="margin-top: 15px;">
-                                <div style="display: flex; width: 50%;">
-                                  <div class="form-group" style="width: 30%;">
-                                    <label for=""
-                                      >Giá theo đêm
-                                      <span
-                                        class="
-                                      imperative-red"
-                                        >*</span
-                                      >
-                                    </label>
-                                    <input
-                                      class="form-control text-right"
-                                      type="number"
-                                    />
-                                  </div>
-                                  <span
-                                    style="margin-top: 33px;
-                                  font-size: 15px;
-                                  margin-left: 10px;"
-                                    >/ đêm</span
-                                  >
-                                </div>
-                              </form>
-                              <h2 class="StepTitle">
-                                Điều khoản và Chính sách hủy
-                              </h2>
-                              <form action="#" style="margin-top: 15px;">
-                                <div style="display: flex; width: 50%;">
-                                  <div class="form-group" style="width: 30%;">
-                                    <label for=""
-                                      >Nhận phòng sau:
-                                      <span
-                                        class="
-                                      imperative-red"
-                                        >*</span
-                                      >
-                                    </label>
-                                      <div id="datetimepicker3" class="input-append">
-                                        <input data-format="hh:mm" type="text" class="form-control"></input>
-                                        <span class="add-on">
-                                          <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-                                          </i>
-                                        </span>
-                                      </div>
-                                  </div>
-                                </div>
-                                <div style="display: flex; width: 50%;">
-                                  <div class="form-group" style="width: 30%;">
-                                    <label for=""
-                                      >Trả phòng trước:
-                                      <span
-                                        class="
-                                      imperative-red"
-                                        >*</span
-                                      >
-                                    </label>
-                                    <div id="datetimepicker4" class="input-append">
-                                      <input data-format="hh:mm" type="text" class="form-control"></input>
-                                      <span class="add-on">
-                                        <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-                                        </i>
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                            <div id="step-4">
-                              <h2 class="StepTitle">Hình ảnh phòng chi tiết</h2>
-                              <form action="#" style="margin-top: 15px;">
-                                <div class="form-group">
-                                  <label for=""
-                                    >Hình ảnh
-                                    <span
-                                      class="
-                                      imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <input
-                                    type="file"
-                                    id="files"
-                                    name="files"
-                                    multiple
-                                  /><br />
-                                  <div id="selectedFiles"></div>
-                                </div>
-                              </form>
-                            </div>
-                            <div id="step-5">
-                              <h2 class="StepTitle">Địa chỉ</h2>
-                              <form action="#" style="margin-top: 15px;">
-                                <div class="form-group">
-                                  <label for=""
-                                    >Địa chỉ
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <input class="form-control" type="text" />
-                                </div>
-                                <div class="form-group">
-                                  <label for=""
-                                    >Chọn Tỉnh/Thành phố
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <select class="form-control" name="">
-                                    <option value="">Select</option>
-                                    <option value="">Hà Nội</option>
-                                    <option value="">Hồ Chí Minh</option>
-                                  </select>
-                                </div>
-                                <div class="form-group">
-                                  <label for=""
-                                    >Chọn quận/Huyện
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <select class="form-control" name="">
-                                    <option value="">Select</option>
-                                    <option value="">Quận 1</option>
-                                    <option value="">Quận 3</option>
-                                  </select>
-                                </div>
-                                <div class="form-group">
-                                  <label for=""
-                                    >Xã/Phường
-                                    <span
-                                      class="
-                                    imperative-red"
-                                      >*</span
-                                    >
-                                  </label>
-                                  <select class="form-control" name="">
-                                    <option value="">Select</option>
-                                    <option value="">BLABLA</option>
-                                    <option value="">.......</option>
-                                  </select>
-                                </div>
-                              </form>
-                            </div>
-                            <div id="step-6" style="height: 120%;">
-                              <h2 class="StepTitle">Các tiện ích</h2>
-                              <form action="#" style="margin-top: 15px;" class="amenities-list">
-                                <div class="form-group">
-                                  <div class="amenities-title">
-                                    <h3>Dành cho gia đình</h3>
-                                  </div>
-                                  <div class="amenities-all">
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Phù hợp với trẻ con</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Đệm bổ sung</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Không hút thuốc</label>
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <div class="amenities-title">
-                                    <h3>Tiện ích bếp</h3>
-                                  </div>
-                                  <div class="amenities-all">
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Bếp điện</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Lò vi sóng</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Tủ lạnh</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Bếp ga</label>
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <div class="amenities-title">
-                                    <h3>Hoat động giải trí</h3>
-                                  </div>
-                                  <div class="amenities-all">
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Cảnh quan đẹp</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Bể bơi chung</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Bể bơi cá nhân</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Hướng biển</label>
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <div class="amenities-title">
-                                    <h3>Tiện ích phòng</h3>
-                                  </div>
-                                  <div class="amenities-all">
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Ban công</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Cửa sổ</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Nhà bếp</label>
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <div class="amenities-title">
-                                    <h3>Tiện ích</h3>
-                                  </div>
-                                  <div class="amenities-all">
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Wifi</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">TV</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Điều hòa</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Máy giặt</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Dầu gội, dầu xả</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Giấy vệ sinh</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Giấy ăn</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Nước khoáng</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Khăn tắm</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Internet</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Máy sấy</label>
-                                      </p>
-                                    </div>
-                                    <div class="amenities-items">
-                                      <p class="checkbox-custom">
-                                        <input type="checkbox">
-                                        <label for="">Bàn là</label>
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                          </div>
-                          <!-- End SmartWizard Content 2 -->
-                        </td>
-                      </tr>
-                    </table>
+                    <div class="dialog-wrapper_body">
+                      <form action="#">
+                        <div class="form-group">
+                          <label for=""
+                            >Tên chỗ ở
+                            <span
+                              class="
+                            imperative-red"
+                              >*</span
+                            >
+                          </label>
+                          <input class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                          <label for=""
+                            >Loại chỗ ở
+                            <span
+                              class="
+                            imperative-red"
+                              >*</span
+                            >
+                          </label>
+                          <select class="form-control" name="" id="">
+                            <option value="">Select</option>
+                            <option value="">Chung cư</option>
+                            <option value="">Biệt Thự</option>
+                            <option value="">Nhà riêng</option>
+                            <option value="">Căn hộ dịch vụ</option>
+                            <option value="">Khác</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for=""
+                            >Loại phòng
+                            <span
+                              class="
+                            imperative-red"
+                              >*</span
+                            >
+                          </label>
+                          <select class="form-control" name="" id="">
+                            <option value="">Select</option>
+                            <option value="">Nguyên căn</option>
+                            <option value="">Phòng riêng</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for=""
+                            >Số khách tiêu chuẩn
+                            <span
+                              class="
+                            imperative-red"
+                              >*</span
+                            >
+                          </label>
+                          <input class="form-control" type="number" />
+                        </div>
+                        <div class="form-group">
+                          <label for=""
+                            >Số khách tối đa (bao gồm số người lớn và số trẻ
+                            em)*
+                            <span
+                              class="
+                            imperative-red"
+                              >*</span
+                            >
+                          </label>
+                          <input class="form-control" type="number" />
+                        </div>
+                        <div class="form-group">
+                          <label for=""
+                            >Trẻ sơ sinh tối đa
+                            <span
+                              class="
+                            imperative-red"
+                              >*</span
+                            >
+                          </label>
+                          <input class="form-control" type="number" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="dialog-wrapper_footer">
+                      <a href="update_new_room.html" class="btn btn-success">
+                        <span>Xây dựng chỗ ở của bạn</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <div>
@@ -913,7 +382,9 @@
                                         <h3><a href="">Name</a></h3>
                                         <p>Cập nhật lần cuối Nov 26 2019</p>
                                         <div class="option-room">
-                                          <a href="">Cập nhật</a>
+                                          <a href="update_new_room.html"
+                                            >Cập nhật</a
+                                          >
                                           <button class="delete">Xóa</button>
                                           <button>Khóa</button>
                                         </div>
@@ -944,7 +415,9 @@
                                         <h3><a href="">Name</a></h3>
                                         <p>Cập nhật lần cuối Nov 26 2019</p>
                                         <div class="option-room">
-                                          <a href="" class="new_room">Cập nhật</a>
+                                          <a href="" class="new_room"
+                                            >Cập nhật</a
+                                          >
                                           <button class="delete">Xóa</button>
                                           <button>Khóa</button>
                                         </div>

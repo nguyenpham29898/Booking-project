@@ -152,15 +152,14 @@ button.new_room span {
   background: #06060666;
 }
 .dialog-wrapper {
-  /* position: relative;
-  margin: 0 auto 50px; */
+  margin: 0 auto;
   position: fixed;
-  /* margin-left: 80px; */
+  margin-left: 20%;
   background: #fff;
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
-  width: 100%;
+  width: 60%;
 }
 .dialog-wrapper.promotion {
   width: 60%;
