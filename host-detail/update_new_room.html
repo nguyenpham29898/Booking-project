@@ -91,6 +91,20 @@
     ></script>
     <!---------------------- LightGallery Zoom -->
     <link rel="stylesheet" href="../lightgallery/dist/css/lightgallery.css" />
+        <!-- -------------------Time for Bootstrap ------------------------->
+        <link
+        href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css"
+      />
+    <!------------------------ validate jquery ----------------------->
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <script src="../js/validate-form.js"></script>
     <!-- ----------------------main------------------------- -->
     <link rel="stylesheet" href="../css/host-detail.css" />
     <link href="../css/smart_wizard.css" rel="stylesheet" type="text/css" />
@@ -164,19 +178,19 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
                   <li class="nav-item">
-                    <a class="nav-link" href="dashboard.html">Bảng thông tin</a>
+                    <a class="nav-link a" href="dashboard.html">Bảng thông tin</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="booking.html">Đặt phòng</a>
+                    <a class="nav-link a" href="booking.html">Đặt phòng</a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="place.html">Chỗ ở của bạn</a>
+                    <a class="nav-link a" href="place.html">Chỗ ở của bạn</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pay.html">Thanh toán</a>
+                    <a class="nav-link a" href="pay.html">Thanh toán</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="promotion.html">Khuyến mãi</a>
+                    <a class="nav-link a" href="promotion.html">Khuyến mãi</a>
                   </li>
                 </ul>
               </div>
@@ -265,9 +279,10 @@
                         Tiêu đề, tóm tắt và mô tả chỗ ở sẽ được hiển thị
                         công khai trên trang của bạn.
                       </h2>
-                      <form action="#" style="margin-top: 15px;">
+                      <form action="#" style="margin-top: 15px;" id="form-mota">
                         <div class="form-group">
-                          <label for=""
+                          <div style="display: flex; justify-content: space-between;">
+                            <label for="" class="title-luu"
                             >Tên chỗ ở
                             <span
                               class="
@@ -275,7 +290,9 @@
                               >*</span
                             >
                           </label>
-                          <input class="form-control" type="text" required/>
+                          <button class="btn btn-success luu-right">Lưu</button>
+                          </div>
+                          <input name="ten" class="form-control" type="text" required/>
                         </div>
                         <div class="form-group">
                           <label for="comment"
@@ -290,6 +307,8 @@
                             class="form-control"
                             rows="5"
                             cols="50"
+                            name="gioithieu"
+                            required
                           ></textarea>
                         </div>
                         <div class="form-group">
@@ -305,15 +324,17 @@
                             class="form-control"
                             rows="5"
                             cols="50"
+                            name="luuy"
                           ></textarea>
                         </div>
                       </form>
                     </div>
                     <div id="step-2">
                       <h2 class="StepTitle">Thông tin cơ bản</h2>
-                      <form action="#" style="margin-top: 15px;">
+                      <form action="#" id="form-chitietphong" style="margin-top: 15px;">
                         <div class="form-group">
-                          <label for=""
+                          <div style="display: flex; justify-content: space-between;">
+                            <label for="" class="title-luu"
                             >Loại chỗ ở
                             <span
                               class="
@@ -321,13 +342,15 @@
                               >*</span
                             >
                           </label>
-                          <select class="form-control" name="">
+                          <button class="btn btn-success luu-right">Lưu</button>
+                          </div>
+                          <select class="form-control" name="loaichoo">
                             <option value="">Select</option>
-                            <option value="">Chung cư</option>
-                            <option value="">Biệt Thự</option>
-                            <option value="">Nhà riêng</option>
-                            <option value="">Căn hộ dịch vụ</option>
-                            <option value="">Khác</option>
+                            <option value="1">Chung cư</option>
+                            <option value="2">Biệt Thự</option>
+                            <option value="3">Nhà riêng</option>
+                            <option value="4">Căn hộ dịch vụ</option>
+                            <option value="5">Khác</option>
                           </select>
                         </div>
                         <div class="form-group">
@@ -339,10 +362,10 @@
                               >*</span
                             >
                           </label>
-                          <select class="form-control" name="">
+                          <select class="form-control" name="loaiphong">
                             <option value="">Select</option>
-                            <option value="">Nguyên căn</option>
-                            <option value="">Phòng riêng</option>
+                            <option value="1">Nguyên căn</option>
+                            <option value="2">Phòng riêng</option>
                           </select>
                         </div>
                         <div class="form-group">
@@ -354,7 +377,7 @@
                               >*</span
                             >
                           </label>
-                          <input class="form-control" type="number" />
+                          <input name="khachtc" class="form-control" type="number" min="0"/>
                         </div>
                         <div class="form-group">
                           <label for=""
@@ -366,7 +389,7 @@
                               >*</span
                             >
                           </label>
-                          <input class="form-control" type="number" />
+                          <input name="khachtd" class="form-control" type="number" min="0" />
                         </div>
                         <div class="form-group">
                           <label for=""
@@ -377,7 +400,7 @@
                               >*</span
                             >
                           </label>
-                          <input class="form-control" type="number" />
+                          <input class="form-control" type="number" min="0"/>
                         </div>
                         <div class="form-group">
                           <label for=""
@@ -388,12 +411,10 @@
                               >*</span
                             >
                           </label>
-                          <input class="form-control" type="number" />
+                          <input name="dientich" class="form-control" type="number" min="0" />
                         </div>
-                      </form>
                       <h2 class="StepTitle">Phòng và giường</h2>
-                      <form action="#" style="margin-top: 15px;">
-                        <div class="form-group">
+                        <div class="form-group"  style="margin-top: 3vh;">
                           <label for=""
                             >Phòng ngủ
                             <span
@@ -402,7 +423,7 @@
                               >*</span
                             >
                           </label>
-                          <input class="form-control" type="number" />
+                          <input name="phongngu" class="form-control" type="number" min="0" required/>
                         </div>
                         <div class="form-group">
                           <div class="col-sm-12 col-md-6">
@@ -416,7 +437,7 @@
                                     >*</span
                                   >
                                 </label>
-                                <input class="form-control" type="number" style="width: 100%;"/>
+                                <input name="giuong" class="form-control" type="number" min="0" style="width: 100%;"/>
                               </div>
                             </div>
                           </div>
@@ -433,12 +454,12 @@
                                 </label>
                                 <select
                                   class="form-control"
-                                  name=""
+                                  name="loaigiuong"
                                   style="width: 50%;"
                                 >
                                   <option value="">Select</option>
-                                  <option value="">Real Bed</option>
-                                  <option value="">King size</option>
+                                  <option value="1">Real Bed</option>
+                                  <option value="2">King size</option>
                                 </select>
                               </div>
                             </div>
@@ -453,40 +474,42 @@
                               >*</span
                             >
                           </label>
-                          <input class="form-control" type="number" />
+                          <input name="phongtam" class="form-control" type="number" min="0"/>
                         </div>
                       </form>
                     </div>
                     <div id="step-3">
                       <h2 class="StepTitle">Giá cơ bản</h2>
-                      <form action="#" style="margin-top: 15px;">
+                      <form id="form-chiphi" action="#" style="margin-top: 15px;">
                         <div style="display: flex; width: 50%;">
                           <div class="form-group" style="width: 30%;">
-                            <label for=""
-                              >Giá theo đêm
+                            <div style="display: flex; justify-content: space-between;">
+                              <label for="" class="title-luu"
+                              >Giá 1 đêm
                               <span
                                 class="
                               imperative-red"
                                 >*</span
                               >
                             </label>
+                            </div>
                             <input
                               class="form-control text-right"
                               type="number"
+                              name="price"
+                              min="0"
                             />
                           </div>
                           <span
-                            style="margin-top: 33px;
+                            style="margin-top: 38px;
                           font-size: 15px;
                           margin-left: 10px;"
                             >/ đêm</span
                           >
                         </div>
-                      </form>
                       <h2 class="StepTitle">
                         Điều khoản và Chính sách hủy
                       </h2>
-                      <form action="#" style="margin-top: 15px;">
                         <div style="display: flex; width: 50%;">
                           <div class="form-group" style="width: 30%;">
                             <label for=""
@@ -525,6 +548,7 @@
                             </div>
                           </div>
                         </div>
+                        <button class="btn btn-success luu-right">Lưu</button>
                       </form>
                     </div>
                     <div id="step-4">
@@ -551,9 +575,10 @@
                     </div>
                     <div id="step-5">
                       <h2 class="StepTitle">Địa chỉ</h2>
-                      <form action="#" style="margin-top: 15px;">
+                      <form id="form-vitri" action="#" style="margin-top: 15px;">
                         <div class="form-group">
-                          <label for=""
+                          <div style="display: flex; justify-content: space-between;">
+                            <label for="" class="title-luu"
                             >Địa chỉ
                             <span
                               class="
@@ -561,7 +586,9 @@
                               >*</span
                             >
                           </label>
-                          <input class="form-control" type="text" />
+                          <button class="btn btn-success luu-right">Lưu</button>
+                          </div>
+                          <input name="diachi" class="form-control" type="text" />
                         </div>
                         <div class="form-group">
                           <label for=""
@@ -572,10 +599,10 @@
                               >*</span
                             >
                           </label>
-                          <select class="form-control" name="">
+                          <select name="tinhthanhpho" class="form-control" name="">
                             <option value="">Select</option>
-                            <option value="">Hà Nội</option>
-                            <option value="">Hồ Chí Minh</option>
+                            <option value="1">Hà Nội</option>
+                            <option value="2">Hồ Chí Minh</option>
                           </select>
                         </div>
                         <div class="form-group">
@@ -587,10 +614,10 @@
                               >*</span
                             >
                           </label>
-                          <select class="form-control" name="">
+                          <select name="quanhuyen" class="form-control" name="">
                             <option value="">Select</option>
-                            <option value="">Quận 1</option>
-                            <option value="">Quận 3</option>
+                            <option value="1">Quận 1</option>
+                            <option value="2">Quận 3</option>
                           </select>
                         </div>
                         <div class="form-group">
@@ -602,17 +629,17 @@
                               >*</span
                             >
                           </label>
-                          <select class="form-control" name="">
+                          <select name="xaphuong" class="form-control" name="">
                             <option value="">Select</option>
-                            <option value="">BLABLA</option>
-                            <option value="">.......</option>
+                            <option value="1">BLABLA</option>
+                            <option value="2">.......</option>
                           </select>
                         </div>
                       </form>
                     </div>
                     <div id="step-6" style="height: 120%;">
                       <h2 class="StepTitle">Các tiện ích</h2>
-                      <form action="#" style="margin-top: 15px;" class="amenities-list">
+                      <form id="form-tienich" action="#" style="margin-top: 15px;" class="amenities-list">
                         <div class="form-group">
                           <div class="amenities-title">
                             <h3>Dành cho gia đình</h3>
@@ -804,6 +831,7 @@
                             </div>
                           </div>
                         </div>
+                        <button class="btn btn-success luu-right">Lưu</button>
                       </form>
                     </div>
                   </div>
@@ -949,6 +977,6 @@
             pickDate: false
           });
         });
-      </script>
+      </script> 
   </body>
 </html>

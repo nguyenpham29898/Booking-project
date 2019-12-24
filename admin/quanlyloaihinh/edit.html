@@ -231,22 +231,20 @@
           <!-- DataTables Example -->
           <div class="content">
             <div class="add-product">
-              <form action="">
+              <form id="form-loaihinh" action="">
                 <h1>Sửa loại hình</h1>
                 <div class="textbox">
                   <h5>Tên loại hình</h5>
-                  <input type="text" placeholder="Tên loại hình" />
+                  <input name="tenlh" type="text" placeholder="Tên loại hình" />
                 </div>
                 <div class="textbox">
                   <h5>Mô tả</h5>
-                  <input type="text" placeholder="Mô tả" />
+                  <textarea name="mota" rows="4"></textarea>
                 </div>
                 <div class="add">
-                  <a href="quanlyloaihinh.html">
-                    <button type="button" class="btn1" name="">
-                      Thêm
-                    </button>
-                  </a>
+                  <button type="submit" class="btn1" name="">
+                    Thêm
+                  </button>
                 </div>
               </form>
             </div>
@@ -330,5 +328,24 @@
 
     <!-- Demo scripts for this page-->
     <script src="../js/demo/datatables-demo.js"></script>
+    <!------------------------ validate jquery ----------------------->
+    <script
+      type="text/javascript"
+      src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"
+    ></script>
+    <script>
+      $("#form-loaihinh").validate({
+        rules: {
+          tenlh: {
+            required: true
+          }
+        },
+        messages: {
+          tenlh: {
+            required: "Bạn chưa nhập Tên loại hình"
+          }
+        }
+      });
+    </script>
   </body>
 </html>

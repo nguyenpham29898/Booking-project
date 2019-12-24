@@ -91,6 +91,23 @@
     ></script>
     <!---------------------- LightGallery Zoom -->
     <link rel="stylesheet" href="../lightgallery/dist/css/lightgallery.css" />
+    <!-- -------------------Time for Bootstrap ------------------------->
+    <link
+      href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css"
+    />
+    <!------------------------ validate jquery ----------------------->
+    <script
+      type="text/javascript"
+      src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"
+    ></script>
+    <script src="../js/validate-form.js"></script>
     <!-- ----------------------main------------------------- -->
     <link rel="stylesheet" href="../css/host-detail.css" />
     <link href="../css/smart_wizard.css" rel="stylesheet" type="text/css" />
@@ -164,19 +181,21 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
                   <li class="nav-item">
-                    <a class="nav-link" href="dashboard.html">Bảng thông tin</a>
+                    <a class="nav-link a" href="dashboard.html"
+                      >Bảng thông tin</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="booking.html">Đặt phòng</a>
+                    <a class="nav-link a" href="booking.html">Đặt phòng</a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="place.html">Chỗ ở của bạn</a>
+                    <a class="nav-link a" href="place.html">Chỗ ở của bạn</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pay.html">Thanh toán</a>
+                    <a class="nav-link a" href="pay.html">Thanh toán</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="promotion.html">Khuyến mãi</a>
+                    <a class="nav-link a" href="promotion.html">Khuyến mãi</a>
                   </li>
                 </ul>
               </div>
@@ -208,7 +227,7 @@
                       </button>
                     </div>
                     <div class="dialog-wrapper_body">
-                      <form action="#">
+                      <form action="#" id="form-themchoo">
                         <div class="form-group">
                           <label for=""
                             >Tên chỗ ở
@@ -218,7 +237,12 @@
                               >*</span
                             >
                           </label>
-                          <input class="form-control" type="text" />
+                          <input
+                            name="ten"
+                            class="form-control"
+                            type="text"
+                            required
+                          />
                         </div>
                         <div class="form-group">
                           <label for=""
@@ -229,13 +253,17 @@
                               >*</span
                             >
                           </label>
-                          <select class="form-control" name="" id="">
+                          <select
+                            class="form-control"
+                            name="loaichoo"
+                            id="loaichoo"
+                          >
                             <option value="">Select</option>
-                            <option value="">Chung cư</option>
-                            <option value="">Biệt Thự</option>
-                            <option value="">Nhà riêng</option>
-                            <option value="">Căn hộ dịch vụ</option>
-                            <option value="">Khác</option>
+                            <option value="1">Chung cư</option>
+                            <option value="2">Biệt Thự</option>
+                            <option value="3">Nhà riêng</option>
+                            <option value="4">Căn hộ dịch vụ</option>
+                            <option value="5">Khác</option>
                           </select>
                         </div>
                         <div class="form-group">
@@ -247,10 +275,14 @@
                               >*</span
                             >
                           </label>
-                          <select class="form-control" name="" id="">
+                          <select
+                            class="form-control"
+                            name="loaiphong"
+                            id="loaiphong"
+                          >
                             <option value="">Select</option>
-                            <option value="">Nguyên căn</option>
-                            <option value="">Phòng riêng</option>
+                            <option value="1">Nguyên căn</option>
+                            <option value="2">Phòng riêng</option>
                           </select>
                         </div>
                         <div class="form-group">
@@ -262,19 +294,19 @@
                               >*</span
                             >
                           </label>
-                          <input class="form-control" type="number" />
+                          <input name="khachtc" class="form-control" type="number" min="0" />
                         </div>
                         <div class="form-group">
                           <label for=""
                             >Số khách tối đa (bao gồm số người lớn và số trẻ
-                            em)*
+                            em)
                             <span
                               class="
                             imperative-red"
                               >*</span
                             >
                           </label>
-                          <input class="form-control" type="number" />
+                          <input name="khachtd" class="form-control" type="number" min="0" />
                         </div>
                         <div class="form-group">
                           <label for=""
@@ -285,14 +317,14 @@
                               >*</span
                             >
                           </label>
-                          <input class="form-control" type="number" />
+                          <input class="form-control" type="number" min="0" />
+                        </div>
+                        <div class="dialog-wrapper_footer">
+                          <button class="btn btn-success">
+                            <span>Xây dựng chỗ ở của bạn</span>
+                          </button>
                         </div>
                       </form>
-                    </div>
-                    <div class="dialog-wrapper_footer">
-                      <a href="update_new_room.html" class="btn btn-success">
-                        <span>Xây dựng chỗ ở của bạn</span>
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -317,13 +349,16 @@
                             style="border-bottom: 1px solid black;"
                           >
                             <li class="nav-item active">
-                              <a class="nav-link" data-toggle="tab" href="#all"
+                              <a
+                                class="nav-link a"
+                                data-toggle="tab"
+                                href="#all"
                                 >Tất cả</a
                               >
                             </li>
                             <li class="nav-item">
                               <a
-                                class="nav-link"
+                                class="nav-link a"
                                 data-toggle="tab"
                                 href="#list-new-place"
                                 >Chỗ ở mới</a
@@ -331,7 +366,7 @@
                             </li>
                             <li class="nav-item">
                               <a
-                                class="nav-link"
+                                class="nav-link a"
                                 data-toggle="tab"
                                 href="#list-open"
                                 >Mở</a
@@ -339,7 +374,7 @@
                             </li>
                             <li class="nav-item">
                               <a
-                                class="nav-link"
+                                class="nav-link a"
                                 data-toggle="tab"
                                 href="#list-close"
                                 >Đóng</a
@@ -347,7 +382,7 @@
                             </li>
                             <li class="nav-item">
                               <a
-                                class="nav-link"
+                                class="nav-link a"
                                 data-toggle="tab"
                                 href="#pending"
                                 >Chờ duyệt</a
@@ -355,7 +390,7 @@
                             </li>
                             <li class="nav-item">
                               <a
-                                class="nav-link"
+                                class="nav-link a"
                                 data-toggle="tab"
                                 href="#return"
                                 >Trả lại</a

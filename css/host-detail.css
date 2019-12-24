@@ -85,30 +85,30 @@ header .navbar {
 .navbar .nav > .active > .a,
 .navbar .nav > .active > .a:hover,
 .navbar .nav > .active > .a:focus {
-  color: #555;
-  text-decoration: none;
-  background-color: white;
+  color: #555 !important;
+  text-decoration: none !important;
+  background-color: white !important;
 }
 .navbar .nav > li > .a {
-  color: white;
-  text-shadow: none;
+  color: white !important;
+  text-shadow: none !important;
 }
 .navbar .nav > li > .a:focus,
 .navbar .nav > li > .a:hover {
-  color: #d3ae87;
-  text-decoration: none;
-  background-color: #eee;
-  border-color: #eee #eee #ddd;
+  color: #d3ae87 !important;
+  text-decoration: none !important;
+  background-color: #eee !important;
+  border-color: #eee #eee #ddd !important;
 }
 .menu-notification,
 .menu-user {
-  height: 60px;
+  height: 60px !important;
 }
 .navbar .menu-notification li.dropdown.open > .dropdown-toggle,
 .navbar .menu-notification li.dropdown.active > .dropdown-toggle,
 .navbar .menu-notification li.dropdown.open.active > .dropdown-toggle {
-  color: #555;
-  background-color: transparent;
+  color: #555 !important;
+  background-color: transparent !important;
 }
 /* ---------------------content-dashboard---------------- */
 .dashboard-form {
@@ -160,6 +160,12 @@ button.new_room span {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
   width: 60%;
+  /* new */
+  top: 1px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  overflow-y: scroll;
 }
 .dialog-wrapper.promotion {
   width: 60%;
@@ -168,6 +174,9 @@ button.new_room span {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  height: 80%;
+  overflow-y: hidden;
+}
 }
 .dialog-wrapper_header {
   padding: 20px;
@@ -215,6 +224,7 @@ input.form-control {
 }
 .dialog-wrapper_footer {
   padding: 20px;
+  padding-top: 0;
   text-align: right;
   box-sizing: border-box;
 }
@@ -337,6 +347,7 @@ input.form-control {
 }
 .form-group {
   margin-bottom: 15px;
+  margin-left: 15px;
 }
 .form-item {
   float: left;
@@ -544,4 +555,18 @@ tbody tr:hover {
   right: 0px;
   height: 100px;
   width: 100%;
+}
+label.error {
+  color: white;
+  padding: 2px 6px;
+  background-color: red;
+}
+label.title-luu {
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+.btn.luu-right {
+  margin-left: 15px;
+  padding: 4px 12px;
+  margin-bottom: 5px;
 }

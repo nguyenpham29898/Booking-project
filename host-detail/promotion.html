@@ -87,6 +87,12 @@
     ></script>
     <!---------------------- LightGallery Zoom -->
     <link rel="stylesheet" href="../lightgallery/dist/css/lightgallery.css" />
+    <!------------------------ validate jquery ----------------------->
+    <script
+      type="text/javascript"
+      src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"
+    ></script>
+    <script src="../js/validate-form.js"></script>
     <!-- ----------------------main------------------------- -->
     <link rel="stylesheet" href="../css/host-detail.css" />
     <link href="../css/smart_wizard.css" rel="stylesheet" type="text/css" />
@@ -160,19 +166,21 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
                   <li class="nav-item">
-                    <a class="nav-link" href="dashboard.html">Bảng thông tin</a>
+                    <a class="nav-link a" href="dashboard.html"
+                      >Bảng thông tin</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="booking.html">Đặt phòng</a>
+                    <a class="nav-link a" href="booking.html">Đặt phòng</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="place.html">Chỗ ở của bạn</a>
+                    <a class="nav-link a" href="place.html">Chỗ ở của bạn</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pay.html">Thanh toán</a>
+                    <a class="nav-link a" href="pay.html">Thanh toán</a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="promotion.html">Khuyến mãi</a>
+                    <a class="nav-link a" href="promotion.html">Khuyến mãi</a>
                   </li>
                 </ul>
               </div>
@@ -195,7 +203,7 @@
                   aria-modal="true"
                   aria-label="dialog"
                   class="dialog-wrapper promotion"
-                  style="margin-top: 7vh;"
+                  style="margin-top: 5vh;"
                 >
                   <div class="dialog-wrapper_header">
                     <h4>Thêm khuyến mãi</h4>
@@ -204,7 +212,7 @@
                     </button>
                   </div>
                   <div class="dialog-wrapper_body">
-                    <form action="#">
+                    <form id="form-khuyenmai" action="#">
                       <div class="form-group">
                         <label for=""
                           >Tên khuyến mãi
@@ -214,7 +222,7 @@
                             >*</span
                           >
                         </label>
-                        <input class="form-control" type="text" />
+                        <input name="tenkm" class="form-control" type="text" />
                       </div>
                       <div class="form-group">
                         <label for=""
@@ -227,6 +235,9 @@
                         </label>
                         <div style="display: flex;">
                           <input
+                            name="giamgia"
+                            min="0"
+                            max="100"
                             type="number"
                             class="form-control"
                             style="width: 50%;"
@@ -245,10 +256,10 @@
                             >*</span
                           >
                         </label>
-                        <select class="form-control" name="">
+                        <select class="form-control" name="vitrigiamgia">
                           <option value="">Select</option>
-                          <option value="">SunSea Villa - Luxury room</option>
-                          <option value="">Resort Sun</option>
+                          <option value="1">SunSea Villa - Luxury room</option>
+                          <option value="2">Resort Sun</option>
                         </select>
                       </div>
                       <div class="form-group">
@@ -260,28 +271,31 @@
                             >*</span
                           >
                         </label>
-                        <div class="input-group content-detail">
+                        <div class="input-group">
                           <input
                             type="text"
+                            name="timeCheckIn"
                             id="timeCheckIn"
                             class="form-control datepicker booking_input booking_input_a booking_in detail_check"
                             placeholder="Check in"
                           />
-                          <div class="adon">to</div>
+                        </div>
+                        <div class="input-group" style="margin-top: 15px;">
                           <input
                             type="text"
                             id="timeCheckOut"
+                            name="timeCheckOut"
                             class="form-control datepicker booking_input booking_input_a booking_out detail_check"
                             placeholder="Check out"
                           />
                         </div>
                       </div>
+                      <div class="dialog-wrapper_footer">
+                        <button class="button-custom">
+                          <span>Lưu</span>
+                        </button>
+                      </div>
                     </form>
-                  </div>
-                  <div class="dialog-wrapper_footer">
-                    <button class="button-custom">
-                      <span>Lưu</span>
-                    </button>
                   </div>
                 </div>
               </div>
@@ -396,5 +410,28 @@
     <script src="../datepicker/js/bootstrap-datepicker.js"></script>
     <script src="../lightgallery/dist/js/lightgallery-all.min.js"></script>
     <script src="../lightgallery/lib/jquery.mousewheel.min.js"></script>
+    <!-- time for bootstrap -->
+    <script
+      type="text/javascript"
+      src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js"
+    ></script>
+    <script type="text/javascript">
+      $(function() {
+        $("#datetimepicker3").datetimepicker({
+          pickDate: false
+        });
+        $("#datetimepicker4").datetimepicker({
+          pickDate: false
+        });
+      });
+    </script>
   </body>
 </html>
