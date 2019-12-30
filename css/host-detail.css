@@ -147,7 +147,23 @@ button.new_room span {
   z-index: 999;
   display: none;
 }
+.edit_promotion {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  margin: 0;
+  transition: 0.4s;
+  z-index: 999;
+  display: none;
+}
 .new-dialog-wrapper.active {
+  display: block;
+  background: #06060666;
+}
+.edit_promotion.live {
   display: block;
   background: #06060666;
 }
@@ -176,7 +192,6 @@ button.new_room span {
   transform: translate(-50%, -50%);
   height: 80%;
   overflow-y: hidden;
-}
 }
 .dialog-wrapper_header {
   padding: 20px;

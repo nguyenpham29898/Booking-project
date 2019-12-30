@@ -368,7 +368,7 @@
                       <td>26/12/2019</td>
                       <td>31/12/2019</td>
                       <td>
-                        <button class="btn btn-warning" type="submit">
+                        <button id="sua" class="btn btn-warning" type="submit">
                           Sửa
                         </button>
                         <button class="btn btn-danger" type="submit">
@@ -404,6 +404,108 @@
       <div class="container text-center">
         <p>Copyright © Your Website 2019</p>
         <p>Design By Nguyên Phạm</p>
+      </div>
+    </div>
+    <div class="edit_promotion">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="dialog"
+        class="dialog-wrapper promotion"
+        style="margin-top: 5vh;"
+      >
+        <div class="dialog-wrapper_header">
+          <h4>Sửa khuyến mãi</h4>
+          <button type="button" class="wrapper_header_btn_back">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="dialog-wrapper_body">
+          <form id="form-khuyenmai" action="#">
+            <div class="form-group">
+              <label for=""
+                >Tên khuyến mãi
+                <span
+                  class="
+              imperative-red"
+                  >*</span
+                >
+              </label>
+              <input name="tenkm" class="form-control" type="text" />
+            </div>
+            <div class="form-group">
+              <label for=""
+                >Mức giảm giá
+                <span
+                  class="
+              imperative-red"
+                  >*</span
+                >
+              </label>
+              <div style="display: flex;">
+                <input
+                  name="giamgia"
+                  min="0"
+                  max="100"
+                  type="number"
+                  class="form-control"
+                  style="width: 50%;"
+                />
+                <h4 style="margin-left: 5px;margin-top: 5px;">
+                  (%)
+                </h4>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for=""
+                >Địa điểm giảm giá
+                <span
+                  class="
+              imperative-red"
+                  >*</span
+                >
+              </label>
+              <select class="form-control" name="vitrigiamgia">
+                <option value="">Select</option>
+                <option value="1">SunSea Villa - Luxury room</option>
+                <option value="2">Resort Sun</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for=""
+                >Thời gian check-in
+                <span
+                  class="
+              imperative-red"
+                  >*</span
+                >
+              </label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  name="timeCheckIn"
+                  id="timeCheckIn"
+                  class="form-control datepicker booking_input booking_input_a booking_in detail_check"
+                  placeholder="Check in"
+                />
+              </div>
+              <div class="input-group" style="margin-top: 15px;">
+                <input
+                  type="text"
+                  id="timeCheckOut"
+                  name="timeCheckOut"
+                  class="form-control datepicker booking_input booking_input_a booking_out detail_check"
+                  placeholder="Check out"
+                />
+              </div>
+            </div>
+            <div class="dialog-wrapper_footer">
+              <button class="button-custom">
+                <span>Lưu</span>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <script src="../datepicker/js/bootstrap.min.js"></script>
