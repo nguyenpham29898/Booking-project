@@ -136,7 +136,7 @@
                       ><img
                         width="30px"
                         height="30px"
-                        style="margin-right: 5px"
+                        style="margin-right: 5px;"
                         src="../images/icon-svg/user.png"
                         class="rounded-circle"
                       />
@@ -241,7 +241,7 @@
                     </div>
                   </div>
                   <div class="table-info">
-                    <table class="table">
+                    <table id="table1" class="table">
                       <thead>
                         <tr>
                           <th>Mã đặt phòng</th>
@@ -283,6 +283,51 @@
                             </button>
                           </td>
                         </tr>
+                        <tr>
+                          <td>12345678</td>
+                          <td>Lê Văn Tèo</td>
+                          <td>12 Bach Đằng - Đà Nẵng</td>
+                          <td>25/11/2019 - 27/11/2019</td>
+                          <td>Đã thuê</td>
+                          <td>
+                            <button class="btn btn-info" type="submit">
+                              Xem
+                            </button>
+                            <button class="btn btn-danger" type="submit">
+                              Hủy
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12345678</td>
+                          <td>Lê Văn Tqqqqo</td>
+                          <td>12 Bach Đằng - Đà Nẵng</td>
+                          <td>25/11/2019 - 27/11/2019</td>
+                          <td>Đã thuê</td>
+                          <td>
+                            <button class="btn btn-info" type="submit">
+                              Xem
+                            </button>
+                            <button class="btn btn-danger" type="submit">
+                              Hủy
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>12345678</td>
+                          <td>Lê Văn Tqqqqo</td>
+                          <td>12 Bach Đằng - Đà Nẵng</td>
+                          <td>25/11/2019 - 27/11/2019</td>
+                          <td>Đã thuê</td>
+                          <td>
+                            <button class="btn btn-info" type="submit">
+                              Xem
+                            </button>
+                            <button class="btn btn-danger" type="submit">
+                              Hủy
+                            </button>
+                          </td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -304,6 +349,22 @@
     <script>
       new WOW().init();
     </script>
+    <!-- panagation table -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/jquery.table.hpaging.min.js"></script>
+    <script>
+      $(function () {
+        $("#table1").hpaging({
+          limit: 2,
+          activePage: 1,
+          parentID: "",
+          navBar: null,
+          totalPages: "",
+        });
+      });
+    </script>
+    <!-- End panagation table -->
     <script src="../datepicker/js/bootstrap.min.js"></script>
     <script src="../datepicker/js/bootstrap-datepicker.js"></script>
     <script src="../lightgallery/dist/js/lightgallery-all.min.js"></script>

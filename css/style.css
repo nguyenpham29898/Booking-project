@@ -2369,3 +2369,121 @@ button.pay {
   margin-top: 16px;
   font-size: 16px;
 }
+/* -------------------------------datepicker-custom (New)-------------------------------------------- */
+.datepicker-custom .title {
+  margin-top: 50px;
+}
+.datepicker-custom .title h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.datepicker-custom p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.embedded-daterangepicker .daterangepicker::before,
+.embedded-daterangepicker .daterangepicker::after {
+  display: none;
+}
+.embedded-daterangepicker .daterangepicker {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  float: left;
+  width: 100%;
+  margin-top: 0;
+}
+.embedded-daterangepicker .daterangepicker .drp-calendar {
+  width: 50%;
+  max-width: 50%;
+}
+.daterangepicker {
+  z-index: 1;
+}
+.review-form {
+  margin-top: 330px;
+}
+.review-form .title {
+  margin-top: 50px;
+}
+.review-form .title h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+x-star-rating {
+  font-family: "Ionicons";
+  font-size: 48px;
+  display: inline-flex;
+  cursor: pointer;
+}
+x-star-rating > .star {
+  font-size: 24px;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+}
+
+x-star-rating > .star::after {
+  /* content: "\f3ae"; */
+  content: "\f005";
+  color: #777;
+}
+
+x-star-rating > .star.full::after {
+  /* content: "\f2fc"; */
+  content: "\f005";
+  color: #fd0;
+}
+.review-form .review {
+  display: flex;
+  margin-bottom: 10px;
+}
+.review-form .review .nd {
+  margin-right: 35px;
+  font-size: 18px;
+}
+.review-form .review .review-text-area {
+}
+.review-form .review .review-text-area textarea {
+  padding: 5px;
+  width: 500px;
+  height: 120px;
+}
+/*start comment*/
+.comment {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid #e3e3e3;
+  margin: 10px 10px;
+}
+.comment .comment-left {
+  width: 5%;
+  text-align: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+.comment .comment-left .avatar {
+  width: 30px;
+  height: 30px;
+}
+.comment .comment-left .avatar i {
+  font-size: 30px;
+  color: black;
+}
+.comment .comment-right {
+  width: 95%;
+}
+.comment .comment-right p {
+  font-size: 18px;
+}
+.comment-right .user-name {
+  margin-bottom: 0 !important;
+  font-size: 18px;
+}
+
+.comment .comment-right .review-title .review-title-rating i {
+  font-size: 16px;
+  color: #ffc120;
+}
+
+/*end comment*/

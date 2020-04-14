@@ -82,6 +82,18 @@
     ></script>
     <!---------------------- LightGallery Zoom -->
     <link rel="stylesheet" href="./lightgallery/dist/css/lightgallery.css" />
+    <!-- new datepickercustom -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <!-- end -->
+
     <!-- ----------------------main------------------------- -->
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/datetime-picker.js"></script>
@@ -95,7 +107,7 @@
           <a href="index.html">Luxury</a>
         </span>
         <div class="search-form">
-            <input type="text" placeholder="Search">
+          <input type="text" placeholder="Search" />
         </div>
         <ul id="menu">
           <li><a href="index.html">Trang chủ</a></li>
@@ -661,40 +673,127 @@
                   <div class="des-rooms-price">
                     <div class="title">
                       <h3>Giá phòng</h3>
-                      <span
-                        >Giá có thể tăng vào cuối tuần hoặc ngày lễ</span
-                      >
+                      <span>Giá có thể tăng vào cuối tuần hoặc ngày lễ</span>
                     </div>
+                  </div>
+                  <div class="rooms-price-detail">
+                    <div class="content">
+                      <span class="days">Thứ hai - Thứ năm</span>
+                      <span class="detail">1.200.000</span>
+                    </div>
+                    <div class="content">
+                      <span class="days">Thứ sáu - Chủ nhật</span>
+                      <span class="detail">1.400.000</span>
+                    </div>
+                    <div class="content">
+                      <span class="days">Phí khách tăng thêm</span>
+                      <span class="detail">150.000 (sau 2 khách)</span>
+                    </div>
+                    <div class="content">
+                      <span class="days">Thuê theo tháng</span>
+                      <span class="detail">-9.09 %</span>
+                    </div>
+                    <div class="content">
+                      <span class="days">Số đêm tối thiểu</span>
+                      <span class="detail">1 đêm</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="rooms-price-detail">
-                  <div class="content">
-                    <span class="days">Thứ hai - Thứ năm</span>
-                    <span class="detail">1.200.000</span>
+                <!-- NEW -->
+
+                <!-- datepicker-custom -->
+                <div class="datepicker-custom">
+                  <div class="title">
+                    <h3>Lịch chi tiết</h3>
                   </div>
-                  <div class="content">
-                    <span class="days">Thứ sáu - Chủ nhật</span>
-                    <span class="detail">1.400.000</span>
+                  <p id="daterangepicker-result">Selected date range:</p>
+                  <input id="daterangepicker1" type="hidden" />
+                  <div
+                    id="daterangepicker1-container"
+                    class="embedded-daterangepicker"
+                  ></div>
+                </div>
+
+                <!-- end datepicker-custom -->
+                <div class="review-form">
+                  <div class="title">
+                    <h3>Đánh giá</h3>
                   </div>
-                  <div class="content">
-                    <span class="days">Phí khách tăng thêm</span>
-                    <span class="detail">150.000 (sau 2 khách)</span>
-                  </div>
-                  <div class="content">
-                    <span class="days">Thuê theo tháng</span>
-                    <span class="detail">-9.09 %</span>
-                  </div>
-                  <div class="content">
-                    <span class="days">Số đêm tối thiểu</span>
-                    <span class="detail">1 đêm</span>
+                  <div>
+                    <div class="review">
+                      <div class="nd">Đánh giá của bạn</div>
+                      <x-star-rating
+                        value="3"
+                        number="5"
+                        id="rating"
+                      ></x-star-rating>
+                    </div>
+                    <div class="review">
+                      <div class="nd">Nội dung đánh giá</div>
+                      <div class="review-text-area">
+                        <textarea
+                          placeholder="Viết đánh giá"
+                          rows="4"
+                        ></textarea>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="policy-rooms">
+                <div class="comment">
+                  <div class="comment-left">
+                    <div class="avatar">
+                      <i class="fas fa-user-circle"></i>
+                    </div>
+                  </div>
+                  <div class="comment-right">
+                    <p class="user-name">Trần Thanh Tùng</p>
+                    <div class="review-title">
+                      <div class="review-title-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p>
+                      Phòng đẹp, gọn gàng sạch sẽ
+                    </p>
+                  </div>
+                </div>
+                <div class="comment">
+                  <div class="comment-left">
+                    <div class="avatar">
+                      <i class="fas fa-user-circle"></i>
+                    </div>
+                  </div>
+                  <div class="comment-right">
+                    <p class="user-name">Trần Thanh Tùng</p>
+                    <div class="review-title">
+                      <div class="review-title-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p>
+                      Phòng đẹp, gọn gàng sạch sẽ
+                    </p>
+                  </div>
+                </div>
+                <!-- NEW -->
+                <div class="policy-rooms">
                   <div class="title">
                     <h3>Nội quy và chính sách về chỗ ở</h3>
                     <h4>Chính sách hủy phòng</h4>
                     <span
-                      ><b>Trung bình:</b> Miễn phí hủy phòng trong vòng 48h sau khi đặt phòng thành công và trước 5 ngày so với thời gian check-in. Sau đó, hủy phòng trước 5 ngày so với thời gian check-in, được hoàn lại 100% tổng số tiền đã trả (trừ phí dịch vụ)
+                      ><b>Trung bình:</b> Miễn phí hủy phòng trong vòng 48h sau
+                      khi đặt phòng thành công và trước 5 ngày so với thời gian
+                      check-in. Sau đó, hủy phòng trước 5 ngày so với thời gian
+                      check-in, được hoàn lại 100% tổng số tiền đã trả (trừ phí
+                      dịch vụ)
                       <a href="" class="read-more-policy">Xem thêm</a>
                     </span>
                   </div>
@@ -710,7 +809,10 @@
                         <div class="rooms-cancel-title-content">
                           <p class="rule-title">5 ngày trước check-in</p>
                         </div>
-                        <div class="rooms-cancel-title-content" style="justify-content: flex-end;">
+                        <div
+                          class="rooms-cancel-title-content"
+                          style="justify-content: flex-end;"
+                        >
                           <p class="rule-title">Check-in</p>
                         </div>
                       </div>
@@ -750,7 +852,8 @@
                             </div>
                             <div class="content-rule-process orange">
                               <p>
-                                Hoàn 50% (trừ phí đêm đầu tiên, phí dịch vụ và các phí kèm theo)
+                                Hoàn 50% (trừ phí đêm đầu tiên, phí dịch vụ và
+                                các phí kèm theo)
                               </p>
                             </div>
                           </div>
@@ -767,501 +870,681 @@
                       </div>
                     </div>
                   </div>
-              </div>
-              <div class="note-rooms">
-                <div class="des-note-rooms">
+                </div>
+                <div class="note-rooms">
+                  <div class="des-note-rooms">
+                    <div class="title">
+                      <h3>Lưu ý đặc biệt</h3>
+                      <p>
+                        - Vui lòng không hút thuốc lá và sử dụng các chất cấm
+                      </p>
+                      <p>- Giữ yên lặng sau 22:00</p>
+                      <p>- Không mang theo thú cưng</p>
+                      <p>- Không tổ chức tiệc</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="check-in_time">
                   <div class="title">
-                    <h3>Lưu ý đặc biệt</h3>
-                    <p>- Vui lòng không hút thuốc lá và sử dụng các chất cấm</p>
-                    <p>- Giữ yên lặng sau 22:00</p>
-                    <p>- Không mang theo thú cưng</p>
-                    <p>- Không tổ chức tiệc</p>
+                    <h3>Thời gian nhận phòng</h3>
                   </div>
-              </div>
-              </div>
-              <div class="check-in_time">
-                <div class="title">
-                  <h3>Thời gian nhận phòng</h3>
+                  <div class="rooms-price-detail">
+                    <div class="content">
+                      <span class="days">Nhận phòng</span>
+                      <span class="detail">02:00 pm</span>
+                    </div>
+                    <div class="content">
+                      <span class="days">Trả phòng</span>
+                      <span class="detail">12:00 pm</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="rooms-price-detail">
-                  <div class="content">
-                    <span class="days">Nhận phòng</span>
-                    <span class="detail">02:00 pm</span>
+                <div class="utility-around">
+                  <div class="title">
+                    <h3>Tiện ích xung quanh</h3>
+                    <span
+                      >Trải nghiệm các tiện ích nổi bật xung quanh căn hộ</span
+                    >
                   </div>
                   <div class="content">
-                    <span class="days">Trả phòng</span>
-                    <span class="detail">12:00 pm</span>
-                  </div>
-                  </div>  
-              </div>
-              <div class="utility-around">
-                <div class="title">
-                  <h3>Tiện ích xung quanh</h3>
-                  <span>Trải nghiệm các tiện ích nổi bật xung quanh căn hộ</span>
-                </div>
-                <div class="content">
-                  <div class="container-fluid">
-                    <div class="row">
+                    <div class="container-fluid">
+                      <div class="row">
                         <div class="col-md-4 mb-3 scroll-nav">
-                            <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
-                      <li class="nav-item">
-                        <a class="nav-link active" id="famous-place-tab" data-toggle="tab" href="#famous-place" role="tab" aria-controls="home" aria-selected="true">
-                          <img
-                          width="24px"
-                          height="24px"
-                          src="./images/icon-svg/cafe.png"
-                          alt="" style="margin-right: 10px;"
-                        />Địa điểm nổi tiếng</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="food-tab" data-toggle="tab" href="#food" role="tab" aria-controls="food" aria-selected="false">
-                            <img
-                            width="24px"
-                            height="24px"
-                            src="./images/icon-svg/salad.png"
-                            alt="" style="margin-right: 10px;"
-                          />Ẩm thực</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="shopping-tab" data-toggle="tab" href="#shopping" role="tab" aria-controls="shopping" aria-selected="false">
-                            <img
-                            width="24px"
-                            height="24px"
-                            src="./images/icon-svg/shopping-cart.png"
-                            alt="" style="margin-right: 10px;"
-                          />
-                          Mua sắm</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="entertaiment-tab" data-toggle="tab" href="#entertaiment" role="tab" aria-controls="entertaiment" aria-selected="false">
-                            <img
-                            width="24px"
-                            height="24px"
-                            src="./images/icon-svg/confetti.png"
-                            alt="" style="margin-right: 10px;"
-                          />Giải trí</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="medical-tab" data-toggle="tab" href="#medical" role="tab" aria-controls="medical" aria-selected="false">
-                            <img
-                            width="24px"
-                            height="24px"
-                            src="./images/icon-svg/medicine.png"
-                            alt="" style="margin-right: 10px;"
-                          />Y tế</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="organ-tab" data-toggle="tab" href="#organ" role="tab" aria-controls="organ" aria-selected="false">
-                            <img
-                            width="24px"
-                            height="24px"
-                            src="./images/icon-svg/building.png"
-                            alt="" style="margin-right: 10px;"
-                          />Cơ quan ban hành</a>
-                      </li>
-                    </ul>
+                          <ul
+                            class="nav nav-pills flex-column"
+                            id="myTab"
+                            role="tablist"
+                          >
+                            <li class="nav-item">
+                              <a
+                                class="nav-link active"
+                                id="famous-place-tab"
+                                data-toggle="tab"
+                                href="#famous-place"
+                                role="tab"
+                                aria-controls="home"
+                                aria-selected="true"
+                              >
+                                <img
+                                  width="24px"
+                                  height="24px"
+                                  src="./images/icon-svg/cafe.png"
+                                  alt=""
+                                  style="margin-right: 10px;"
+                                />Địa điểm nổi tiếng</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a
+                                class="nav-link"
+                                id="food-tab"
+                                data-toggle="tab"
+                                href="#food"
+                                role="tab"
+                                aria-controls="food"
+                                aria-selected="false"
+                              >
+                                <img
+                                  width="24px"
+                                  height="24px"
+                                  src="./images/icon-svg/salad.png"
+                                  alt=""
+                                  style="margin-right: 10px;"
+                                />Ẩm thực</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a
+                                class="nav-link"
+                                id="shopping-tab"
+                                data-toggle="tab"
+                                href="#shopping"
+                                role="tab"
+                                aria-controls="shopping"
+                                aria-selected="false"
+                              >
+                                <img
+                                  width="24px"
+                                  height="24px"
+                                  src="./images/icon-svg/shopping-cart.png"
+                                  alt=""
+                                  style="margin-right: 10px;"
+                                />
+                                Mua sắm</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a
+                                class="nav-link"
+                                id="entertaiment-tab"
+                                data-toggle="tab"
+                                href="#entertaiment"
+                                role="tab"
+                                aria-controls="entertaiment"
+                                aria-selected="false"
+                              >
+                                <img
+                                  width="24px"
+                                  height="24px"
+                                  src="./images/icon-svg/confetti.png"
+                                  alt=""
+                                  style="margin-right: 10px;"
+                                />Giải trí</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a
+                                class="nav-link"
+                                id="medical-tab"
+                                data-toggle="tab"
+                                href="#medical"
+                                role="tab"
+                                aria-controls="medical"
+                                aria-selected="false"
+                              >
+                                <img
+                                  width="24px"
+                                  height="24px"
+                                  src="./images/icon-svg/medicine.png"
+                                  alt=""
+                                  style="margin-right: 10px;"
+                                />Y tế</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a
+                                class="nav-link"
+                                id="organ-tab"
+                                data-toggle="tab"
+                                href="#organ"
+                                role="tab"
+                                aria-controls="organ"
+                                aria-selected="false"
+                              >
+                                <img
+                                  width="24px"
+                                  height="24px"
+                                  src="./images/icon-svg/building.png"
+                                  alt=""
+                                  style="margin-right: 10px;"
+                                />Cơ quan ban hành</a
+                              >
+                            </li>
+                          </ul>
                         </div>
                         <!-- /.col-md-4 -->
-                            <div class="col-md-8 content-utility">
+                        <div class="col-md-8 content-utility">
                           <div class="tab-content" id="myTabContent">
-                      <div class="tab-pane fade show active" id="famous-place" role="tabpanel" aria-labelledby="famous-place-tab">
-                      <div class="row">
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="counter">
-                                <span class="counter_number">1</span>
-                                <span class="counter_text">Chợ Đồng Xuân</span>
-                              </div>
-                        </div>
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="counter">
-                                <span class="counter_number">2</span>
-                                <span class="counter_text">Tháp nước “Bốt” Hàng Đậu</span>
-                              </div>
-                        </div>
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="counter">
-                                <span class="counter_number">3</span>
-                                <span class="counter_text">
-                                    Chùa quán Huyền Thiên</span>
-                              </div>
-                        </div>
-                      </div>
-                      </div>
-                      <div class="tab-pane fade" id="food" role="tabpanel" aria-labelledby="food-tab">
-                          <div class="row">
-                              <div class="col-sm-6 col-xs-12">
+                            <div
+                              class="tab-pane fade show active"
+                              id="famous-place"
+                              role="tabpanel"
+                              aria-labelledby="famous-place-tab"
+                            >
+                              <div class="row">
+                                <div class="col-sm-6 col-xs-12">
                                   <div class="counter">
-                                      <span class="counter_number">1</span>
-                                      <span class="counter_text">
-                                          48 Bistro - Beefsteak & Món Âu - Lê Thị Riêng</span>
-                                    </div>
-                              </div>
-                              <div class="col-sm-6 col-xs-12">
+                                    <span class="counter_number">1</span>
+                                    <span class="counter_text"
+                                      >Chợ Đồng Xuân</span
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
                                   <div class="counter">
-                                      <span class="counter_number">2</span>
-                                      <span class="counter_text">Sushi Tei - Lý Tự Trọng</span>
-                                    </div>
-                              </div>
-                              </div>
-                    </div>
-                    <div class="tab-pane fade" id="shopping" role="tabpanel" aria-labelledby="shopping-tab">
-                        <div class="row">
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="counter">
-                                    <span class="counter_number">1</span>
-                                    <span class="counter_text">
-                                        Circle K Store</span>
-                                  </div>
-                            </div>
-                            </div>
-                    </div>
-                    <div class="tab-pane fade" id="entertaiment" role="tabpanel" aria-labelledby="entertaiment-tab">
-                        <div class="row">
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="counter">
-                                    <span class="counter_number">1</span>
-                                    <span class="counter_text">
-                                        Softwater Club - Beer & Cafe</span>
-                                  </div>
-                            </div>
-                            </div>
-                    </div>
-                    <div class="tab-pane fade" id="medical" role="tabpanel" aria-labelledby="medical-tab">
-                        <div class="row">
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="counter">
-                                    <span class="counter_number">1</span>
-                                    <span class="counter_text">BỆNH VIỆN MẮT SÀI GÒN</span>
-                                  </div>
-                            </div>
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="counter">
                                     <span class="counter_number">2</span>
-                                    <span class="counter_text">
-                                        NHA KHOA NGUYỄN VĂN HẬU</span>
+                                    <span class="counter_text"
+                                      >Tháp nước “Bốt” Hàng Đậu</span
+                                    >
                                   </div>
-                            </div>
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="counter">
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                  <div class="counter">
                                     <span class="counter_number">3</span>
                                     <span class="counter_text">
-                                        Bệnh Viện Y Học Cổ Truyền Nam Á - Hòe Nhai</span>
+                                      Chùa quán Huyền Thiên</span
+                                    >
                                   </div>
+                                </div>
+                              </div>
                             </div>
-                            </div>
-                    </div>
-                    <div class="tab-pane fade" id="organ" role="tabpanel" aria-labelledby="organ-tab">
-                        <div class="row">
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="counter">
+                            <div
+                              class="tab-pane fade"
+                              id="food"
+                              role="tabpanel"
+                              aria-labelledby="food-tab"
+                            >
+                              <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                  <div class="counter">
                                     <span class="counter_number">1</span>
                                     <span class="counter_text">
-                                        Liên Đoàn Lao Động</span>
+                                      48 Bistro - Beefsteak & Món Âu - Lê Thị
+                                      Riêng</span
+                                    >
                                   </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                  <div class="counter">
+                                    <span class="counter_number">2</span>
+                                    <span class="counter_text"
+                                      >Sushi Tei - Lý Tự Trọng</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="counter">
+                            <div
+                              class="tab-pane fade"
+                              id="shopping"
+                              role="tabpanel"
+                              aria-labelledby="shopping-tab"
+                            >
+                              <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                  <div class="counter">
+                                    <span class="counter_number">1</span>
+                                    <span class="counter_text">
+                                      Circle K Store</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="tab-pane fade"
+                              id="entertaiment"
+                              role="tabpanel"
+                              aria-labelledby="entertaiment-tab"
+                            >
+                              <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                  <div class="counter">
+                                    <span class="counter_number">1</span>
+                                    <span class="counter_text">
+                                      Softwater Club - Beer & Cafe</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="tab-pane fade"
+                              id="medical"
+                              role="tabpanel"
+                              aria-labelledby="medical-tab"
+                            >
+                              <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                  <div class="counter">
+                                    <span class="counter_number">1</span>
+                                    <span class="counter_text"
+                                      >BỆNH VIỆN MẮT SÀI GÒN</span
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                  <div class="counter">
                                     <span class="counter_number">2</span>
                                     <span class="counter_text">
-                                        Uỷ ban nhân dân Phường cô Giang</span>
+                                      NHA KHOA NGUYỄN VĂN HẬU</span
+                                    >
                                   </div>
-                            </div>
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="counter">
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                  <div class="counter">
                                     <span class="counter_number">3</span>
                                     <span class="counter_text">
-                                        Uỷ ban nhân dân Phường Bến Thành</span>
+                                      Bệnh Viện Y Học Cổ Truyền Nam Á - Hòe
+                                      Nhai</span
+                                    >
                                   </div>
+                                </div>
+                              </div>
                             </div>
+                            <div
+                              class="tab-pane fade"
+                              id="organ"
+                              role="tabpanel"
+                              aria-labelledby="organ-tab"
+                            >
+                              <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                  <div class="counter">
+                                    <span class="counter_number">1</span>
+                                    <span class="counter_text">
+                                      Liên Đoàn Lao Động</span
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                  <div class="counter">
+                                    <span class="counter_number">2</span>
+                                    <span class="counter_text">
+                                      Uỷ ban nhân dân Phường cô Giang</span
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                  <div class="counter">
+                                    <span class="counter_number">3</span>
+                                    <span class="counter_text">
+                                      Uỷ ban nhân dân Phường Bến Thành</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                    </div>
+                          </div>
+                          <!-- /.col-md-8 -->
                         </div>
-                        <!-- /.col-md-8 -->
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12" data-sticky-container>
+              <div id="fix-right" class="infor-detail-right">
+                <div class="room-sidebar">
+                  <div class="shadow">
+                    <div class="content-shadow">
+                      <div class="prices-room">
+                        <span style="font-weight: bold;">1.200.000đ</span>
+                        <span style="font-size: 14px;">/đêm</span>
+                      </div>
+                      <div class="home_content">
+                        <!-- <div class="home_title"><h1>A Luxury Stay</h1></div> -->
+                        <div class="booking_form_container detail_room">
+                          <form action="#" class="booking_form">
+                            <div
+                              class="d-flex flex-xl-row flex-column align-items-start justify-content-start"
+                            >
+                              <div
+                                class="booking_input_container d-flex flex-lg-row flex-column align-items-start justify-content-start detail"
+                              >
+                                <div class="content-detail">
+                                  <input
+                                    type="text"
+                                    id="timeCheckIn"
+                                    class="datepicker booking_input booking_input_a booking_in detail_check"
+                                    placeholder="Check in"
+                                    required="required"
+                                  />
+                                </div>
+                                <div class="content-detail">
+                                  <input
+                                    type="text"
+                                    id="timeCheckOut"
+                                    class="datepicker booking_input booking_input_a booking_out detail_check"
+                                    placeholder="Check out"
+                                    required="required"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="d-flex flex-xl-row flex-column align-items-start justify-content-start"
+                            >
+                              <div
+                                class="booking_input_container d-flex flex-lg-row flex-column align-items-start justify-content-start"
+                              >
+                                <div class="select-items content-detail">
+                                  <!-- <input type="number" class="booking_input booking_input_b" placeholder="Children" required="required"> -->
+                                  <select
+                                    name=""
+                                    id=""
+                                    class="booking_input booking_input_b detail_check"
+                                  >
+                                    <option value="">Adults</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                  </select>
+                                  <i class="fas fa-angle-down icon"></i>
+                                </div>
+                                <div class="content-detail">
+                                  <!-- <input type="number" class="booking_input booking_input_b" placeholder="Room" required="required"> -->
+                                  <div class="select-items">
+                                    <!-- <input type="number" class="booking_input booking_input_b" placeholder="Children" required="required"> -->
+                                    <select
+                                      name=""
+                                      id=""
+                                      class="booking_input booking_input_b detail_check"
+                                    >
+                                      <option value="">Adults</option>
+                                      <option value="">1</option>
+                                      <option value="">2</option>
+                                      <option value="">3</option>
+                                      <option value="">4</option>
+                                    </select>
+                                    <i class="fas fa-angle-down icon"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <button id="addtocart">Đặt ngay</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-xs-12" data-sticky-container>
-          <div id="fix-right" class="infor-detail-right">
-              <div class="room-sidebar">
-                  <div class="shadow">
-                      <div class="content-shadow">
-                        <div class="prices-room">
-                          <span style="font-weight: bold;">1.200.000đ</span>
-                          <span style="font-size: 14px;">/đêm</span>
-                        </div>
-                          <div class="home_content">
-                            <!-- <div class="home_title"><h1>A Luxury Stay</h1></div> -->
-                            <div class="booking_form_container detail_room">
-                        <form action="#" class="booking_form">
-                          <div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
-                            <div class="booking_input_container d-flex flex-lg-row flex-column align-items-start justify-content-start detail">
-                              <div class="content-detail"><input type="text" id="timeCheckIn" class="datepicker booking_input booking_input_a booking_in detail_check" placeholder="Check in" required="required"></div>
-                              <div class="content-detail"><input type="text" id="timeCheckOut" class="datepicker booking_input booking_input_a booking_out detail_check" placeholder="Check out" required="required"></div>
-                            </div>
-                          </div>
-                            <div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
-                            <div class="booking_input_container d-flex flex-lg-row flex-column align-items-start justify-content-start">
-                              <div class="select-items content-detail">
-                                <!-- <input type="number" class="booking_input booking_input_b" placeholder="Children" required="required"> -->
-                                <select name="" id="" class="booking_input booking_input_b detail_check">
-                                  <option value="">Adults</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                </select>
-                                <i class="fas fa-angle-down icon"></i>
-                              </div>
-                              <div class="content-detail">
-                                <!-- <input type="number" class="booking_input booking_input_b" placeholder="Room" required="required"> -->
-                                <div class="select-items">
-                                    <!-- <input type="number" class="booking_input booking_input_b" placeholder="Children" required="required"> -->
-                                    <select name="" id="" class="booking_input booking_input_b detail_check">
-                                      <option value="">Adults</option>
-                                        <option value="">1</option>
-                                        <option value="">2</option>
-                                        <option value="">3</option>
-                                        <option value="">4</option>
-                                    </select>
-                                    <i class="fas fa-angle-down icon"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          
-                        </form>
-                      </div>
-                    </div>
-                    <button id="addtocart">Đặt ngay</button>
-                  </div>
-                  </div>
-                </div>
-          </div>
-
-      </div>
-    </div>
-    </div>
-  </div>
     </div>
     <div class="container similars-rooms">
-        <div class="row">
-            <div class="col-xs-12">
-              <div class="similar-room">
-                  <div class="title">
-                    <h3>Chỗ ở tương tự</h3>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="similar-room">
+            <div class="title">
+              <h3>Chỗ ở tương tự</h3>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <div style="width: 100%; display: inline-block;">
+                  <div class="product_img">
+                    <a href="" target="_blank">
+                      <img
+                        width="270px"
+                        height="190px"
+                        src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
+                      />
+                    </a>
                   </div>
-                  <div class="row">
-                    <div class="col-xs-6 col-sm-4 col-md-3">
-                        <div style="width: 100%; display: inline-block;">
-                            <div class="product_img">
-                              <a href="" target="_blank">
-                                <img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
-                              </a>
-                            </div>	
-                            <div class="promo_content">
-                              <div class="main_content">
-                                <a href="">
-                                  <div class="promo_title">
-                                      URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
-                                  </div>	
-                                </a>
-                                <div class="promo_description">
-                                    4 khách · 2 Phòng ngủ · 2 phòng tắm
-                                </div>
-                                <div class="promo_price">
-                                  <span class="promotion_price">
-                                      1.200.000đ/đêm
-                                  </span>
-                                  <span class="main_price"> 1.500.000đ</span>
-                                </div>
-                                <div class="promo_address">
-                                    Quận 1, Hồ Chí Minh
-                                </div>
-                                <div class="promo_review">
-                                  <div class="promo_star">
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                      <i class="fa fa-star"></i>
-                                  </div>
-                                  <span class="promo_review">
-                                    3
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3">
-                      <div style="width: 100%; display: inline-block;">
-                          <div class="product_img">
-                            <a href="" target="_blank">
-                              <img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
-                            </a>
-                          </div>	
-                          <div class="promo_content">
-                            <div class="main_content">
-                              <a href="">
-                                <div class="promo_title">
-                                    URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
-                                </div>	
-                              </a>
-                              <div class="promo_description">
-                                  4 khách · 2 Phòng ngủ · 2 phòng tắm
-                              </div>
-                              <div class="promo_price">
-                                <span class="promotion_price">
-                                    1.200.000đ/đêm
-                                </span>
-                                <span class="main_price"> 1.500.000đ</span>
-                              </div>
-                              <div class="promo_address">
-                                  Quận 1, Hồ Chí Minh
-                              </div>
-                              <div class="promo_review">
-                                <div class="promo_star">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <span class="promo_review">
-                                  3
-                                </span>
-                              </div>
-                            </div>
-                          </div>
+                  <div class="promo_content">
+                    <div class="main_content">
+                      <a href="">
+                        <div class="promo_title">
+                          URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN
+                          TIỆN NGHI CHO GIA ĐÌNH
                         </div>
-                  </div>
-                  <div class="col-xs-6 col-sm-4 col-md-3">
-                    <div style="width: 100%; display: inline-block;">
-                        <div class="product_img">
-                          <a href="" target="_blank">
-                            <img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
-                          </a>
-                        </div>	
-                        <div class="promo_content">
-                          <div class="main_content">
-                            <a href="">
-                              <div class="promo_title">
-                                  URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
-                              </div>	
-                            </a>
-                            <div class="promo_description">
-                                4 khách · 2 Phòng ngủ · 2 phòng tắm
-                            </div>
-                            <div class="promo_price">
-                              <span class="promotion_price">
-                                  1.200.000đ/đêm
-                              </span>
-                              <span class="main_price"> 1.500.000đ</span>
-                            </div>
-                            <div class="promo_address">
-                                Quận 1, Hồ Chí Minh
-                            </div>
-                            <div class="promo_review">
-                              <div class="promo_star">
-                                  <i class="fa fa-star"></i>
-                                  <i class="fa fa-star"></i>
-                                  <i class="fa fa-star"></i>
-                                  <i class="fa fa-star"></i>
-                                  <i class="fa fa-star"></i>
-                              </div>
-                              <span class="promo_review">
-                                3
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+                      </a>
+                      <div class="promo_description">
+                        4 khách · 2 Phòng ngủ · 2 phòng tắm
                       </div>
+                      <div class="promo_price">
+                        <span class="promotion_price">
+                          1.200.000đ/đêm
+                        </span>
+                        <span class="main_price"> 1.500.000đ</span>
+                      </div>
+                      <div class="promo_address">
+                        Quận 1, Hồ Chí Minh
+                      </div>
+                      <div class="promo_review">
+                        <div class="promo_star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
+                        <span class="promo_review">
+                          3
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div style="width: 100%; display: inline-block;">
-                      <div class="product_img">
-                        <a href="" target="_blank">
-                          <img width="270px" height="190px" src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg" />
-                        </a>
-                      </div>	
-                      <div class="promo_content">
-                        <div class="main_content">
-                          <a href="">
-                            <div class="promo_title">
-                                URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN TIỆN NGHI CHO GIA ĐÌNH
-                            </div>	
-                          </a>
-                          <div class="promo_description">
-                              4 khách · 2 Phòng ngủ · 2 phòng tắm
-                          </div>
-                          <div class="promo_price">
-                            <span class="promotion_price">
-                                1.200.000đ/đêm
-                            </span>
-                            <span class="main_price"> 1.500.000đ</span>
-                          </div>
-                          <div class="promo_address">
-                              Quận 1, Hồ Chí Minh
-                          </div>
-                          <div class="promo_review">
-                            <div class="promo_star">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <span class="promo_review">
-                              3
-                            </span>
-                          </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <div style="width: 100%; display: inline-block;">
+                  <div class="product_img">
+                    <a href="" target="_blank">
+                      <img
+                        width="270px"
+                        height="190px"
+                        src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
+                      />
+                    </a>
+                  </div>
+                  <div class="promo_content">
+                    <div class="main_content">
+                      <a href="">
+                        <div class="promo_title">
+                          URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN
+                          TIỆN NGHI CHO GIA ĐÌNH
                         </div>
+                      </a>
+                      <div class="promo_description">
+                        4 khách · 2 Phòng ngủ · 2 phòng tắm
+                      </div>
+                      <div class="promo_price">
+                        <span class="promotion_price">
+                          1.200.000đ/đêm
+                        </span>
+                        <span class="main_price"> 1.500.000đ</span>
+                      </div>
+                      <div class="promo_address">
+                        Quận 1, Hồ Chí Minh
+                      </div>
+                      <div class="promo_review">
+                        <div class="promo_star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
+                        <span class="promo_review">
+                          3
+                        </span>
                       </div>
                     </div>
-              </div>
                   </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <div style="width: 100%; display: inline-block;">
+                  <div class="product_img">
+                    <a href="" target="_blank">
+                      <img
+                        width="270px"
+                        height="190px"
+                        src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
+                      />
+                    </a>
+                  </div>
+                  <div class="promo_content">
+                    <div class="main_content">
+                      <a href="">
+                        <div class="promo_title">
+                          URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN
+                          TIỆN NGHI CHO GIA ĐÌNH
+                        </div>
+                      </a>
+                      <div class="promo_description">
+                        4 khách · 2 Phòng ngủ · 2 phòng tắm
+                      </div>
+                      <div class="promo_price">
+                        <span class="promotion_price">
+                          1.200.000đ/đêm
+                        </span>
+                        <span class="main_price"> 1.500.000đ</span>
+                      </div>
+                      <div class="promo_address">
+                        Quận 1, Hồ Chí Minh
+                      </div>
+                      <div class="promo_review">
+                        <div class="promo_star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
+                        <span class="promo_review">
+                          3
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <div style="width: 100%; display: inline-block;">
+                  <div class="product_img">
+                    <a href="" target="_blank">
+                      <img
+                        width="270px"
+                        height="190px"
+                        src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
+                      />
+                    </a>
+                  </div>
+                  <div class="promo_content">
+                    <div class="main_content">
+                      <a href="">
+                        <div class="promo_title">
+                          URBAN HOUSE SAIGON ❤️ FREE CITY TOUR ❤️ CĂN HỘ 2PN
+                          TIỆN NGHI CHO GIA ĐÌNH
+                        </div>
+                      </a>
+                      <div class="promo_description">
+                        4 khách · 2 Phòng ngủ · 2 phòng tắm
+                      </div>
+                      <div class="promo_price">
+                        <span class="promotion_price">
+                          1.200.000đ/đêm
+                        </span>
+                        <span class="main_price"> 1.500.000đ</span>
+                      </div>
+                      <div class="promo_address">
+                        Quận 1, Hồ Chí Minh
+                      </div>
+                      <div class="promo_review">
+                        <div class="promo_star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
+                        <span class="promo_review">
+                          3
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
     </div>
     <footer style="margin-top: 30px;">
-			<div class="footer2">
-				<div class="container text-center">
-					<p>Copyright © Your Website 2019 </p>
-					<p>Design By Nguyên Phạm</p>
-				</div>
-			</div>
+      <div class="footer2">
+        <div class="container text-center">
+          <p>Copyright © Your Website 2019</p>
+          <p>Design By Nguyên Phạm</p>
+        </div>
+      </div>
     </footer>
-    <div class='lentop'>
-			<div>
-				<img src='https://1.bp.blogspot.com/-k6sikOdzFXQ/VwqCKDosmEI/AAAAAAAAKxE/nLxLhkTIO6o3iE5ZWmtxo2bf4QHdzPQNQ/s1600/top.png'/>
-			</div>
-	</div>
+    <div class="lentop">
+      <div>
+        <img
+          src="https://1.bp.blogspot.com/-k6sikOdzFXQ/VwqCKDosmEI/AAAAAAAAKxE/nLxLhkTIO6o3iE5ZWmtxo2bf4QHdzPQNQ/s1600/top.png"
+        />
+      </div>
+    </div>
     <script src="./sticky-js/dist/sticky.compile.js"></script>
     <script type="text/javascript">
-      $(document).ready(function() {
+      $(document).ready(function () {
         // var elementPosition = $('#fix-right').offset();
         // $(window).scroll(function(){
         // if($(window).scrollTop() > elementPosition.top){
         //       $('#fix-right').css('position','fixed').css('top','0').css('z-index','9999').css('margin-top','80px');
         // } else {
         //     $('#fix-right').css('position','static');
-        // }    
+        // }
         // });
         // var sticky = new Sticky("[data-sticky]", {});
       });
     </script>
-        <script>
-          var sticky = new Sticky('.infor-detail-right');
-        </script>
+    <script>
+      var sticky = new Sticky(".infor-detail-right");
+    </script>
     <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
     <script src="./lightgallery/dist/js/lightgallery-all.min.js"></script>
     <script src="./lightgallery/lib/jquery.mousewheel.min.js"></script>
     <script src="datepicker/js/bootstrap.min.js"></script>
-		<script src="datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="datepicker/js/bootstrap-datepicker.js"></script>
+    <!-- new datepickercustom -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.min.js"></script>
+    <!-- comment -->
+    <script src="js/StarRating.js"></script>
+    <script>
+      rating.addEventListener("rate", () => {
+        console.log(rating.value);
+      });
+    </script>
   </body>
 </html>

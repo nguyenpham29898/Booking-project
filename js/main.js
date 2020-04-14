@@ -1,18 +1,18 @@
-$(function() {
+$(function () {
   //   -----------scroll----------------
-  $(document).scroll(function() {
+  $(document).scroll(function () {
     var $nav = $(".nav-menu");
     $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
   });
-  $("#toggle").click(function() {
+  $("#toggle").click(function () {
     $(this).toggleClass("on");
     $("#resize").toggleClass("active");
   });
-  $("#resize ul li a").click(function() {
+  $("#resize ul li a").click(function () {
     $(this).toggleClass("on");
     $("#resize").toggleClass("active");
   });
-  $(".close-btn").click(function() {
+  $(".close-btn").click(function () {
     $(this).toggleClass("on");
     $("#resize").toggleClass("active");
   });
@@ -22,13 +22,13 @@ $(function() {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: false,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
   });
   $(".lazy").slick({
     dots: false,
     lazyLoad: "ondemand",
     slidesToShow: 5,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   });
   $("#lightgallery").lightGallery();
   $(".detail_slide").slick({
@@ -37,28 +37,54 @@ $(function() {
     speed: 300,
     slidesToShow: 3,
     centerMode: true,
-    variableWidth: true
+    variableWidth: true,
   });
-  $(".read-more").click(function() {
+  $(".read-more").click(function () {
     $("#content-detail-amenities").addClass("active");
     $("html,body").addClass("noscroll");
     return false;
   });
-  $("#back").click(function() {
+  $("#back").click(function () {
     $("#content-detail-amenities").removeClass("active");
     $("html,body").removeClass("noscroll");
     return false;
   });
   // Len top
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 100) $(".lentop").fadeIn();
     else $(".lentop").fadeOut();
   });
-  $(".lentop").on("click", function() {
+  $(".lentop").on("click", function () {
     $("HTML, BODY").animate({ scrollTop: 0 }, 1000);
   });
-  $(".contactmenu").on("click", function() {
+  $(".contactmenu").on("click", function () {
     var bottom = $(document).height() - $(window).height();
     $("HTML, BODY").animate({ scrollTop: bottom }, 1000);
   });
+
+  // new datepickercustom
+});
+$(function () {
+  // init daterangepicker
+  const today = new Date();
+  var picker = $("#daterangepicker1").daterangepicker({
+    parentEl: "#daterangepicker1-container",
+    autoApply: true,
+    minDate: today,
+  });
+  // range update listener
+  picker.on("apply.daterangepicker", function (ev, picker) {
+    $("#daterangepicker-result")
+      .html(
+        "Selected date range: " +
+          picker.startDate.format("DD-MM-YYYY") +
+          " to " +
+          picker.endDate.format("DD-MM-YYYY")
+      )
+      .val();
+  });
+  // prevent hide after range selection
+  picker.data("daterangepicker").hide = function () {};
+  // show picker on load
+  picker.data("daterangepicker").show();
 });
