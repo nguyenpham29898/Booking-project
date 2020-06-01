@@ -155,7 +155,7 @@
                       ><img
                         width="30px"
                         height="30px"
-                        style="margin-right: 5px"
+                        style="margin-right: 5px;"
                         src="../images/icon-svg/user.png"
                         class="rounded-circle"
                       />
@@ -231,11 +231,7 @@
                         <div class="form-group">
                           <label for=""
                             >Tên chỗ ở
-                            <span
-                              class="
-                            imperative-red"
-                              >*</span
-                            >
+                            <span class="imperative-red">*</span>
                           </label>
                           <input
                             name="ten"
@@ -247,11 +243,7 @@
                         <div class="form-group">
                           <label for=""
                             >Loại chỗ ở
-                            <span
-                              class="
-                            imperative-red"
-                              >*</span
-                            >
+                            <span class="imperative-red">*</span>
                           </label>
                           <select
                             class="form-control"
@@ -269,11 +261,7 @@
                         <div class="form-group">
                           <label for=""
                             >Loại phòng
-                            <span
-                              class="
-                            imperative-red"
-                              >*</span
-                            >
+                            <span class="imperative-red">*</span>
                           </label>
                           <select
                             class="form-control"
@@ -288,34 +276,31 @@
                         <div class="form-group">
                           <label for=""
                             >Số khách tiêu chuẩn
-                            <span
-                              class="
-                            imperative-red"
-                              >*</span
-                            >
+                            <span class="imperative-red">*</span>
                           </label>
-                          <input name="khachtc" class="form-control" type="number" min="0" />
+                          <input
+                            name="khachtc"
+                            class="form-control"
+                            type="number"
+                            min="0"
+                          />
                         </div>
                         <div class="form-group">
                           <label for=""
-                            >Số khách tối đa (bao gồm số người lớn và số trẻ
-                            em)
-                            <span
-                              class="
-                            imperative-red"
-                              >*</span
-                            >
+                            >Số khách tối đa (bao gồm số người lớn và số trẻ em)
+                            <span class="imperative-red">*</span>
                           </label>
-                          <input name="khachtd" class="form-control" type="number" min="0" />
+                          <input
+                            name="khachtd"
+                            class="form-control"
+                            type="number"
+                            min="0"
+                          />
                         </div>
                         <div class="form-group">
                           <label for=""
                             >Trẻ sơ sinh tối đa
-                            <span
-                              class="
-                            imperative-red"
-                              >*</span
-                            >
+                            <span class="imperative-red">*</span>
                           </label>
                           <input class="form-control" type="number" min="0" />
                         </div>
@@ -399,12 +384,178 @@
                           </ul>
                           <div class="tab-content detail-content">
                             <div class="container tab-pane active" id="all">
-                              <div class="search-form">
-                                <input type="text" placeholder="Search" />
-                                <button>Tìm kiếm</button>
-                              </div>
-                              <table class="table">
+                              <table class="table place" id="example">
+                                <thead>
+                                  <tr>
+                                    <th>Các chỗ ở</th>
+                                  </tr>
+                                </thead>
                                 <tbody>
+                                  <tr>
+                                    <td>
+                                      <div class="img-room">
+                                        <img
+                                          src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <div class="info-left-room">
+                                        <h3><a href="">Name</a></h3>
+                                        <p>Cập nhật lần cuối Nov 26 2019</p>
+                                        <div class="option-room">
+                                          <a href="update_new_room.html"
+                                            >Cập nhật</a
+                                          >
+                                          <button class="delete">Xóa</button>
+                                          <button>Khóa</button>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td class="info-right-room">
+                                      <div class="id-room">
+                                        Mã chỗ ở: 123456
+                                      </div>
+                                      <div class="price-room">
+                                        <span>1.200.000</span>/ Đêm
+                                      </div>
+                                      <div class="guest-room">
+                                        3 <span>(Số khách tiêu chuẩn)</span> - 3
+                                        <span>(Số khách tối đa)</span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="img-room">
+                                        <img
+                                          src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <div class="info-left-room">
+                                        <h3><a href="">Name</a></h3>
+                                        <p>Cập nhật lần cuối Nov 26 2019</p>
+                                        <div class="option-room">
+                                          <a href="update_new_room.html"
+                                            >Cập nhật</a
+                                          >
+                                          <button class="delete">Xóa</button>
+                                          <button>Khóa</button>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td class="info-right-room">
+                                      <div class="id-room">
+                                        Mã chỗ ở: 123456
+                                      </div>
+                                      <div class="price-room">
+                                        <span>1.200.000</span>/ Đêm
+                                      </div>
+                                      <div class="guest-room">
+                                        3 <span>(Số khách tiêu chuẩn)</span> - 3
+                                        <span>(Số khách tối đa)</span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="img-room">
+                                        <img
+                                          src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <div class="info-left-room">
+                                        <h3><a href="">Name</a></h3>
+                                        <p>Cập nhật lần cuối Nov 26 2019</p>
+                                        <div class="option-room">
+                                          <a href="update_new_room.html"
+                                            >Cập nhật</a
+                                          >
+                                          <button class="delete">Xóa</button>
+                                          <button>Khóa</button>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td class="info-right-room">
+                                      <div class="id-room">
+                                        Mã chỗ ở: 123456
+                                      </div>
+                                      <div class="price-room">
+                                        <span>1.200.000</span>/ Đêm
+                                      </div>
+                                      <div class="guest-room">
+                                        3 <span>(Số khách tiêu chuẩn)</span> - 3
+                                        <span>(Số khách tối đa)</span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="img-room">
+                                        <img
+                                          src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <div class="info-left-room">
+                                        <h3><a href="">Name</a></h3>
+                                        <p>Cập nhật lần cuối Nov 26 2019</p>
+                                        <div class="option-room">
+                                          <a href="update_new_room.html"
+                                            >Cập nhật</a
+                                          >
+                                          <button class="delete">Xóa</button>
+                                          <button>Khóa</button>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td class="info-right-room">
+                                      <div class="id-room">
+                                        Mã chỗ ở: 123456
+                                      </div>
+                                      <div class="price-room">
+                                        <span>1.200.000</span>/ Đêm
+                                      </div>
+                                      <div class="guest-room">
+                                        3 <span>(Số khách tiêu chuẩn)</span> - 3
+                                        <span>(Số khách tối đa)</span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="img-room">
+                                        <img
+                                          src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <div class="info-left-room">
+                                        <h3><a href="">Name</a></h3>
+                                        <p>Cập nhật lần cuối Nov 26 2019</p>
+                                        <div class="option-room">
+                                          <a href="update_new_room.html"
+                                            >Cập nhật</a
+                                          >
+                                          <button class="delete">Xóa</button>
+                                          <button>Khóa</button>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td class="info-right-room">
+                                      <div class="id-room">
+                                        Mã chỗ ở: 123456
+                                      </div>
+                                      <div class="price-room">
+                                        <span>1.200.000</span>/ Đêm
+                                      </div>
+                                      <div class="guest-room">
+                                        3 <span>(Số khách tiêu chuẩn)</span> - 3
+                                        <span>(Số khách tối đa)</span>
+                                      </div>
+                                    </td>
+                                  </tr>
                                   <tr>
                                     <td>
                                       <div class="img-room">
@@ -515,12 +666,12 @@
       new WOW().init();
     </script>
     <script type="text/javascript">
-      $(document).ready(function() {
+      $(document).ready(function () {
         //  Wizard 1
         $("#wizard1").smartWizard({
           transitionEffect: "fade",
           onFinish: onFinishCallback,
-          onLeaveStep: leaveAStepCallback
+          onLeaveStep: leaveAStepCallback,
         });
         function leaveAStepCallback(obj, context) {
           // To check and enable finish button if needed
@@ -532,7 +683,7 @@
         //  Wizard 2
         $("#wizard2").smartWizard({
           transitionEffect: "slide",
-          onFinish: onFinishCallback
+          onFinish: onFinishCallback,
         });
         function onFinishCallback() {
           alert("Finish Called");
@@ -543,7 +694,7 @@
       var selDiv = "";
       var storedFiles = [];
 
-      $(document).ready(function() {
+      $(document).ready(function () {
         $("#files").on("change", handleFileSelect);
 
         selDiv = $("#selectedFiles");
@@ -555,14 +706,14 @@
       function handleFileSelect(e) {
         var files = e.target.files;
         var filesArr = Array.prototype.slice.call(files);
-        filesArr.forEach(function(f) {
+        filesArr.forEach(function (f) {
           if (!f.type.match("image.*")) {
             return;
           }
           storedFiles.push(f);
 
           var reader = new FileReader();
-          reader.onload = function(e) {
+          reader.onload = function (e) {
             var html =
               '<div><img src="' +
               e.target.result +
@@ -588,7 +739,7 @@
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "handler.cfm", true);
 
-        xhr.onload = function(e) {
+        xhr.onload = function (e) {
           if (this.status == 200) {
             console.log(e.currentTarget.responseText);
             alert(e.currentTarget.responseText + " items uploaded.");
@@ -606,9 +757,7 @@
             break;
           }
         }
-        $(this)
-          .parent()
-          .remove();
+        $(this).parent().remove();
       }
     </script>
     <script src="../datepicker/js/bootstrap.min.js"></script>
@@ -628,13 +777,32 @@
       type="text/javascript"
       src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js"
     ></script>
+    <!-- panagation table -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/jquery.table.hpaging.min.js"></script>
+    <!-- SEARCH VALUE BOOSTRAP -->
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../js/search.js"></script>
+    <script>
+      $(function () {
+        $("#example").hpaging({
+          limit: 3,
+          activePage: 1,
+          parentID: "",
+          navBar: null,
+          totalPages: "",
+        });
+      });
+      $("#example").DataTable();
+    </script>
     <script type="text/javascript">
-      $(function() {
+      $(function () {
         $("#datetimepicker3").datetimepicker({
-          pickDate: false
+          pickDate: false,
         });
         $("#datetimepicker4").datetimepicker({
-          pickDate: false
+          pickDate: false,
         });
       });
     </script>

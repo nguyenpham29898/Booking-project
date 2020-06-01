@@ -473,3 +473,10 @@ tbody tr:hover {
 .pagination a:hover:not(.active) {
   background-color: #ddd;
 }
+#table1_length,
+#table1_info,
+#table1_paginate,
+#example_info,
+#example_paginate {
+  display: none;
+}

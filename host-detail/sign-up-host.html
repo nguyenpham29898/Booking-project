@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="../css/login-host.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      charset="utf-8"
+    ></script>
+  </head>
+  <body>
+    <form
+      action=""
+      class="login-form"
+      style="height: 680px; padding: 40px 40px;"
+    >
+      <h1 style="margin-bottom: 40px;">Sign up for HOST</h1>
+
+      <div class="txtb">
+        <input type="email" />
+        <span data-placeholder="Địa chỉ Email"></span>
+      </div>
+
+      <div class="txtb">
+        <input type="number" />
+        <span data-placeholder="Số điện thoại"></span>
+      </div>
+
+      <div class="txtb">
+        <input type="text" />
+        <span data-placeholder="Tên"></span>
+      </div>
+
+      <div class="txtb">
+        <input type="text" />
+        <span data-placeholder="Họ và tên đệm"></span>
+      </div>
+
+      <div class="txtb">
+        <input type="password" />
+        <span data-placeholder="Mật khẩu"></span>
+      </div>
+      <div class="txtb">
+        <input type="password" />
+        <span data-placeholder="Xác nhận mật khẩu"></span>
+      </div>
+      <!-- <input type="submit" class="logbtn fb" value="Đăng nhập bằng Facebook" /> -->
+      <input type="submit" class="logbtn" value="Đăng ký" />
+
+      <div class="bottom-text" style="margin-top: 10px;">
+        Bạn đã có mật khẩu ? <a href="./login-host.html">Đăng nhập</a>
+      </div>
+    </form>
+    <script type="text/javascript">
+      $(".txtb input").on("focus", function () {
+        $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur", function () {
+        if ($(this).val() == "") $(this).removeClass("focus");
+      });
+    </script>
+  </body>
+</html>

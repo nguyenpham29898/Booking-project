@@ -401,6 +401,9 @@ button.view:hover {
 .table {
   margin-top: 50px;
 }
+.table.place {
+  margin-top: 10px;
+}
 .td {
   vertical-align: top;
   padding: 20px 8px;
@@ -584,4 +587,150 @@ label.title-luu {
   margin-left: 15px;
   padding: 4px 12px;
   margin-bottom: 5px;
+}
+#example_info,
+#example_paginate,
+#example_length {
+  display: none;
+}
+#example_filter {
+  margin-top: 20px;
+}
+
+/* -------------------------PANAGATION TABLE----------------------- */
+
+.pagination {
+  display: flex;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+#table1_length,
+#table1_info,
+#table1_paginate,
+#example_info,
+#example_paginate {
+  display: none;
+}
+
+/* ------------------vertical tabs--------------- */
+.account_main {
+  background: #f4f4f4;
+  padding: 28px 0;
+}
+
+.edit_account-content {
+  margin-top: 24px !important;
+}
+.edit_account-content:first-child {
+  margin-top: 0px !important;
+}
+.edit_account-content p {
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: black;
+  font-size: 17px;
+}
+.edit_account-content .gender {
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+}
+.edit_account-content .gender p {
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+#info-account-v a.btn,
+#change-password-v a.btn {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.tab-content.detail-content .tab-content {
+  height: 850px;
+}
+.tab-content.detail-content .tabs-left {
+  border-bottom: none;
+  border-right: 1px solid #ddd;
+}
+
+.tab-content.detail-content .tabs-left > li {
+  float: none;
+  margin: 0px;
+}
+.tab-content.detail-content .tabs-left > li a {
+  font-size: 19px;
+}
+.tab-content.detail-content .tabs-left > li.active > a,
+.tab-content.detail-content .tabs-left > li.active > a:hover,
+.tab-content.detail-content .tabs-left > li.active > a:focus {
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
+  background: #f90;
+  border: none;
+  border-radius: 0px;
+  margin: 0px;
+}
+.tab-content.detail-content .nav-tabs > li > a:hover {
+  /* margin-right: 2px; */
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  /* border-radius: 4px 4px 0 0; */
+}
+.tab-content.detail-content .tabs-left > li.active > a::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  border-left: 10px solid #f90;
+  display: block;
+  width: 0;
+}
+.tab-content.detail-content .nav-tabs > li > a {
+  color: black;
+}
+/* RESPONSIVE MOBILE */
+.fas.fa-align-right {
+  background-color: white;
+  border: 1px solid white;
+}
+
+@media only screen and (max-width: 900px) {
+  .nav-tabs > li {
+    width: 7%;
+  }
+  .navbar .nav > li > .a {
+    font-size: 15px;
+  }
+  .nav-tabs > li > a {
+    margin-right: 0;
+  }
+  .nav > li > a {
+    padding: 10px 10px;
+  }
+  .nav.nav-tabs {
+    text-align: center;
+  }
+  #alrt {
+    margin: 0 !important;
+  }
 }

@@ -738,6 +738,11 @@
                       </div>
                     </div>
                   </div>
+                  <div class="float-right">
+                    <button id="click_btn" class="btn btn-success btn-block">
+                      Lưu
+                    </button>
+                  </div>
                 </div>
                 <div class="comment">
                   <div class="comment-left">
@@ -753,7 +758,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star gray"></i>
                       </div>
                     </div>
                     <p>
@@ -1204,7 +1209,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-xs-12" data-sticky-container>
+            <div class="booking-right col-md-4 col-xs-12" data-sticky-container>
               <div id="fix-right" class="infor-detail-right">
                 <div class="room-sidebar">
                   <div class="shadow">
@@ -1213,10 +1218,20 @@
                         <span style="font-weight: bold;">1.200.000đ</span>
                         <span style="font-size: 14px;">/đêm</span>
                       </div>
+                      <div class="promotion_label_detail">
+                        <span class="title">Giảm 10% từ chủ nhà</span>
+                      </div>
+                      <div class="promotion_label_detail2">
+                        <span class="content"
+                          >Giảm <strong>10%</strong> cho đặt phòng có checkin từ
+                          <strong>11/05</strong> đến
+                          <strong>31/07</strong></span
+                        >
+                      </div>
                       <div class="home_content">
                         <!-- <div class="home_title"><h1>A Luxury Stay</h1></div> -->
                         <div class="booking_form_container detail_room">
-                          <form action="#" class="booking_form">
+                          <form id="my_booking" action="#" class="booking_form">
                             <div
                               class="d-flex flex-xl-row flex-column align-items-start justify-content-start"
                             >
@@ -1225,20 +1240,26 @@
                               >
                                 <div class="content-detail">
                                   <input
+                                    autocomplete="off"
                                     type="text"
                                     id="timeCheckIn"
                                     class="datepicker booking_input booking_input_a booking_in detail_check"
+                                    required
+                                    pattern="^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$"
                                     placeholder="Check in"
-                                    required="required"
+                                    name="timeCheckIn"
                                   />
                                 </div>
                                 <div class="content-detail">
                                   <input
+                                    autocomplete="off"
                                     type="text"
                                     id="timeCheckOut"
                                     class="datepicker booking_input booking_input_a booking_out detail_check"
                                     placeholder="Check out"
                                     required="required"
+                                    pattern="^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$"
+                                    name="timeCheckOut"
                                   />
                                 </div>
                               </div>
@@ -1284,10 +1305,13 @@
                                 </div>
                               </div>
                             </div>
+                            <button type="submit" id="addtocart">
+                              Đặt ngay
+                            </button>
+                            <p id="response"></p>
                           </form>
                         </div>
                       </div>
-                      <button id="addtocart">Đặt ngay</button>
                     </div>
                   </div>
                 </div>
@@ -1540,11 +1564,131 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.min.js"></script>
     <!-- comment -->
+    <script src="js/validate-form.js"></script>
     <script src="js/StarRating.js"></script>
+    <!------------------------ validate jquery ----------------------->
+    <script
+      type="text/javascript"
+      src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"
+    ></script>
+    <script src="js/validate-form.js"></script>
     <script>
       rating.addEventListener("rate", () => {
         console.log(rating.value);
       });
+      $("#click_btn").click(function () {
+        const rating = document.getElementById("rating");
+        const star = rating.value;
+        alert(star);
+      });
+      function resize() {
+        if ($(window).width() < 900) {
+          $(".booking-right").removeClass("col-md-4");
+          $("#fix-right").removeClass("infor-detail-right");
+          $(".booking-right").addClass("col-md-12");
+          return false;
+        } else {
+          $(".booking-right").removeClass("col-md-12");
+          $("#fix-right").addClass("infor-detail-right");
+          $(".booking-right").addClass("col-md-4");
+        }
+      }
+      $(document).ready(function () {
+        $(window).resize(resize);
+        resize();
+      });
+
+      $("#timeCheckIn").on("change keyup", function () {
+        // Remove invalid characters
+        var sanitized = $(this)
+          .val()
+          .replace(/[^-.0-9/]/g, "");
+        // Remove non-leading minus signs
+        sanitized = sanitized.replace(/(.)-+/g, "$1");
+        // Remove the first point if there is more than one
+        sanitized = sanitized.replace(/\.(?=.*\.)/g, "");
+        // Update value
+        $(this).val(sanitized);
+      });
+      $("#timeCheckOut").on("change keyup", function () {
+        // Remove invalid characters
+        var sanitized = $(this)
+          .val()
+          .replace(/[^-.0-9/]/g, "");
+        // Remove non-leading minus signs
+        sanitized = sanitized.replace(/(.)-+/g, "$1");
+        // Remove the first point if there is more than one
+        sanitized = sanitized.replace(/\.(?=.*\.)/g, "");
+        // Update value
+        $(this).val(sanitized);
+      });
+      $("#addtocart").click(isDate);
+      $(function () {
+        const dateRangeDisabled = [
+          {
+            start: "23/05/2020",
+            end: "29/05/2020",
+          },
+          {
+            start: "01/06/2020",
+            end: "05/06/2020",
+          },
+        ];
+        // init daterangepicker
+        const today = new Date();
+        var picker = $("#daterangepicker1").daterangepicker({
+          parentEl: "#daterangepicker1-container",
+          autoApply: true,
+          minDate: today,
+          isInvalidDate: function (date) {
+            for (let dateRange of dateRangeDisabled) {
+              if (
+                date.isSameOrAfter(moment(dateRange.start, "DD/MM/YYYY")) &&
+                date.isSameOrBefore(moment(dateRange.end, "DD/MM/YYYY"))
+              ) {
+                return true;
+              }
+            }
+            return false;
+          },
+        });
+        // range update listener
+
+        picker.on("apply.daterangepicker", function (ev, picker) {
+          // $("#timeCheckIn").value(picker.startDate.format("DD-MM-YYYY")).val();
+          // $("#timeCheckOut").value(picker.endDate.format("DD-MM-YYYY")).val();
+
+          document.getElementById(
+            "timeCheckIn"
+          ).value = picker.startDate.format("DD/MM/YYYY");
+          document.getElementById("timeCheckOut").value = picker.endDate.format(
+            "DD/MM/YYYY"
+          );
+
+          // picker.endDate.format("DD-MM-YYYY");
+        });
+        // prevent hide after range selection
+        picker.data("daterangepicker").hide = function () {};
+        // show picker on load
+        picker.data("daterangepicker").show();
+      });
+      var from = $("#timeCheckIn").val();
+      var to = $("#timeCheckOut").val();
+
+      if (Date.parse(from) > Date.parse(to)) {
+        alert("Invalid Date Range");
+      } else {
+        alert("Valid date Range");
+      }
+      // $("#addtocart").on("click", function (e) {
+      //   e.preventDefault();
+      //   var startDate = new Date($("#timeCheckIn").val());
+      //   var endDate = new Date($("#timeCheckOut").val());
+      //   console.log(startDate);
+      //   if (startDate < endDate) {
+      //     alert("SAI");
+      //   }
+      // });
     </script>
   </body>
 </html>

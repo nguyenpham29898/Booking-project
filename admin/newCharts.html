@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>ADMIN</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Page level plugin CSS-->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+        <a class="navbar-brand mr-1" href="index.html">ADMIN</a>
+  
+        <button
+          class="btn btn-link btn-sm text-white order-1 order-sm-0"
+          id="sidebarToggle"
+          href="#"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+  
+        <!-- Navbar Search -->
+        <form
+          class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
+        >
+          <!-- <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search for..."
+              aria-label="Search"
+              aria-describedby="basic-addon2"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div> -->
+        </form>
+  
+        <!-- Navbar -->
+        <ul class="navbar-nav ml-auto ml-md-0">
+          <li class="nav-item dropdown no-arrow mx-1">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="alertsDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bell fa-fw"></i>
+              <span class="badge badge-danger">9+</span>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right"
+              aria-labelledby="alertsDropdown"
+            >
+              <a class="dropdown-item" href="#">Hoạt động</a>
+              <a class="dropdown-item" href="#">Hoạt động khác</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Khác</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown no-arrow mx-1">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="messagesDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-envelope fa-fw"></i>
+              <span class="badge badge-danger">7</span>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right"
+              aria-labelledby="messagesDropdown"
+            >
+              <a class="dropdown-item" href="#">Hoạt động</a>
+              <a class="dropdown-item" href="#">Hoạt động khác</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Khác</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown no-arrow">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="userDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-user-circle fa-fw"></i>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right"
+              aria-labelledby="userDropdown"
+            >
+              <a class="dropdown-item" href="#">Cài đặt</a>
+              <a class="dropdown-item" href="#">Hoạt động đăng nhập</a>
+              <div class="dropdown-divider"></div>
+              <a
+                class="dropdown-item"
+                href="#"
+                data-toggle="modal"
+                data-target="#logoutModal"
+                >Đăng xuất</a
+              >
+            </div>
+          </li>
+        </ul>
+      </nav>
+<div id="wrapper">
+    <ul class="sidebar navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Bảng điều khiển</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="pagesDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Tùy chọn</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <h6 class="dropdown-header">Màn hình đăng nhập:</h6>
+            <a class="dropdown-item" href="login.html">Đăng nhập</a>
+            <a class="dropdown-item" href="register.html">Đăng ký</a>
+            <a class="dropdown-item" href="forgot-password.html"
+              >Quên mật khẩu</a
+            >
+            <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header">Trang khác:</h6>
+            <a class="dropdown-item" href="404.html">Trang 404</a>
+            <a class="dropdown-item" href="blank.html">Trang trống</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="charts.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Biểu đồ thống kê</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="quanlyloaihinh/quanlyloaihinh.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Quản lý loại hình</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="quanlytaikhoan/quanlytk.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Quản lý tài khoản</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="quanlykhuyenmai/quanlykm.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Quản lý khuyến mãi</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="quanlydangtin/quanlydt.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Quản lý đăng tin</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="taikhoancanhan/edit.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Quản lý TK cá nhân</span></a
+          >
+        </li>
+      </ul>
+  <!-- Sidebar -->
+  <div id="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="/luxurystay/admin/">Trang chủ</a>
+        </li>
+        <li class="breadcrumb-item active">Tổng quan</li>
+      </ol>
+
+      <!-- Area Chart Example-->
+      <div style="display: flex;">
+        <select id="chartType" style=" margin: 5px 50px 10px 0px;">
+            <option value="barSelect" selected">---- Chọn thống kê ----</option>
+            <option value="barMonth">Thống kê theo tháng</option>
+            <option value="barYear">Thống kê theo năm</option>
+            <option value="barArea">Thống kê theo khu vực</option>
+            <option value="barRevenue">Thống kê doanh thu</option>
+          </select>
+         <div class="barMonth boxBar" style="display: none; display: flex;">
+              <p style="margin: 8px 10px 10px 0px;">Thời gian</p>
+              <select style="margin: 8px 0px 10px 0px;">
+                <option>2020</option>
+                <option>2019</option>
+              </select>
+              <a href="newChartsMonth.html">
+                <button style="margin-left: 20px" class="btn btn-success">Thống kê</button>
+              </a>
+          </div>
+          <form action="qlthongke" method = "">
+          <div class="barYear boxBar" style="display: none; display: flex;">
+              <p style="margin: 8px 10px 10px 0px;">Từ</p>
+              <select id="from_tk" name="from_tk" style="margin: 8px 0px 10px 0px;">
+                  <option value=2021>2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2029</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                
+              </select>
+              <p style="margin: 8px 10px 10px 5px;">đến</p>
+              <select id="to_tk" name="to_tk" style="margin: 8px 0px 10px 0px;">
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+              </select>
+              <button id="btn-thongketheonam" type="submit" style="margin-left: 20px" class="btn btn-success">Thống kê</button>
+          </div>
+          </form>
+      </div>
+      <div class="chart_container">
+        <div id="barSelectChart" style="display: none;">
+        <canvas id="barMonthChart" width="80%" height="35px"></canvas>
+        <canvas id="barYearChart" width="80%" height="35px"></canvas>
+        <canvas id="barAreaChart" width="80%" height="35px"></canvas>
+        <canvas id="barRevenueChart" width="80%" height="35px"></canvas>
+        </div>
+      </div>
+        <table class="barMonth table table-hover table-danger" style="margin: 30px auto; width: 80%;">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <!-- /.container-fluid -->
+
+    <!-- Sticky Footer -->
+    <footer class="sticky-footer">
+      <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+          <span>Copyright © Your Website 2019</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- /.content-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+<div
+  class="modal fade"
+  id="logoutModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+        <button
+          class="close"
+          type="button"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Select "Logout" below if you are ready to end your current session.
+      </div>
+      <div class="modal-footer">
+        <button
+          class="btn btn-secondary"
+          type="button"
+          data-dismiss="modal"
+        >
+          Cancel
+        </button>
+        <a class="btn btn-primary" href="login.html">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Page level plugin JavaScript-->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+
+<script>
+  $(function () {
+    let select = document.querySelector("#chartType");
+    let disable = document.getElementById("barSelectChart");
+    function showHide() {
+      // concat Chart for the canvas ID
+      disable.style.display = "block";
+      let chart = this.options[select.selectedIndex].value + "Chart";
+      document.querySelectorAll("canvas").forEach((c) => {
+        c.style.display = c.id === chart ? "inherit" : "none";
+      });
+    }
+    select.addEventListener("change", showHide);
+    // toggle
+    $("#chartType").change(function(){
+    $(this).find("option:selected").each(function(){
+        var optionValue = $(this).attr("value");
+        if(optionValue){
+            $(".boxBar").not("." + optionValue).hide();
+            $(".table").not("." + optionValue).hide();
+            $("." + optionValue).show();
+        } else{
+            $(".table").hide();
+        }
+    });
+}).change();
+    // Precipitation
+    var ctx = document.getElementById("barMonthChart");
+    //Test data nam
+       var BarChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: [
+              "May 2017",
+              "June 2017",
+              "July 2017",
+              "Aug 2017",
+              "Sep 2017",
+              "Oct 2017",
+              "Nov 2017",
+              "Dec 2017",
+              "Jan 2018",
+              "Feb 2018",
+              "Mar 2018",
+              "Apr 2018",
+              "May 2018",
+            ],
+        datasets: [
+          {
+            label: "Precipitation Data",
+            data: [
+                  102.2,
+                  46.4,
+                  1.8,
+                  5.0,
+                  29.4,
+                  114.8,
+                  197.0,
+                  170.6,
+                  249.4,
+                  105.8,
+                  111.8,
+                  134.8,
+                  1.4,
+                ],
+            backgroundColor: [
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                /* "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)", */
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(155,130,32,1)",
+              "rgba(105,9,132,1)",
+              /* "rgba(15,130,202,1)",
+              "rgba(15,250,252,1)",
+              "rgba(205,100,32,0.5)",
+              "rgba(0,205,0,1)",
+              "rgba(55,15,52,1)",
+              "rgba(255,0,0,1)",
+              "rgba(25,59,52,1)",
+              "rgba(0,100,55,1)",
+              "rgba(200,111,199,1)", */
+            ],
+            borderWidth: "1",
+            pointHoverBackgroundColor: "#fff",
+            hoverBorderColor: "#fff",
+          },
+        ],
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Thống kê doanh số theo tháng",
+          fontSize: 20,
+          fontColor: "rgba(10,0,20,0.9)",
+        },
+        legend: {
+          display: false,
+          position: "right",
+          labels: {
+            fontColor: "#000",
+          },
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                callback: function (value, index, values) {
+                  return value + " Triệu (VND)";
+                },
+              },
+            },
+          ],
+        },
+      },
+    });
+  });
+  // YEar
+  //Test data thang
+  
+  
+   var ctx = document.getElementById("barYearChart");
+    var BarChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: [
+              "May 2017",
+              "June 2017",
+              "July 2017",
+              "Aug 2017",
+              "Sep 2017",
+              "Oct 2017",
+              "Nov 2017",
+              "Dec 2017",
+              "Jan 2018",
+              "Feb 2018",
+              "Mar 2018",
+              "Apr 2018",
+              "May 2018",
+            ],
+        datasets: [
+          {
+            label: "Precipitation Data",
+            data: [
+                  102.2,
+                  46.4,
+                  1.8,
+                  5.0,
+                  29.4,
+                  114.8,
+                  197.0,
+                  170.6,
+                  249.4,
+                  105.8,
+                  111.8,
+                  134.8,
+                  1.4,
+                ],
+            backgroundColor: [
+                "rgba(15,250,252,0.5)",
+                "rgba(15,250,252,0.5)",
+                "rgba(15,250,252,0.5)",
+                "rgba(15,250,252,0.5)",
+                "rgba(15,250,252,0.5)",
+                "rgba(15,250,252,0.5)",
+                "rgba(15,250,252,0.5)",
+                "rgba(15,250,252,0.5)",
+                "rgba(15,250,252,0.5)",
+                "rgba(15,250,252,0.5)",
+                "rgba(15,250,252,0.5)",
+                "rgba(15,250,252,0.5)",
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(155,130,32,1)",
+              "rgba(105,9,132,1)",
+              "rgba(15,130,202,1)",
+              "rgba(15,250,252,1)",
+              "rgba(205,100,32,0.5)",
+              "rgba(0,205,0,1)",
+              "rgba(55,15,52,1)",
+              "rgba(255,0,0,1)",
+              "rgba(25,59,52,1)",
+              "rgba(0,100,55,1)",
+              "rgba(200,111,199,1)",
+            ],
+            borderWidth: "1",
+            pointHoverBackgroundColor: "#fff",
+            hoverBorderColor: "#fff",
+          },
+        ],
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Thống kê doanh số theo năm",
+          fontSize: 20,
+          fontColor: "rgba(10,0,20,0.9)",
+        },
+        legend: {
+          display: false,
+          position: "right",
+          labels: {
+            fontColor: "#000",
+          },
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                callback: function (value, index, values) {
+                  return value + " mm";
+                },
+              },
+            },
+          ],
+        },
+      },
+    });
+  
+  
+  //Area
+  
+   var ctx = document.getElementById("barAreaChart");
+    var BarChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: [
+          "May 2017",
+          "June 2017",
+          "July 2017",
+          "Aug 2017",
+          "Sep 2017",
+          "Oct 2017",
+          "Nov 2017",
+          "Dec 2017",
+          "Jan 2018",
+          "Feb 2018",
+          "Mar 2018",
+          "Apr 2018",
+          "May 2018",
+        ],
+        datasets: [
+          {
+            label: "Precipitation Data",
+            data: [
+              102.2,
+              46.4,
+              1.8,
+              5.0,
+              29.4,
+              114.8,
+              197.0,
+              170.6,
+              249.4,
+              105.8,
+              111.8,
+              134.8,
+              1.4,
+            ],
+            backgroundColor: [
+                "rgba(0,205,0,0.5)",
+                "rgba(0,205,0,0.5)",
+                "rgba(0,205,0,0.5)",
+                "rgba(0,205,0,0.5)",
+                "rgba(0,205,0,0.5)",
+                "rgba(0,205,0,0.5)",
+                "rgba(0,205,0,0.5)",
+                "rgba(0,205,0,0.5)",
+                "rgba(0,205,0,0.5)",
+                "rgba(0,205,0,0.5)",
+                "rgba(0,205,0,0.5)",
+                "rgba(0,205,0,0.5)",
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(155,130,32,1)",
+              "rgba(105,9,132,1)",
+              "rgba(15,130,202,1)",
+              "rgba(15,250,252,1)",
+              "rgba(205,100,32,0.5)",
+              "rgba(0,205,0,1)",
+              "rgba(55,15,52,1)",
+              "rgba(255,0,0,1)",
+              "rgba(25,59,52,1)",
+              "rgba(0,100,55,1)",
+              "rgba(200,111,199,1)",
+            ],
+            borderWidth: "1",
+            pointHoverBackgroundColor: "#fff",
+            hoverBorderColor: "#fff",
+          },
+        ],
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Thống kê doanh số theo khu vực",
+          fontSize: 20,
+          fontColor: "rgba(10,0,20,0.9)",
+        },
+        legend: {
+          display: false,
+          position: "right",
+          labels: {
+            fontColor: "#000",
+          },
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                callback: function (value, index, values) {
+                  return value + " mm";
+                },
+              },
+            },
+          ],
+        },
+      },
+    });
+
+  
+  // Doanh thu
+  
+   var ctx = document.getElementById("barRevenueChart");
+    var BarChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: [
+          "May 2017",
+          "June 2017",
+          "July 2017",
+          "Aug 2017",
+          "Sep 2017",
+          "Oct 2017",
+          "Nov 2017",
+          "Dec 2017",
+          "Jan 2018",
+          "Feb 2018",
+          "Mar 2018",
+          "Apr 2018",
+          "May 2018",
+        ],
+        datasets: [
+          {
+            label: "Precipitation Data",
+            data: [
+              102.2,
+              46.4,
+              1.8,
+              5.0,
+              29.4,
+              114.8,
+              197.0,
+              170.6,
+              249.4,
+              105.8,
+              111.8,
+              134.8,
+              1.4,
+            ],
+            backgroundColor: [
+                "rgba(105,9,132,0.5)",
+                "rgba(105,9,132,0.5)",
+                "rgba(105,9,132,0.5)",
+                "rgba(105,9,132,0.5)",
+                "rgba(105,9,132,0.5)",
+                "rgba(105,9,132,0.5)",
+                "rgba(105,9,132,0.5)",
+                "rgba(105,9,132,0.5)",
+                "rgba(105,9,132,0.5)",
+                "rgba(105,9,132,0.5)",
+                "rgba(105,9,132,0.5)",
+                "rgba(105,9,132,0.5)",
+            ],
+            borderColor: [
+              "rgba(255,99,132,1)",
+              "rgba(155,130,32,1)",
+              "rgba(105,9,132,1)",
+              "rgba(15,130,202,1)",
+              "rgba(15,250,252,1)",
+              "rgba(205,100,32,0.5)",
+              "rgba(0,205,0,1)",
+              "rgba(55,15,52,1)",
+              "rgba(255,0,0,1)",
+              "rgba(25,59,52,1)",
+              "rgba(0,100,55,1)",
+              "rgba(200,111,199,1)",
+            ],
+            borderWidth: "1",
+            pointHoverBackgroundColor: "#fff",
+            hoverBorderColor: "#fff",
+          },
+        ],
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Thống kê doanh thu",
+          fontSize: 20,
+          fontColor: "rgba(10,0,20,0.9)",
+        },
+        legend: {
+          display: false,
+          position: "right",
+          labels: {
+            fontColor: "#000",
+          },
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                callback: function (value, index, values) {
+                  return value + " mm";
+                },
+              },
+            },
+          ],
+        },
+      },
+    });
+ 
+</script>
+</body>
+</html>

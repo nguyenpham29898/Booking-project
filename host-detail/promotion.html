@@ -134,13 +134,14 @@
                 <ul class="nav navbar-nav navbar-right menu-user">
                   <li class="user dropdown">
                     <a
+                      href="#"
                       data-toggle="dropdown"
                       aria-expanded="false"
                       class="dropdown-toggle"
                       ><img
                         width="30px"
                         height="30px"
-                        style="margin-right: 5px"
+                        style="margin-right: 5px;"
                         src="../images/icon-svg/user.png"
                         class="rounded-circle"
                       />
@@ -148,7 +149,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right">
                       <li class="nav-item">
-                        <a href="" class="nav-link">Hồ sơ</a>
+                        <a href="./profile.html" class="nav-link">Hồ sơ</a>
                       </li>
                     </ul>
                   </li>
@@ -159,9 +160,24 @@
         </div>
       </div>
       <div class="main_header">
-        <nav class="navbar navbar-toggleable-md navbar-light mb-4 nav-main">
+        <nav
+          id="navbar"
+          class="navbar navbar-toggleable-md navbar-light mb-4 nav-main"
+        >
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed fas fa-align-right"
+              data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false"
+            ></button>
+          </div>
           <div class="container">
-            <div class="collapse navbar-collapse">
+            <div
+              class="collapse navbar-collapse"
+              id="bs-example-navbar-collapse-1"
+            >
               <div class="row">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
@@ -216,22 +232,14 @@
                       <div class="form-group">
                         <label for=""
                           >Tên khuyến mãi
-                          <span
-                            class="
-                            imperative-red"
-                            >*</span
-                          >
+                          <span class="imperative-red">*</span>
                         </label>
                         <input name="tenkm" class="form-control" type="text" />
                       </div>
                       <div class="form-group">
                         <label for=""
                           >Mức giảm giá
-                          <span
-                            class="
-                            imperative-red"
-                            >*</span
-                          >
+                          <span class="imperative-red">*</span>
                         </label>
                         <div style="display: flex;">
                           <input
@@ -242,7 +250,7 @@
                             class="form-control"
                             style="width: 50%;"
                           />
-                          <h4 style="margin-left: 5px;margin-top: 5px;">
+                          <h4 style="margin-left: 5px; margin-top: 5px;">
                             (%)
                           </h4>
                         </div>
@@ -250,11 +258,7 @@
                       <div class="form-group">
                         <label for=""
                           >Địa điểm giảm giá
-                          <span
-                            class="
-                            imperative-red"
-                            >*</span
-                          >
+                          <span class="imperative-red">*</span>
                         </label>
                         <select class="form-control" name="vitrigiamgia">
                           <option value="">Select</option>
@@ -265,11 +269,7 @@
                       <div class="form-group">
                         <label for=""
                           >Thời gian check-in
-                          <span
-                            class="
-                            imperative-red"
-                            >*</span
-                          >
+                          <span class="imperative-red">*</span>
                         </label>
                         <div class="input-group">
                           <input
@@ -299,15 +299,26 @@
                   </div>
                 </div>
               </div>
-              <div>
+              <div style="display: flex;">
                 <button class="new_room">
                   <i class="fas fa-plus"></i>
                   <span><strong>Thêm mới khuyến mãi</strong></span>
                 </button>
+                <div
+                  id="alrt"
+                  style="
+                    margin: 14px 280px;
+                    background: red;
+                    padding: 5px;
+                    box-sizing: border-box;
+                    color: white;
+                    border-radius: 30px;
+                  "
+                ></div>
               </div>
             </div>
             <div class="page-content">
-              <div class="filter-booking">
+              <!-- <div class="filter-booking">
                 <div class="filter-booking-content">
                   <div class="form-group">
                     <div class="form-item">
@@ -345,9 +356,9 @@
                     </form>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <div class="table-info">
-                <table class="table">
+                <table class="table" id="example">
                   <thead>
                     <tr>
                       <th>Mã khuyến mãi</th>
@@ -379,6 +390,22 @@
                     <tr>
                       <td>1123333</td>
                       <td>Nhân dịp Black-Friday</td>
+                      <td>30 %</td>
+                      <td>SunSea Villa - Luxury room</td>
+                      <td>26/12/2019</td>
+                      <td>31/12/2019</td>
+                      <td>
+                        <button class="btn btn-warning" type="submit">
+                          Sửa
+                        </button>
+                        <button class="btn btn-danger" type="submit">
+                          Xóa
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>1123333</td>
+                      <td>A dịp Black-Friday</td>
                       <td>30 %</td>
                       <td>SunSea Villa - Luxury room</td>
                       <td>26/12/2019</td>
@@ -425,22 +452,14 @@
             <div class="form-group">
               <label for=""
                 >Tên khuyến mãi
-                <span
-                  class="
-              imperative-red"
-                  >*</span
-                >
+                <span class="imperative-red">*</span>
               </label>
               <input name="tenkm" class="form-control" type="text" />
             </div>
             <div class="form-group">
               <label for=""
                 >Mức giảm giá
-                <span
-                  class="
-              imperative-red"
-                  >*</span
-                >
+                <span class="imperative-red">*</span>
               </label>
               <div style="display: flex;">
                 <input
@@ -451,7 +470,7 @@
                   class="form-control"
                   style="width: 50%;"
                 />
-                <h4 style="margin-left: 5px;margin-top: 5px;">
+                <h4 style="margin-left: 5px; margin-top: 5px;">
                   (%)
                 </h4>
               </div>
@@ -459,11 +478,7 @@
             <div class="form-group">
               <label for=""
                 >Địa điểm giảm giá
-                <span
-                  class="
-              imperative-red"
-                  >*</span
-                >
+                <span class="imperative-red">*</span>
               </label>
               <select class="form-control" name="vitrigiamgia">
                 <option value="">Select</option>
@@ -474,17 +489,13 @@
             <div class="form-group">
               <label for=""
                 >Thời gian check-in
-                <span
-                  class="
-              imperative-red"
-                  >*</span
-                >
+                <span class="imperative-red">*</span>
               </label>
               <div class="input-group">
                 <input
                   type="text"
-                  name="timeCheckIn"
-                  id="timeCheckIn"
+                  name="timeCheckIn2"
+                  id="timeCheckIn2"
                   class="form-control datepicker booking_input booking_input_a booking_in detail_check"
                   placeholder="Check in"
                 />
@@ -492,8 +503,8 @@
               <div class="input-group" style="margin-top: 15px;">
                 <input
                   type="text"
-                  id="timeCheckOut"
-                  name="timeCheckOut"
+                  id="timeCheckOut2"
+                  name="timeCheckOut2"
                   class="form-control datepicker booking_input booking_input_a booking_out detail_check"
                   placeholder="Check out"
                 />
@@ -525,14 +536,24 @@
       type="text/javascript"
       src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js"
     ></script>
+    <!-- SEARCH VALUE BOOSTRAP -->
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../js/search.js"></script>
     <script type="text/javascript">
-      $(function() {
+      $(function () {
         $("#datetimepicker3").datetimepicker({
-          pickDate: false
+          pickDate: false,
         });
         $("#datetimepicker4").datetimepicker({
-          pickDate: false
+          pickDate: false,
         });
+        document.getElementById("alrt").innerHTML =
+          "<b>Please wait, Your download will start soon!!!</b>";
+        setTimeout(function () {
+          document.getElementById("alrt").innerHTML = "";
+          document.getElementById("alrt").style.background = "white";
+        }, 5000);
+        $("#example").DataTable();
       });
     </script>
   </body>

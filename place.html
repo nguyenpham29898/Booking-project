@@ -123,7 +123,7 @@
       <div class="search-fix">
         <div class="container">
           <div class="search-filter">
-            <div class="drop-down">
+            <!-- <div class="drop-down">
               <button
                 class="btn dropdown-toggle search"
                 id="place"
@@ -137,29 +137,29 @@
                   alt=""
                 />Khu vực
               </button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="place">
+              <ul
+                class="dropdown-menu"
+                role="menu"
+                aria-labelledby="place"
+                style="overflow-y: scroll; height: 200px;"
+              >
                 <div class="form-check">
-                  <label class="form-check-label">
+                  <label role="checkbox" class="form-check-label">
                     <input type="checkbox" class="form-check-input" value="" />
-                    <p>Option 1</p>
+                    <p>Đà Nẵng</p>
                   </label>
                 </div>
                 <div class="form-check">
                   <label class="form-check-label">
                     <input type="checkbox" class="form-check-input" value="" />
-                    <p>Option 2</p>
+                    <p>Hà Nội</p>
                   </label>
                 </div>
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="" />
-                    <p>Option 3</p>
-                  </label>
-                </div>
+                
                 <button class="btn btn-primary select">Áp dụng</button>
               </ul>
-            </div>
-            <div class="drop-down">
+            </div> -->
+            <!-- <div class="drop-down">
               <button
                 class="btn dropdown-toggle search"
                 id="place"
@@ -177,19 +177,19 @@
                 <div class="form-check">
                   <label class="form-check-label">
                     <input type="checkbox" class="form-check-input" value="" />
-                    <p>Option 1</p>
+                    <p>Lò gạch</p>
                   </label>
                 </div>
                 <div class="form-check">
                   <label class="form-check-label">
                     <input type="checkbox" class="form-check-input" value="" />
-                    <p>Option 2</p>
+                    <p>Biệt thự</p>
                   </label>
                 </div>
                 <div class="form-check">
                   <label class="form-check-label">
                     <input type="checkbox" class="form-check-input" value="" />
-                    <p>Option 3</p>
+                    <p>Nhà riêng</p>
                   </label>
                 </div>
                 <button class="btn btn-primary select">Áp dụng</button>
@@ -213,19 +213,19 @@
                 <div class="form-check">
                   <label class="form-check-label">
                     <input type="checkbox" class="form-check-input" value="" />
-                    <p>Option 1</p>
+                    <p>1.000.000 - 2.000.000</p>
                   </label>
                 </div>
                 <div class="form-check">
                   <label class="form-check-label">
                     <input type="checkbox" class="form-check-input" value="" />
-                    <p>Option 2</p>
+                    <p>2.000.000 - 3.000.000</p>
                   </label>
                 </div>
                 <div class="form-check">
                   <label class="form-check-label">
                     <input type="checkbox" class="form-check-input" value="" />
-                    <p>Option 3</p>
+                    <p>3.000.000 - 4.000.000</p>
                   </label>
                 </div>
                 <div class="form-check">
@@ -242,7 +242,94 @@
                 </div>
                 <button class="btn btn-primary select">Áp dụng</button>
               </ul>
+            </div> -->
+
+            <!-- <select id="Ultra" style="margin-right: 20px;" size="5">
+              <option value="0" hidden>Khu vực</option>
+              <option value="?queryid=1" label="option 1">option 1</option>
+              <option value="&queryid=2" label="option 2">option 2</option>
+              <option value="&queryid=3" label="option 3">option 3</option>
+              <option value="&queryid=4" label="option 4">option 4</option>
+              <option value="&queryid=5" label="option 5">option 5</option>
+              <option value="&queryid=6" label="option 6">option 6</option>
+            </select>
+            <select id="landing" name="landingpage" style="margin-right: 20px;">
+              <option value="0" hidden>choose one</option>
+              <option value="&cid=1" label="landing 1">landing 1</option>
+              <option value="&cid=2" label="landing 2">landing 2</option>
+            </select>
+            <input
+              type="button"
+              id="change"
+              style="margin-right: 20px;"
+              value="Create URL"
+              onclick="createUrl()"
+            />
+
+            <input
+              type="text"
+              id="result"
+              placeholder="placeholder"
+              style="width: 300px;"
+            /><br /> -->
+            <div class="wrapper_select">
+              <select
+                id="placeSelect"
+                style="margin-right: 20px;"
+                onfocus="this.size=5;"
+                onblur="this.size=1;"
+                onchange="this.size=1; this.blur();"
+                class="form-control"
+              >
+                <option value="0" hidden>Khu vực</option>
+                <option value="&queryid=1">option 1</option>
+                <option value="&queryid=2">option 2</option>
+                <option value="&queryid=3">option 3</option>
+                <option value="&queryid=4">option 4</option>
+                <option value="&queryid=5">option 5</option>
+                <option value="&queryid=6">option 6</option>
+              </select>
             </div>
+
+            <div class="wrapper_select">
+              <select
+                id="priceSelect"
+                style="margin-right: 20px;"
+                onfocus="this.size=5;"
+                onblur="this.size=1;"
+                onchange="this.size=1; this.blur();"
+                class="form-control"
+              >
+                <option value="0" hidden>Giá tiền</option>
+                <option value="&cid=1" label="landing 1">landing 1</option>
+                <option value="&cid=2" label="landing 2">landing 2</option>
+              </select>
+            </div>
+
+            <div class="wrapper_select">
+              <select
+                id="typeSelect"
+                style="margin-right: 20px;"
+                onfocus="this.size=5;"
+                onblur="this.size=1;"
+                onchange="this.size=1; this.blur();"
+                class="form-control"
+              >
+                <option value="0" hidden>Loại phòng</option>
+                <option value="&typeid=1" label="landing 1">landing 1</option>
+                <option value="&typeid=2" label="landing 2">landing 2</option>
+              </select>
+            </div>
+            <input
+              type="text"
+              value=""
+              id="urlBox"
+              readonly
+              style="display: none;"
+            />
+            <a id="MyLink" target="_blank" href=""
+              ><div class="btn btn-primary btn-block">Áp dụng</div></a
+            >
           </div>
         </div>
       </div>
@@ -253,18 +340,20 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="title">
-                <h2>Hà Nội</h2>
+                <h2>
+                  Hà Nội
+                </h2>
               </div>
             </div>
           </div>
           <div class="similar-room">
             <div class="row">
-              <div class="col-xs-6 col-md-3 col-lg-20">
+              <div class="col-xs-6 col-md-3 col-lg-3">
                 <div style="width: 100%; display: inline-block;">
                   <div class="product_img">
                     <a href="" target="_blank">
                       <img
-                        width="270px"
+                        width="100%"
                         height="190px"
                         src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
                       />
@@ -306,12 +395,12 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xs-6 col-md-3 col-lg-20">
+              <div class="col-xs-6 col-md-3 col-lg-3">
                 <div style="width: 100%; display: inline-block;">
                   <div class="product_img">
                     <a href="" target="_blank">
                       <img
-                        width="270px"
+                        width="100%"
                         height="190px"
                         src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
                       />
@@ -353,12 +442,12 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xs-6 col-md-3 col-lg-20">
+              <div class="col-xs-6 col-md-3 col-lg-3">
                 <div style="width: 100%; display: inline-block;">
                   <div class="product_img">
                     <a href="" target="_blank">
                       <img
-                        width="270px"
+                        width="100%"
                         height="190px"
                         src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
                       />
@@ -400,12 +489,12 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xs-6 col-md-3 col-lg-20">
+              <div class="col-xs-6 col-md-3 col-lg-3">
                 <div style="width: 100%; display: inline-block;">
                   <div class="product_img">
                     <a href="" target="_blank">
                       <img
-                        width="270px"
+                        width="100%"
                         height="190px"
                         src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
                       />
@@ -447,12 +536,12 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xs-6 col-md-3 col-lg-20">
+              <div class="col-xs-6 col-md-3 col-lg-3">
                 <div style="width: 100%; display: inline-block;">
                   <div class="product_img">
                     <a href="" target="_blank">
                       <img
-                        width="270px"
+                        width="100%"
                         height="190px"
                         src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
                       />
@@ -494,12 +583,12 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xs-6 col-md-3 col-lg-20">
+              <div class="col-xs-6 col-md-3 col-lg-3">
                 <div style="width: 100%; display: inline-block;">
                   <div class="product_img">
                     <a href="" target="_blank">
                       <img
-                        width="270px"
+                        width="100%"
                         height="190px"
                         src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
                       />
@@ -541,12 +630,12 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xs-6 col-md-3 col-lg-20">
+              <div class="col-xs-6 col-md-3 col-lg-3">
                 <div style="width: 100%; display: inline-block;">
                   <div class="product_img">
                     <a href="" target="_blank">
                       <img
-                        width="270px"
+                        width="100%"
                         height="190px"
                         src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
                       />
@@ -588,12 +677,12 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xs-6 col-md-3 col-lg-20">
+              <div class="col-xs-6 col-md-3 col-lg-3">
                 <div style="width: 100%; display: inline-block;">
                   <div class="product_img">
                     <a href="" target="_blank">
                       <img
-                        width="270px"
+                        width="100%"
                         height="190px"
                         src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
                       />
@@ -635,12 +724,12 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xs-6 col-md-3 col-lg-20">
+              <div class="col-xs-6 col-md-3 col-lg-3">
                 <div style="width: 100%; display: inline-block;">
                   <div class="product_img">
                     <a href="" target="_blank">
                       <img
-                        width="270px"
+                        width="100%"
                         height="190px"
                         src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
                       />
@@ -682,12 +771,12 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xs-6 col-md-3 col-lg-20">
+              <div class="col-xs-6 col-md-3 col-lg-3">
                 <div style="width: 100%; display: inline-block;">
                   <div class="product_img">
                     <a href="" target="_blank">
                       <img
-                        width="270px"
+                        width="100%"
                         height="190px"
                         src="https://cdn.luxstay.com/rooms/13797/medium/1534953530_DSC01764-Edit.jpg"
                       />
@@ -731,20 +820,22 @@
               </div>
               <div
                 class="col-xs-12"
-                style="padding-top: 30px!important;
-              padding-bottom: 30px!important;"
-              >	
-              <div class="text-center">
-                <ul class="pagination">
-                  <li><a href="#">&laquo; Trang trước</a></li>
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">&raquo; Trang tiếp</a></li>
-                </ul>
+                style="
+                  padding-top: 30px !important;
+                  padding-bottom: 30px !important;
+                "
+              >
+                <div class="text-center">
+                  <ul class="pagination">
+                    <li><a href="#">&laquo; Trang trước</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">&raquo; Trang tiếp</a></li>
+                  </ul>
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
@@ -765,5 +856,61 @@
         />
       </div>
     </div>
+    <script>
+      $('input[type="checkbox"]').on("change", function () {
+        $('input[type="checkbox"]').not(this).prop("checked", false);
+      });
+      // function createUrl() {
+      //   var google = "http://www.google.com/";
+      //   document.getElementById("result").value =
+      //     google +
+      //     document.getElementById("Ultra").value +
+      //     document.getElementById("landing").value;
+      // }
+      var SourceUrl = "http://www.google.com/?tracker=blah1";
+      var placeUrl = "";
+      var priceUrl = "";
+      var typeUrl = "";
+      $(function () {
+        //For showing default url
+        MakeUrl();
+
+        $("#placeSelect").on("change", function () {
+          if ($(this).val() == 0) {
+            placeUrl = "";
+          } else {
+            placeUrl = $(this).val();
+          }
+          MakeUrl();
+          return false;
+        });
+
+        $("#priceSelect").on("change", function () {
+          if ($(this).val() == 0) {
+            priceUrl = "";
+          } else {
+            priceUrl = $(this).val();
+          }
+          MakeUrl();
+          return false;
+        });
+
+        $("#typeSelect").on("change", function () {
+          if ($(this).val() == 0) {
+            typeUrl = "";
+          } else {
+            typeUrl = $(this).val();
+          }
+          MakeUrl();
+          return false;
+        });
+      });
+
+      function MakeUrl() {
+        var finalUrl = SourceUrl + placeUrl + priceUrl + typeUrl;
+        $("#urlBox").val(finalUrl);
+        $("#MyLink").attr("href", finalUrl);
+      }
+    </script>
   </body>
 </html>

@@ -1580,7 +1580,7 @@ footer {
 }
 /* ------------------infor-detail-right ------------------------*/
 .booking_form_container.detail_room {
-  margin-top: 20px;
+  margin-top: 15px;
   padding-left: 0;
   padding-right: 0;
 }
@@ -1626,30 +1626,19 @@ button:focus {
   font-size: 20px;
   font-weight: bold;
   color: white;
-  background: rgb(248, 111, 57);
-  background: linear-gradient(
-    90deg,
-    rgba(248, 111, 57, 1) 31%,
-    rgba(243, 31, 42, 1) 68%,
-    rgba(252, 176, 69, 1) 100%
-  );
+  background-image: linear-gradient(90deg, #f65e38 0, #f68a39 51%, #f65e38);
+  background-size: 200% auto;
   border: none;
   cursor: pointer;
   transition: 200ms;
   border-radius: 2rem;
   outline: 0;
-  transition: 1s ease-in;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px 0 rgba(246, 116, 57, 0.4);
 }
 #addtocart:hover {
-  background-position: 100%;
   color: white;
-  background: rgb(248, 111, 57);
-  background: radial-gradient(
-    circle,
-    rgba(248, 111, 57, 1) 31%,
-    rgba(243, 31, 42, 1) 68%,
-    rgba(252, 176, 69, 1) 100%
-  );
+  background-position: 100%;
 }
 .fix-info-right {
   position: fixed;
@@ -2442,8 +2431,7 @@ x-star-rating > .star.full::after {
   margin-right: 35px;
   font-size: 18px;
 }
-.review-form .review .review-text-area {
-}
+
 .review-form .review .review-text-area textarea {
   padding: 5px;
   width: 500px;
@@ -2485,5 +2473,241 @@ x-star-rating > .star.full::after {
   font-size: 16px;
   color: #ffc120;
 }
-
+i.fas.fa-star.gray {
+  color: gray !important;
+}
 /*end comment*/
+
+/* RESPONSIVE  */
+@media only screen and (max-width: 900px) {
+  .second_detail {
+    height: 200px;
+  }
+  .drp-calendar.left,
+  .drp-calendar.right {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  #cancel-rule {
+    width: 50%;
+  }
+  .rooms-cancel-title-content {
+    font-size: 10px;
+  }
+  .rooms-cancel-content,
+  .rooms-cancel-content.detail {
+    width: 50%;
+  }
+  .infor-detail-left
+    .policy-rooms
+    #cancel-rule
+    .rooms-cancel-content
+    .detail
+    .rule
+    .icon-rule-process
+    .rule-line,
+  .content-rule-process,
+  .icon-rule-yellow .rule-line.top {
+    width: 90px;
+    font-size: 10px;
+  }
+  .infor-detail-left
+    .policy-rooms
+    #cancel-rule
+    .rooms-cancel-content
+    .detail
+    .rule
+    .content-rule-process {
+    margin-left: 40px;
+    max-height: 25px;
+    max-width: 30px;
+  }
+  .content-rule-process p {
+    margin-left: -15px;
+  }
+  .infor-detail-left
+    .policy-rooms
+    #cancel-rule
+    .rooms-cancel-content
+    .detail
+    .rule {
+    width: 90px;
+  }
+  .content-rule-process.orange {
+    min-width: 110px;
+  }
+  .infor-detail-left
+    .policy-rooms
+    #cancel-rule
+    .rooms-cancel-content
+    .detail
+    .rule
+    .icon-rule-process.last {
+    transform: translateX(45px);
+  }
+  .infor-detail .container .section .row {
+    flex-direction: column;
+  }
+  .room-sidebar {
+    order: 2;
+  }
+  .infor-detail-right {
+    float: left;
+  }
+  .booking-right {
+    margin-top: 250px;
+  }
+  .booking_form_container {
+    margin-top: 150px;
+  }
+  .booking_button {
+    width: 100%;
+  }
+  .booking_input_container.detail > div:first-child,
+  .booking_input_container.detail > div:nth-child(2),
+  .booking_input_container > div:first-child,
+  .booking_input_container > div:nth-child(2) {
+    width: 100%;
+  }
+  .content-shadow .prices-room span {
+    font-size: 30px !important;
+  }
+  .container.similars-rooms {
+    margin-top: 0px;
+  }
+  #main_column_left textarea {
+    width: 420px !important;
+  }
+  #main_column {
+    flex-direction: column;
+  }
+  #main_column #main_column_left {
+    order: 3;
+  }
+  #main_column #main_column_mid {
+    order: 2;
+  }
+  #main_column #main_column_right {
+    order: 1;
+  }
+}
+@media only screen and (max-width: 500px) {
+  form.form-login {
+    margin-left: 60px;
+  }
+  form.form-login.sign-up {
+    margin-left: 60px;
+  }
+}
+/* CUSTOM DATEPICKER */
+.daterangepicker td.off.disabled {
+  /* background-color: #fe000073;
+  border-radius: 4px;
+  border: 2px solid #ff0000; */
+  width: 40px;
+  height: 39px;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgb(250, 151, 151),
+    rgb(255, 255, 255) 3px,
+    rgb(235, 235, 235) 3px,
+    rgb(235, 235, 235) 4px
+  );
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 7px;
+  padding: 0px;
+}
+.daterangepicker td.disabled {
+  color: white;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+.daterangepicker td.active.start-date,
+.daterangepicker td.active.end-date {
+  background-color: #78f188;
+  border-color: transparent;
+  color: #fff;
+}
+.daterangepicker td.in-range,
+.daterangepicker td.in-range {
+  background-color: rgb(122, 212, 248);
+  border-color: transparent;
+  color: rgb(10, 9, 9);
+}
+.promotion_label_room {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  top: 15px;
+  left: 10px;
+}
+.promotion_label_room span {
+  font-size: 13px;
+  background: #ff6348;
+  color: #fff;
+  border-radius: 1.5rem;
+  letter-spacing: 0.5px;
+  line-height: 1.375rem;
+  padding: 5px 0.5rem;
+}
+.promotion_label_detail {
+  margin-top: 10px;
+}
+.promotion_label_detail .title {
+  font-size: 13px;
+  background: #ff6348;
+  color: #fff;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+  line-height: 1.375rem;
+  padding: 5px 0.5rem;
+}
+.promotion_label_detail2 {
+  margin-top: 6px;
+}
+.promotion_label_detail2 .content {
+  font-size: 13px;
+}
+label.error {
+  color: white !important;
+  padding: 2px 6px;
+  background-color: red;
+  width: 50%;
+}
+#emailtk-error,
+#mobile-error {
+  width: 100%;
+  font-size: 14px;
+}
+#error_mobile {
+  color: white !important;
+  padding: 2px 6px;
+  background-color: white;
+  width: 100%;
+}
+
+/* Select Custom */
+.wrapper_select {
+  margin-right: 20px;
+}
+.similars-room .title {
+  margin-top: 55px;
+}
+.similars-room .title h2 {
+  border-bottom: 3px solid red;
+  width: 50%;
+}
+@media only screen and (max-width: 900px) {
+  .similars-room .title {
+    margin-top: 100px;
+  }
+  .wrapper_select {
+    margin-right: 19px;
+  }
+  #MyLink {
+    margin-top: 10px;
+    width: 100%;
+  }
+}

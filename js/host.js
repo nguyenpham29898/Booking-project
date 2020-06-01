@@ -15,10 +15,12 @@ $(function () {
     $(".edit_promotion").removeClass("live");
     return false;
   });
+  $(".menu-user-profile").click(function () {
+    $(".user").addClass("open");
+  });
 });
 $(function () {
   $(".menu-user").click(function () {
     $(".user").addClass("open");
-    return false;
   });
 });

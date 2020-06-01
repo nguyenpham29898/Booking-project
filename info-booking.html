@@ -83,10 +83,16 @@
 
     <!---------------------- LightGallery Zoom -->
     <link rel="stylesheet" href="./lightgallery/dist/css/lightgallery.css" />
-
+    
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js"></script>
     <script src="js/datetime-picker.js"></script>
+        <!------------------------ validate jquery ----------------------->
+        <script
+        type="text/javascript"
+        src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"
+      ></script>
+    <script src="js/validate-form.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -124,8 +130,8 @@
     </div>
     <div class="main">
       <div class="container-fluid" style="max-width: calc(1296px + 5.6rem);">
-        <div class="row">
-          <div class="col-md-6 col-xs-12">
+        <div id="main_column" class="row">
+          <div id="main_column_left" class="col-md-6 col-xs-12 col-sm-12">
             <div>
               <div class="title_info_booking">
                 <h3>Thông tin đặt chỗ</h3>
@@ -180,45 +186,48 @@
             <div class="title_user">
               <h3>Thông tin của bạn</h3>
             </div>
-            <div class="content_user">
-              <div class="input-group">
-                <label for="">
-                  <span class="text-ranger">*</span>Tên khách hàng
-                </label>
-                <span style="  display: block;">Họ tên trên CMND/ Thẻ căn cước</span>
-                <input type="text" class="input"/>
-              </div>
-              <div class="row input-group">
-                <div class="col-xs-12 col-sm-6" style="padding-left: 0;">
-                  <div class="input-group">
-                    <label for="">
-                      <span class="text-ranger">*</span>Số điện thoại
-                    </label>
-                    <span>Mã điện thoại quốc gia</span>
-                    <input class="input" type="number" placeholder="Số điện thoại" />
+            <form id="form-checkout" action="#">
+              <div class="content_user">
+                <div class="input-group">
+                  <label for="">
+                    <span class="text-ranger">*</span>Tên khách hàng
+                  </label>
+                  <span style="  display: block;">Họ tên trên CMND/ Thẻ căn cước</span>
+                  <input name="tentk" type="text" class="input"/>
+                </div>
+                <div class="row input-group">
+                  <div class="col-xs-12 col-sm-6" style="padding-left: 0;">
+                    <div class="input-group">
+                      <label for="">
+                        <span class="text-ranger">*</span>Số điện thoại
+                      </label>
+                      <span>Mã điện thoại quốc gia</span>
+                      <input id="mobile" name="numbertk" class="input" type="number" placeholder="Số điện thoại" />
+                      <label id ="error_mobile"></label>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6" style="padding-left: 0; padding-right: 0;">
+                    <div class="input-group">
+                      <label for="">
+                        <span class="text-danger">*</span>Email
+                      </label>
+                      <span>VD: email@example.com</span>
+                      <input name="emailtk" class="input" type="email" placeholder="Email" />
+                    </div>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-6" style="padding-left: 0; padding-right: 0;">
-                  <div class="input-group">
-                    <label for="">
-                      <span class="text-danger">*</span>Email
-                    </label>
-                    <span>VD: email@example.com</span>
-                    <input class="input" type="email" placeholder="Email" />
-                  </div>
+                <div class="input-group">
+                  <label for="">
+                    Yêu cầu đặc biệt
+                  </label>
+                  <textarea name="yctk" id="" cols="71" rows="10"></textarea>
                 </div>
+                <button class="pay checkmobile">Thanh toán</button>
               </div>
-              <div class="input-group">
-                <label for="">
-                  Yêu cầu đặc biệt
-                </label>
-                <textarea name="" id="" cols="71" rows="10"></textarea>
-              </div>
-              <button class="pay">Thanh toán</button>
-            </div>
+            </form>
           </div>
-          <div class="col-lg-2 col-md-1"></div>
-          <div class="col-md-5 col-lg-4 col-xs-12">
+          <div id="main_column_mid" class="col-lg-2 col-md-1"></div>
+          <div id="main_column_right" class="col-md-5 col-lg-4 col-xs-12 col-sm-12">
             <div>
               <div class="title_detail_booking">
                 <h3>
@@ -328,6 +337,26 @@
         var bottom = $(document).height() - $(window).height();
         $("HTML, BODY").animate({ scrollTop: bottom }, 1000);
       });
+      $(document).ready(function() {
+        var error = document.getElementById('error_mobile');
+      $('#mobile').change(function(){
+        var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+      var mobile = $('#mobile').val();
+      if(mobile !==''){
+          if (vnf_regex.test(mobile) == false) 
+          {
+            error.style.background = "red";
+            error.innerHTML = 'Số điện thoại của bạn không đúng định dạng!';
+            document.getElementById('mobile').value = "";
+            $('#mobile').focus();
+          }else{
+            error.style.background = "none";
+              error.innerHTML = "";
+          }
+      }
+      });
+      
+});
     </script>
     <!-- datetime-picker -->
     <script src="datepicker/js/bootstrap.min.js"></script>

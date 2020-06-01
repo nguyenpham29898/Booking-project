@@ -65,23 +65,48 @@ $(function () {
   // new datepickercustom
 });
 $(function () {
+  const dateRangeDisabled = [
+    {
+      start: "23/05/2020",
+      end: "29/05/2020",
+    },
+    {
+      start: "01/06/2020",
+      end: "05/06/2020",
+    },
+  ];
   // init daterangepicker
   const today = new Date();
   var picker = $("#daterangepicker1").daterangepicker({
     parentEl: "#daterangepicker1-container",
     autoApply: true,
     minDate: today,
+    isInvalidDate: function (date) {
+      for (let dateRange of dateRangeDisabled) {
+        if (
+          date.isSameOrAfter(moment(dateRange.start, "DD/MM/YYYY")) &&
+          date.isSameOrBefore(moment(dateRange.end, "DD/MM/YYYY"))
+        ) {
+          return true;
+        }
+      }
+      return false;
+    },
   });
   // range update listener
+
   picker.on("apply.daterangepicker", function (ev, picker) {
-    $("#daterangepicker-result")
-      .html(
-        "Selected date range: " +
-          picker.startDate.format("DD-MM-YYYY") +
-          " to " +
-          picker.endDate.format("DD-MM-YYYY")
-      )
-      .val();
+    // $("#timeCheckIn").value(picker.startDate.format("DD-MM-YYYY")).val();
+    // $("#timeCheckOut").value(picker.endDate.format("DD-MM-YYYY")).val();
+
+    document.getElementById("timeCheckIn").value = picker.startDate.format(
+      "DD/MM/YYYY"
+    );
+    document.getElementById("timeCheckOut").value = picker.endDate.format(
+      "DD/MM/YYYY"
+    );
+
+    // picker.endDate.format("DD-MM-YYYY");
   });
   // prevent hide after range selection
   picker.data("daterangepicker").hide = function () {};

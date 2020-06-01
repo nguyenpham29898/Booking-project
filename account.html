@@ -107,13 +107,13 @@
               <img
                 width="25px"
                 height="25px"
-                style="margin-right: 5px"
+                style="margin-right: 5px;"
                 src="../images/icon-svg/user.png"
                 class="rounded-circle"
               />
               Phạm Lê Đức Nguyên
             </a>
-            <ul class="dropdown-menu" style="width: 85%; margin-top:10px;">
+            <ul class="dropdown-menu" style="width: 85%; margin-top: 10px;">
               <li>
                 <a href="">Hồ sơ</a>
               </li>
@@ -382,13 +382,13 @@
                           </div>
                           <div class="edit_account-content">
                             <p>Giới tính</p>
-                            <form action="" style="display: flex;">
+                            <div style="display: flex;">
                               <div class="gender">
                                 <input
                                   type="radio"
                                   name="gender"
                                   value="male"
-                                  style="margin-right: 5px"
+                                  style="margin-right: 5px;"
                                 />
                                 <p>Nam</p>
                               </div>
@@ -397,7 +397,7 @@
                                   type="radio"
                                   name="gender"
                                   value="female"
-                                  style="margin-right: 5px"
+                                  style="margin-right: 5px;"
                                 />
                                 <p>Nữ</p>
                               </div>
@@ -406,11 +406,11 @@
                                   type="radio"
                                   name="gender"
                                   value="other"
-                                  style="margin-right: 5px"
+                                  style="margin-right: 5px;"
                                 />
                                 <p>Khác</p>
                               </div>
-                            </form>
+                            </div>
                           </div>
                           <div class="edit_account-content">
                             <p>Giới thiêu bản thân</p>
@@ -480,14 +480,14 @@
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
     <script>
       new WOW().init();
-      $(window).scroll(function() {
+      $(window).scroll(function () {
         if ($(this).scrollTop() > 100) $(".lentop").fadeIn();
         else $(".lentop").fadeOut();
       });
-      $(".lentop").on("click", function() {
+      $(".lentop").on("click", function () {
         $("HTML, BODY").animate({ scrollTop: 0 }, 1000);
       });
-      $(".contactmenu").on("click", function() {
+      $(".contactmenu").on("click", function () {
         var bottom = $(document).height() - $(window).height();
         $("HTML, BODY").animate({ scrollTop: bottom }, 1000);
       });

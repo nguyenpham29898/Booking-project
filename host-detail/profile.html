@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- font-awesome -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <script src="https://kit.fontawesome.com/20b02079e9.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=vietnamese"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Darker+Grotesque:300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+      rel="stylesheet"
+    />
+
+    <!-- datetime-picker -->
+    <link href="../datepicker/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../datepicker/css/datepicker.css" rel="stylesheet" />
+
+    <!-- for on scroll animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css"
+    />
+    <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+
+    <!-- slide slick -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"
+    ></script>
+    <!---------------------- LightGallery Zoom -->
+    <link rel="stylesheet" href="../lightgallery/dist/css/lightgallery.css" />
+    <!------------------------ validate jquery ----------------------->
+    <script
+      type="text/javascript"
+      src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"
+    ></script>
+    <script src="../js/validate-form.js"></script>
+    <!-- ----------------------main------------------------- -->
+    <link rel="stylesheet" href="../css/host-detail.css" />
+    <link href="../css/smart_wizard.css" rel="stylesheet" type="text/css" />
+    <script src="../js/host.js"></script>
+    <script src="../js/datetime-picker.js"></script>
+    <script src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/jquery.smartWizard.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="top_header_navbar">
+        <div class="container">
+          <div class="row top">
+            <nav role="navigation" class="navbar navbar-default">
+              <div class="navbar-header">
+                <span id="brand">
+                  <a href="../host.html">Luxury for HOST</a>
+                </span>
+              </div>
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right menu-notification">
+                  <li menu-right class="dropdown">
+                    <a
+                      id="menu_user"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="true"
+                      class="dropdown-toggle"
+                      ><img
+                        width="30px"
+                        height="30px"
+                        src="../images/icon-svg/alarm.png"
+                        class="rounded-circle"
+                      />
+                    </a>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right menu-user-profile">
+                  <li class="user dropdown">
+                    <a
+                      href="#"
+                      data-toggle="dropdown"
+                      aria-expanded="false"
+                      class="dropdown-toggle"
+                      ><img
+                        width="30px"
+                        height="30px"
+                        style="margin-right: 5px;"
+                        src="../images/icon-svg/user.png"
+                        class="rounded-circle"
+                      />
+                      Phạm Lê Đức Nguyên
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li class="nav-item">
+                        <a href="" class="nav-link">Hồ sơ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="nav-link">Đăng xuất</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="account_main">
+      <div class="container">
+        <div class="row">
+          <div class="tab-content detail-content">
+            <div id="edit_account" class="tab-pane active">
+              <h3 style="font-weight: bold; margin-bottom: 20px;">
+                Thông tin tài khoản
+              </h3>
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-3">
+                    <!-- required for floating -->
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs tabs-left sideways">
+                      <li class="active" style="width: 100%;">
+                        <a href="#info-account-v" data-toggle="tab"
+                          >Thông tin tài khoản</a
+                        >
+                      </li>
+                      <li style="width: 100%;">
+                        <a href="#change-password-v" data-toggle="tab"
+                          >Thay đổi mật khẩu</a
+                        >
+                      </li>
+                      <li style="width: 100%;">
+                        <a href="index.html">Đăng xuất</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="col-xs-9">
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="info-account-v">
+                        <div class="edit_account-content">
+                          <p>Họ và tên</p>
+                          <input
+                            class="form-control"
+                            type="text"
+                            placeholder="Tên"
+                          />
+                        </div>
+                        <div class="edit_account-content">
+                          <p>Email</p>
+                          <input
+                            class="form-control"
+                            type="email"
+                            placeholder="Email"
+                          />
+                        </div>
+                        <div class="edit_account-content">
+                          <p>Số điện thoại</p>
+                          <input
+                            class="form-control"
+                            type="number"
+                            placeholder="Số điện thoại"
+                          />
+                        </div>
+                        <div class="edit_account-content">
+                          <p>Địa chỉ</p>
+                          <input
+                            class="form-control"
+                            type="text"
+                            placeholder="Địa chỉ"
+                          />
+                        </div>
+                        <div class="edit_account-content">
+                          <p>Ngày sinh</p>
+                          <input class="form-control" type="date" />
+                        </div>
+                        <div class="edit_account-content">
+                          <p>Giới tính</p>
+                          <div style="display: flex;">
+                            <div class="gender">
+                              <input
+                                type="radio"
+                                name="gender"
+                                value="male"
+                                style="margin-right: 5px;"
+                              />
+                              <p>Nam</p>
+                            </div>
+                            <div class="gender">
+                              <input
+                                type="radio"
+                                name="gender"
+                                value="female"
+                                style="margin-right: 5px;"
+                              />
+                              <p>Nữ</p>
+                            </div>
+                            <div class="gender">
+                              <input
+                                type="radio"
+                                name="gender"
+                                value="other"
+                                style="margin-right: 5px;"
+                              />
+                              <p>Khác</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="edit_account-content">
+                          <p>Giới thiêu bản thân</p>
+                          <textarea
+                            class="form-control"
+                            name=""
+                            id=""
+                            cols="30"
+                            rows="10"
+                          ></textarea>
+                        </div>
+                        <a href="" class="btn btn-success">Cập nhật</a>
+                      </div>
+                      <div class="tab-pane" id="change-password-v">
+                        <div class="edit_account-content">
+                          <p>Mật khẩu hiện tại</p>
+                          <input
+                            class="form-control"
+                            type="password"
+                            placeholder="Mật khẩu hiện tại"
+                          />
+                        </div>
+                        <div class="edit_account-content">
+                          <p>Mật khẩu mới</p>
+                          <input
+                            class="form-control"
+                            type="password"
+                            placeholder="Mật khẩu mới"
+                          />
+                        </div>
+                        <div class="edit_account-content">
+                          <p>Xác nhận mật khẩu</p>
+                          <input
+                            class="form-control"
+                            type="password"
+                            placeholder="Xác nhận mật khẩu"
+                          />
+                        </div>
+                        <a href="" class="btn btn-success">Cập nhật</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer2 fixed-bottom">
+      <div class="container text-center">
+        <p>Copyright © Your Website 2019</p>
+        <p>Design By Nguyên Phạm</p>
+      </div>
+    </div>
+    <div class="edit_promotion">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="dialog"
+        class="dialog-wrapper promotion"
+        style="margin-top: 5vh;"
+      >
+        <div class="dialog-wrapper_header">
+          <h4>Sửa khuyến mãi</h4>
+          <button type="button" class="wrapper_header_btn_back">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="dialog-wrapper_body">
+          <form id="form-khuyenmai" action="#">
+            <div class="form-group">
+              <label for=""
+                >Tên khuyến mãi
+                <span class="imperative-red">*</span>
+              </label>
+              <input name="tenkm" class="form-control" type="text" />
+            </div>
+            <div class="form-group">
+              <label for=""
+                >Mức giảm giá
+                <span class="imperative-red">*</span>
+              </label>
+              <div style="display: flex;">
+                <input
+                  name="giamgia"
+                  min="0"
+                  max="100"
+                  type="number"
+                  class="form-control"
+                  style="width: 50%;"
+                />
+                <h4 style="margin-left: 5px; margin-top: 5px;">
+                  (%)
+                </h4>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for=""
+                >Địa điểm giảm giá
+                <span class="imperative-red">*</span>
+              </label>
+              <select class="form-control" name="vitrigiamgia">
+                <option value="">Select</option>
+                <option value="1">SunSea Villa - Luxury room</option>
+                <option value="2">Resort Sun</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for=""
+                >Thời gian check-in
+                <span class="imperative-red">*</span>
+              </label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  name="timeCheckIn2"
+                  id="timeCheckIn2"
+                  class="form-control datepicker booking_input booking_input_a booking_in detail_check"
+                  placeholder="Check in"
+                />
+              </div>
+              <div class="input-group" style="margin-top: 15px;">
+                <input
+                  type="text"
+                  id="timeCheckOut2"
+                  name="timeCheckOut2"
+                  class="form-control datepicker booking_input booking_input_a booking_out detail_check"
+                  placeholder="Check out"
+                />
+              </div>
+            </div>
+            <div class="dialog-wrapper_footer">
+              <button class="button-custom">
+                <span>Lưu</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="../datepicker/js/bootstrap.min.js"></script>
+    <script src="../datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../lightgallery/dist/js/lightgallery-all.min.js"></script>
+    <script src="../lightgallery/lib/jquery.mousewheel.min.js"></script>
+    <!-- time for bootstrap -->
+    <script
+      type="text/javascript"
+      src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js"
+    ></script>
+    <!-- SEARCH VALUE BOOSTRAP -->
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../js/search.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $("#datetimepicker3").datetimepicker({
+          pickDate: false,
+        });
+        $("#datetimepicker4").datetimepicker({
+          pickDate: false,
+        });
+        document.getElementById("alrt").innerHTML =
+          "<b>Please wait, Your download will start soon!!!</b>";
+        setTimeout(function () {
+          document.getElementById("alrt").innerHTML = "";
+          document.getElementById("alrt").style.background = "white";
+        }, 5000);
+        $("#example").DataTable();
+      });
+    </script>
+  </body>
+</html>

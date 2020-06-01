@@ -43,19 +43,19 @@
         class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
       >
         <!-- <div class="input-group">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Search for..."
-            aria-label="Search"
-            aria-describedby="basic-addon2"
-          />
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="button">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-        </div> -->
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search for..."
+              aria-label="Search"
+              aria-describedby="basic-addon2"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div> -->
       </form>
 
       <!-- Navbar -->
@@ -136,9 +136,7 @@
         </li>
       </ul>
     </nav>
-
     <div id="wrapper">
-      <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="index.html">
@@ -209,76 +207,128 @@
           >
         </li>
       </ul>
-
+      <!-- Sidebar -->
       <div id="content-wrapper">
         <div class="container-fluid">
           <!-- Breadcrumbs-->
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="#">Bảng điều khiển</a>
+              <a href="/luxurystay/admin/">Trang chủ</a>
             </li>
             <li class="breadcrumb-item active">Tổng quan</li>
           </ol>
-          <select id="chartType">
-            <option value="line">Thống kê 1</option>
-            <option value="bar">Thống kê 2</option>
-            <option value="pie">Thống kê 3</option>
-            <option value="radar">Thống kê 4</option>
-          </select>
-          <div class="chart_container">
-            <canvas id="lineChart" width="80%" height="30"></canvas>
-            <canvas id="barChart"></canvas>
-            <canvas id="pieChart"></canvas>
-            <canvas id="radarChart"></canvas>
-          </div>
+
           <!-- Area Chart Example-->
-          <!-- <div class="card mb-3">
-            <div class="card-header">
-              <i class="fas fa-chart-area"></i>
-              Thống kê doanh số theo năm
+          <div style="display: flex;">
+            <select id="chartType" style="margin: 5px 50px 10px 0px;">
+              <!-- <option>---- Chọn thống kê ----</option> -->
+              <option value="barMonth">Thống kê theo tháng</option>
+              <option value="barYear" selected>Thống kê theo năm</option>
+              <option value="barArea">Thống kê theo khu vực</option>
+              <option value="barRevenue">Thống kê doanh thu</option>
+            </select>
+
+            <div class="barMonth boxBar" style="display: flex;">
+              <p style="margin: 8px 10px 10px 0px;">Thời gian</p>
+              <select style="margin: 8px 0px 10px 0px;">
+                <option>2020</option>
+                <option>2019</option>
+              </select>
+              <a href="newChartsMonth.html">
+                <button style="margin-left: 20px;" class="btn btn-success">
+                  Thống kê
+                </button>
+              </a>
             </div>
-            <div class="card-body">
-              <canvas id="myAreaChart" width="100%" height="30"></canvas>
+            <div class="barYear boxBar" style="display: flex;">
+              <p style="margin: 8px 10px 10px 0px;">Từ</p>
+              <select
+                id="from_tk"
+                name="from_tk"
+                style="margin: 8px 0px 10px 0px;"
+              >
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2029</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+              </select>
+              <p style="margin: 8px 10px 10px 5px;">đến</p>
+              <select id="to_tk" name="to_tk" style="margin: 8px 0px 10px 0px;">
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+              </select>
+              <a href="newChartsYear.html">
+                <button
+                  id="btn-thongketheonam"
+                  type="submit"
+                  style="margin-left: 20px;"
+                  class="btn btn-success"
+                >
+                  Thống kê
+                </button></a
+              >
             </div>
-            <div class="card-footer small text-muted">
-              Updated yesterday at 11:59 PM
+            <div class="barArea boxBar" style="display: flex;">
+              <p style="margin: 8px 10px 10px 0px;">Khu vực</p>
+              <select style="margin: 8px 0px 10px 0px;">
+                <option>Đà Nẵng</option>
+                <option>Huế</option>
+              </select>
+              <a href="newChartsArea.html">
+                <button style="margin-left: 20px;" class="btn btn-success">
+                  Thống kê
+                </button>
+              </a>
             </div>
           </div>
-
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="card mb-3">
-                <div class="card-header">
-                  <i class="fas fa-chart-bar"></i>
-                  Thống kê doanh số theo tháng
-                </div>
-                <div class="card-body">
-                  <canvas id="myBarChart" width="100%" height="50"></canvas>
-                </div>
-                <div class="card-footer small text-muted">
-                  Updated yesterday at 11:59 PM
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card mb-3">
-                <div class="card-header">
-                  <i class="fas fa-chart-pie"></i>
-                  Thống kê doanh số theo khu vực
-                </div>
-                <div class="card-body">
-                  <canvas id="myPieChart" width="100%" height="100"></canvas>
-                </div>
-                <div class="card-footer small text-muted">
-                  Updated yesterday at 11:59 PM
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- <p class="small text-center text-muted my-5">
-            <em>More chart examples coming soon...</em>
-          </p> -->
+          <div class="chart_container">
+            <canvas id="barYearChart" width="80%" height="35px"></canvas>
+          </div>
+          <table
+            class="barYear table table-hover table-danger"
+            style="margin: 30px auto; width: 80%;"
+          >
+            <thead>
+              <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Tháng 1</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <!-- /.container-fluid -->
 
@@ -352,90 +402,40 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
 
-    <!-- Demo scripts for this page-->
-    <!-- <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-bar-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script> -->
     <script>
       $(function () {
-        let select = document.querySelector("#chartType");
-        function showHide() {
-          // concat Chart for the canvas ID
-          let chart = this.options[select.selectedIndex].value + "Chart";
-          document.querySelectorAll("canvas").forEach((c) => {
-            c.style.display = c.id === chart ? "inherit" : "none";
-          });
-        }
-        select.addEventListener("change", showHide);
-
-        var ctx = document.getElementById("lineChart");
-        var lineChart = new Chart(ctx, {
-          type: "line",
-          data: {
-            labels: ["2000", "2005", "2010", "2015", "2018"],
-            datasets: [
-              {
-                label: "Vancouver Population Data",
-                data: [195000, 2093000, 2278000, 2485000, 2597000],
-                borderColor: ["rgba(255,99,132,1)"],
-                backgroundColor: ["rgba(255,200,200,0.3)"],
-                borderWidth: 1,
-                //borderDash:([3]),
-                pointBackgroundColor: "red",
-                pointBorderColor: "rgba(250,10,10,0.1)",
-                pointBorderWidth: "10",
-                pointStyle: "rectRounded",
-                pointHoverBackgroundColor: "rgba(255,0,0,0.5)",
-                pointHoverBorderColor: "rgba(255,255,100,0.7)",
-                pointHoverRadius: "10",
-                //showLine:false,
-                //steppedLine:"false"
-              },
-            ],
-          },
-          options: {
-            title: {
-              display: true,
-              text: "Thống kê 1",
-              fontSize: 20,
-              fontColor: "rgba(20,20,20,1)",
-            },
-            legend: {
-              display: false,
-              position: "right",
-              labels: {
-                fontColor: "#000",
-              },
-            },
-            elements: {
-              line: {
-                tension: 0, //disables bezier curves
-              },
-            },
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true,
-                    callback: function (value, index, values) {
-                      return value + " people";
-                    },
-                  },
-                },
-              ],
-            },
-            /*animation: {
-          duration:0, // general animation time
-      },*/
-            hover: {
-              animationDuration: 0, // duration of animations when hovering an item
-            },
-            responsiveAnimationDuration: 0, // animation duration after a resize
-          },
-        });
-
+        // let select = document.querySelector("#chartType");
+        // let disable = document.getElementById("barSelectChart");
+        // function showHide() {
+        //   // concat Chart for the canvas ID
+        //   disable.style.display = "block";
+        //   let chart = this.options[select.selectedIndex].value + "Chart";
+        //   document.querySelectorAll("canvas").forEach((c) => {
+        //     c.style.display = c.id === chart ? "inherit" : "none";
+        //   });
+        // }
+        // select.addEventListener("change", showHide);
+        // toggle
+        $("#chartType")
+          .change(function () {
+            $(this)
+              .find("option:selected")
+              .each(function () {
+                var optionValue = $(this).attr("value");
+                if (optionValue) {
+                  $(".boxBar")
+                    .not("." + optionValue)
+                    .hide();
+                  $("." + optionValue).show();
+                } else {
+                  $(".boxBar").hide();
+                }
+              });
+          })
+          .change();
         // Precipitation
-        var ctx = document.getElementById("barChart");
+        var ctx = document.getElementById("barYearChart");
+        //Test data nam
         var BarChart = new Chart(ctx, {
           type: "bar",
           data: {
@@ -473,32 +473,32 @@
                   1.4,
                 ],
                 backgroundColor: [
-                  "rgba(255,99,132,0.5)",
-                  "rgba(155,130,32,0.5)",
-                  "rgba(105,9,132,0.5)",
-                  "rgba(15,130,202,0.5)",
-                  "rgba(15,250,252,0.5)",
-                  "rgba(205,100,32,0.5)",
-                  "rgba(0,205,0,0.5)",
-                  "rgba(55,15,52,0.5)",
                   "rgba(255,0,0,0.5)",
-                  "rgba(25,59,52,0.5)",
-                  "rgba(0,100,55,0.5)",
-                  "rgba(200,111,199,0.5)",
+                  "rgba(255,0,0,0.5)",
+                  "rgba(255,0,0,0.5)",
+                  /* "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)",
+                "rgba(255,0,0,0.5)", */
                 ],
                 borderColor: [
                   "rgba(255,99,132,1)",
                   "rgba(155,130,32,1)",
                   "rgba(105,9,132,1)",
-                  "rgba(15,130,202,1)",
-                  "rgba(15,250,252,1)",
-                  "rgba(205,100,32,0.5)",
-                  "rgba(0,205,0,1)",
-                  "rgba(55,15,52,1)",
-                  "rgba(255,0,0,1)",
-                  "rgba(25,59,52,1)",
-                  "rgba(0,100,55,1)",
-                  "rgba(200,111,199,1)",
+                  /* "rgba(15,130,202,1)",
+              "rgba(15,250,252,1)",
+              "rgba(205,100,32,0.5)",
+              "rgba(0,205,0,1)",
+              "rgba(55,15,52,1)",
+              "rgba(255,0,0,1)",
+              "rgba(25,59,52,1)",
+              "rgba(0,100,55,1)",
+              "rgba(200,111,199,1)", */
                 ],
                 borderWidth: "1",
                 pointHoverBackgroundColor: "#fff",
@@ -509,7 +509,7 @@
           options: {
             title: {
               display: true,
-              text: "Vancouver Precipitation",
+              text: "Thống kê doanh số theo năm",
               fontSize: 20,
               fontColor: "rgba(10,0,20,0.9)",
             },
@@ -526,150 +526,11 @@
                   ticks: {
                     beginAtZero: true,
                     callback: function (value, index, values) {
-                      return value + " mm";
+                      return value + " Triệu (VND)";
                     },
                   },
                 },
               ],
-            },
-          },
-        });
-
-        // Ethnicity
-        var ctx = document.getElementById("pieChart");
-        var PieChart = new Chart(ctx, {
-          type: "pie",
-          data: {
-            labels: [
-              "European Candadian",
-              "Chinese",
-              "South Asia",
-              "Fillipino",
-              "Southeast Asian",
-              "Japanese",
-              "Latin American",
-              "Mixed visible minority",
-              "Korean",
-              "Aboriginal",
-              "West Asian",
-              "Black",
-              "Arab",
-            ],
-            datasets: [
-              {
-                label: "Ethnicity",
-                data: [46.2, 27.7, 6, 6, 3, 1.7, 1.6, 1.5, 1.5, 2, 1.2, 1, 0.5],
-                backgroundColor: [
-                  "rgba(255,99,132,0.5)",
-                  "rgba(155,130,32,0.5)",
-                  "rgba(105,9,132,0.5)",
-                  "rgba(15,130,202,0.5)",
-                  "rgba(15,250,252,0.5)",
-                  "rgba(205,100,32,0.5)",
-                  "rgba(0,205,0,0.5)",
-                  "rgba(55,15,52,0.5)",
-                  "rgba(255,0,0,0.5)",
-                  "rgba(25,59,52,0.5)",
-                  "rgba(0,100,55,0.5)",
-                  "rgba(200,231,50,0.5)",
-                  "rgba(155,22,30,0.5)",
-                ],
-                borderColor: [
-                  "rgba(255,99,132,0.5)",
-                  "rgba(155,130,32,0.5)",
-                  "rgba(105,9,132,0.5)",
-                  "rgba(15,130,202,0.5)",
-                  "rgba(15,250,252,0.5)",
-                  "rgba(205,100,32,0.5)",
-                  "rgba(0,205,0,0.5)",
-                  "rgba(55,15,52,0.5)",
-                  "rgba(255,0,0,0.5)",
-                  "rgba(25,59,52,0.5)",
-                  "rgba(0,100,55,0.5)",
-                  "rgba(200,231,50,0.5)",
-                  "rgba(155,22,30,0.5)",
-                ],
-                borderWidth: [1],
-              },
-            ],
-            cutoutPercentage: [0],
-          },
-          options: {
-            title: {
-              display: true,
-              text: "Vancouver Ethnicity",
-              fontSize: "20",
-              fontColor: "rgba(20,20,20,1)",
-            },
-          },
-        });
-
-        // Radar
-        Chart.defaults.scale.ticks.beginAtZero = true;
-
-        var ctx = document.getElementById("radarChart");
-        var RadarChart = new Chart(ctx, {
-          type: "radar",
-          data: {
-            labels: [
-              "Hiking",
-              "Sporting Events",
-              "Stanley Park",
-              "Skiing & Snowboarding",
-              "Beaches",
-              "eating",
-            ],
-            datasets: [
-              {
-                label: "Male",
-                data: ["50", "70", "80", "60", "20", "70"],
-                backgroundColor: ["rgba(255,155,32,0.5)"],
-                borderWidth: 1,
-                pointBackgroundColor: [
-                  "yellow",
-                  "black",
-                  "green",
-                  "white",
-                  "skyblue",
-                  "red",
-                ],
-                pointHoverBackgroundColor: ["black"],
-                pointStyle: ["triangle"],
-              },
-              {
-                label: "Female",
-                data: ["60", "30", "80", "20", "50", "60"],
-                backgroundColor: ["rgba(155,15,132,0.5)"],
-                borderWidth: 1,
-                pointBackgroundColor: [
-                  "yellow",
-                  "black",
-                  "green",
-                  "white",
-                  "skyblue",
-                  "red",
-                ],
-                pointHoverBackgroundColor: ["black"],
-                pointStyle: ["triangle"],
-              },
-            ],
-          },
-          option: {
-            title: {
-              display: true,
-              text: "Activities in Vancouver",
-              fontSize: "20",
-              fontColor: "rgba(10,0,20,0.9)",
-            },
-            legend: {
-              display: false,
-              position: "right",
-              labels: {
-                fontColor: "#000",
-              },
-            },
-            scales: {
-              scale: {},
             },
           },
         });

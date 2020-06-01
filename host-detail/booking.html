@@ -195,7 +195,7 @@
                   <h1>Đặt phòng</h1>
                 </div>
                 <div class="page-content">
-                  <div class="filter-booking">
+                  <!-- <div class="filter-booking">
                     <div class="filter-booking-content">
                       <div class="form-group">
                         <div class="form-item">
@@ -239,7 +239,7 @@
                         </form>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="table-info">
                     <table id="table1" class="table">
                       <thead>
@@ -283,51 +283,6 @@
                             </button>
                           </td>
                         </tr>
-                        <tr>
-                          <td>12345678</td>
-                          <td>Lê Văn Tèo</td>
-                          <td>12 Bach Đằng - Đà Nẵng</td>
-                          <td>25/11/2019 - 27/11/2019</td>
-                          <td>Đã thuê</td>
-                          <td>
-                            <button class="btn btn-info" type="submit">
-                              Xem
-                            </button>
-                            <button class="btn btn-danger" type="submit">
-                              Hủy
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>12345678</td>
-                          <td>Lê Văn Tqqqqo</td>
-                          <td>12 Bach Đằng - Đà Nẵng</td>
-                          <td>25/11/2019 - 27/11/2019</td>
-                          <td>Đã thuê</td>
-                          <td>
-                            <button class="btn btn-info" type="submit">
-                              Xem
-                            </button>
-                            <button class="btn btn-danger" type="submit">
-                              Hủy
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>12345678</td>
-                          <td>Lê Văn Tqqqqo</td>
-                          <td>12 Bach Đằng - Đà Nẵng</td>
-                          <td>25/11/2019 - 27/11/2019</td>
-                          <td>Đã thuê</td>
-                          <td>
-                            <button class="btn btn-info" type="submit">
-                              Xem
-                            </button>
-                            <button class="btn btn-danger" type="submit">
-                              Hủy
-                            </button>
-                          </td>
-                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -353,17 +308,27 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../js/jquery.table.hpaging.min.js"></script>
+    <!-- SEARCH VALUE BOOSTRAP -->
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../js/search.js"></script>
     <script>
       $(function () {
         $("#table1").hpaging({
-          limit: 2,
+          limit: 3,
           activePage: 1,
           parentID: "",
           navBar: null,
           totalPages: "",
         });
       });
+      $("#table1").DataTable();
+      let result = document.querySelectorAll("odd dataTables_empty");
+      console.log(result.innerHTML);
+      if (result === "No matching records found") {
+        result.innerHTML = "Không tìm thấy kết quả !!!";
+      }
     </script>
+
     <!-- End panagation table -->
     <script src="../datepicker/js/bootstrap.min.js"></script>
     <script src="../datepicker/js/bootstrap-datepicker.js"></script>
